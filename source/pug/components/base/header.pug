@@ -32,13 +32,14 @@ mixin header(headerMods, currentUrl)
     .container
       .header__wrapper
         if(currentUrl === "index.html")
-          //- lighthouse снимает 10 баллов SEO за <a> без href
-          span.header__logo Логотип
+          +logo({header: true})
         else
-          a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+          +logo({header: true, href: "index.html"})
         nav.main-nav
-          button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-            +icon("icon-burger", 16, 16)
+        button.header__button.header__button--open.active(type="button", aria-label="Открыть меню")
+          +icon("icon-burger-open", 16, 16)
+        button.header__button.header__button--close(type="button", aria-label="Закрыть меню")
+          +icon("icon-burger-close", 16, 16)
           .main-nav__wrapper
             ul.main-nav__list
               each link in headerLinks
