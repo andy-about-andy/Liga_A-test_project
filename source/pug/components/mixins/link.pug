@@ -1,0 +1,13 @@
+mixin link(data = {})
+  - const tag = data.href ? "a" : "button";
+  - const href = data.href || false;
+  - const label = data.label;
+  - const rel = data.isExternal ? "nofollow noopener noreferrer" : false;
+  - const target = data.isExternal ? "_blank" : false;
+  - const text = data.text;
+  - const isHeader = data.isHeader || false;
+
+  if (isHeader)
+    #{tag}.link(href=href, aria-label=label, rel=rel, target=target)&attributes(attributes)!= text
+  else
+    #{tag}.link(href=href, aria-label=label, rel=rel, target=target)&attributes(attributes)!= text

@@ -36,17 +36,14 @@ mixin header(headerMods, currentUrl)
         else
           +logo({header: true, href: "index.html"})
         nav.main-nav
-        button.header__button.header__button--open.active(type="button", aria-label="Открыть меню")
-          +icon("icon-burger-open", 16, 16)
-        button.header__button.header__button--close(type="button", aria-label="Закрыть меню")
-          +icon("icon-burger-close", 16, 16)
-          .main-nav__wrapper
-            ul.main-nav__list
-              each link in headerLinks
-                - const activeState = currentUrl === link.href
-                li.main-nav__item
-                  if(activeState)
-                    span.main-nav__link.is-active= link.text
-                  else
-                    a.main-nav__link(href=link.href)= link.text
-            +btn({text: button.text, scrollTo: button.href})(aria-label="Переход к разделу контакты").header__button
+          button.header__button.header__button--open.active(type="button", aria-label="Открыть меню")
+            +icon("icon-burger-open", 16, 16)
+          button.header__button.header__button--close(type="button", aria-label="Закрыть меню")
+            +icon("icon-burger-close", 16, 16)
+          .header__menu.nonactive
+            nav.header__nav
+              ul.header__list.nonactive
+                each link in headerLinks
+                  li.header__item
+                    +link({href: link.href, label: link.label, isExternal: false, text: link.text, isHeader: true})
+              +btn({text: button.text, scrollTo: button.href})(aria-label="Переход к разделу контакты").header__button

@@ -1,13 +1,86 @@
 .header {
-  padding: 28px 0;
+  width: 100%;
+  padding: 31px 0;
+  background-color: $color-transparent;
+  position: sticky;
+  top: 0;
+  z-index: 50;
 
-  background-color: $color-deep-sky-blue;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2.55fr;
+    align-items: center;
 
-  .container {
-    display: flex;
+    @include vp-767 {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
-  &__logo {
+  & .logo svg,
+  & .logo {
+    width: 101px;
+    height: 30px;
+  }
+
+  &__button {
+    display: none;
+    border: 1px solid $color-accent-main;
+    background-color: $color-transparent;
+    cursor: pointer;
+    transition: opacity $trans-default;
+    margin: 0 0 0 auto;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &.active {
+      @include vp-767 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &--open svg,
+    &--close svg {
+      position: absolute;
+      width: 16px;
+      height: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0 10px 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-right: 64px;
+    font-weight: 300;
+  }
+
+  &__link {
     color: $color-default-white;
+
+    &.is-active {
+      opacity: 0.6;
+    }
   }
 }
