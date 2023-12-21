@@ -1,22 +1,41 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
-
+  padding: 18px 38px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
   color: $color-default-white;
-
-  background-color: $color-deep-sky-blue;
+  background: $color-accent-main;
   border: none;
   cursor: pointer;
-
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-coral-red;
+  &--with-border {
+    background: none;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: $color-accent-main;
+  }
+
+  &--capitalize {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+
+  &--icon {
+    padding: 17px;
+    background: none;
+    background-color: $color-transparent-second;
   }
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 

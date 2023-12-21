@@ -5,5 +5,9 @@ mixin btn(options = {})
   - const type = options.type || tag === "button" ? options.type || "button" : false;
   - const target = options.isExternal ? "_blank" : false;
   - const rel = options.isExternal ? "nofollow noopener noreferrer" : false;
+  - const icon = options.icon;
 
   #{tag}.btn(href=href, target=target, rel=rel, type=type)&attributes(attributes)!= text
+    if icon
+      span.btn__icon
+        +icon(icon.name, icon.width, icon.height)
