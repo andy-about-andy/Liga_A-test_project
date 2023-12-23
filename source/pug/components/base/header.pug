@@ -7,7 +7,7 @@ mixin header(headerMods, currentUrl)
       },
       {
         href: "#",
-        text: "About us"
+        text: "About&nbsp;us"
       },
       {
         href: "#",
@@ -15,7 +15,7 @@ mixin header(headerMods, currentUrl)
       },
       {
         href: "#",
-        text: "Pricing Plan"
+        text: "Pricing&nbsp;Plan"
       },
       {
         href: "#",
@@ -25,25 +25,23 @@ mixin header(headerMods, currentUrl)
 
     const button = {
       href: "#footer",
-      text: "Contact us",
+      text: "Contact&nbsp;us",
     }
 
-  header.header(class=headerMods)
+  header.header.header--sticky(class=headerMods)(data-header="sticky")
     .container
       .header__wrapper
         if(currentUrl === "index.html")
           +logo({header: true})
         else
           +logo({header: true, href: "index.html"})
-        nav.main-nav
-          button.header__button.header__button--open.active(type="button", aria-label="Открыть меню")
-            +icon("icon-burger-open", 16, 16)
-          button.header__button.header__button--close(type="button", aria-label="Закрыть меню")
-            +icon("icon-burger-close", 16, 16)
-          .header__menu.nonactive
-            nav.header__nav
-              ul.header__list.nonactive
-                each link in headerLinks
-                  li.header__item
-                    +link({href: link.href, label: link.label, isExternal: false, text: link.text, isHeader: true})
-              +btn({text: button.text, scrollTo: button.href})(aria-label="Переход к разделу контакты").btn--with-border.btn--capitalize.header__button
+        nav.header__nav
+          button.btn--with-border.header__button(type="button", aria-label="Открыть меню")(data-burger)
+            +icon("icon-burger-open", 16, 16).header__button--icon-open
+            +icon("icon-burger-close", 16, 16).header__button--icon-close
+          .header__menu
+            ul.header__list
+              each link in headerLinks
+                li.header__item
+                  +link({href: link.href, label: link.label, isExternal: false, text: link.text, isHeader: true})(data-close-menu)
+            +btn({text: button.text, scrollTo: button.href})(aria-label="Переход к разделу контакты", data-close-menu).btn--with-border.btn--capitalize

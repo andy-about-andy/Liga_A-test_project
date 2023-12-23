@@ -1,0 +1,16 @@
+.link {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  transition: opacity $trans-default;
+
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  @include vp-1023 {
+    text-align: center;
+  }
+}
