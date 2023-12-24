@@ -4,7 +4,7 @@ mixin link(data = {})
   - const label = data.label;
   - const rel = data.isExternal ? "nofollow noopener noreferrer" : false;
   - const target = data.isExternal ? "_blank" : false;
-  - const text = data.text;
+  - const text = data.text || "";
   - const isHeader = data.isHeader || false;
 
   if (isHeader)

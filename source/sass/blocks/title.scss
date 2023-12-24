@@ -1,0 +1,41 @@
+.title {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $color-default-white;
+
+  &--h1 {
+    letter-spacing: -0.32px;
+
+    @include vp-767 {
+      font-size: 48px;
+      line-height: 58px;
+      letter-spacing: -0.24px;
+    }
+  }
+
+  &--h2 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2.24px;
+    text-transform: uppercase;
+    background: $color-accent-main;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &--h3 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &--600 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+}

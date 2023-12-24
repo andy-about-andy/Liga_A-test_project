@@ -1,3 +1,103 @@
 mixin footer(footerMods)
-  footer.footer(class=footerMods)
-    .container
+  footer.footer(class=footerMods)#footer
+    .footer__wrapper
+      .container
+        .footer__inner
+          .footer__socials
+            +logo({href: "#"})
+            +socials([
+              {
+                href: "#",
+                iconName: "icon-twitter",
+                iconWidth: "20",
+                iconHeight: "16"
+              },
+              {
+                href: "#",
+                iconName: "icon-facebook",
+                iconWidth: "12",
+                iconHeight: "21"
+              },
+              {
+                href: "#",
+                iconName: "icon-instagram",
+                iconWidth: "24",
+                iconHeight: "24"
+              },
+              {
+                href: "#",
+                iconName: "icon-github",
+                iconWidth: "22",
+                iconHeight: "22"
+              },
+            ])
+          .footer__link
+            +list-link({
+              title: "Quicklinks",
+              filling: [
+                {
+                  href: "#",
+                  text: "Home",
+                },
+                {
+                  href: "#",
+                  text: "Pricing Plan",
+                },
+                {
+                  href: "#",
+                  text: "Service",
+                },
+                {
+                  href: "#",
+                  text: "Blog",
+                },
+                {
+                  href: "#",
+                  text: "Our Team",
+                },
+              ]
+            })
+            +list-link({
+              title: "Support",
+              filling: [
+                {
+                  href: "#",
+                  text: "About us",
+                },
+                {
+                  href: "#",
+                  text: "Contact us",
+                },
+                {
+                  href: "#",
+                  text: "FAQ",
+                },
+                {
+                  href: "#",
+                  text: "Tems & Conditions",
+                },
+                {
+                  href: "#",
+                  text: "Privacy Policy",
+                },
+              ]
+            })
+          .footer__contacts
+            +title({tag: "h3", text: "Need Help?"}).title--h3.title--600
+            ul.footer__contacts-list
+              li.footer__item
+                .footer__icon
+                  +icon("icon-location", 20, 20)
+                p.footer__text Tanjung&nbsp;Sari Street&nbsp;no.48, Pontianak&nbsp;City
+              li.footer__item
+                .footer__icon
+                  +icon("icon-mail", 20, 20)
+                +link({href: "mailto:Support@VRNas.com", label: "Напишите нам", isExternal: false, text: "Support@VRNas.com"}).footer__text
+              li.footer__item
+                .footer__icon
+                  +icon("icon-telephone", 20, 20)
+                +link({href: "tel:+123 456 7890", label: "Позвоните нам", isExternal: false, text: "+123 456 7890"}).footer__text
+        .footer__copyright
+          p.footer__text © Copyright 2023, All Rights Reserved
+      .footer__decor
+        +icon("icon-decor-footer", 1011, 498, true)
