@@ -86,15 +86,15 @@ mixin footer(footerMods)
             +title({tag: "h3", text: "Need Help?"}).title--h3.title--600
             ul.footer__contacts-list
               li.footer__item
-                .footer__icon
+                span.footer__icon
                   +icon("icon-location", 20, 20)
                 p.footer__text Tanjung&nbsp;Sari Street&nbsp;no.48, Pontianak&nbsp;City
               li.footer__item
-                .footer__icon
+                span.footer__icon
                   +icon("icon-mail", 20, 20)
                 +link({href: "mailto:Support@VRNas.com", label: "Напишите нам", isExternal: false, text: "Support@VRNas.com"}).footer__text
               li.footer__item
-                .footer__icon
+                span.footer__icon
                   +icon("icon-telephone", 20, 20)
                 +link({href: "tel:+123 456 7890", label: "Позвоните нам", isExternal: false, text: "+123 456 7890"}).footer__text
         .footer__copyright

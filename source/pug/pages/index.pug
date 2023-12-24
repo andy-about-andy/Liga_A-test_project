@@ -13,4 +13,8 @@ block main
   main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
-    +intro()
+
+    //- +advantages({textName: true})
+    +page-content()
+      +page-section()
+        +advantages({textName: true, title: true})

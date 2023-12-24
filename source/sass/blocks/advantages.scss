@@ -1,0 +1,49 @@
+.advantages {
+  &__inner {
+    text-align: center;
+
+    .title--h2 {
+      margin: 0 0 12px;
+    }
+
+    p {
+      margin: 0 0 54px;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 58px;
+      letter-spacing: -0.24px;
+
+      @include vp-1023 {
+        margin: 0 0 32px;
+        font-size: 32px;
+        line-height: normal;
+        letter-spacing: -0.16px;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 42px 63px 53px 65px;
+    background-color: $color-second-black;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+
+    @include vp-1279 {
+      gap: 35px;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: none;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 50px;
+    }
+
+    @include vp-767 {
+      padding: 36px 37px;
+    }
+  }
+}
