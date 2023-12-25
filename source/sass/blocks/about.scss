@@ -1,0 +1,154 @@
+.about {
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+
+  &__decor {
+    position: relative;
+    z-index: -1;
+
+    @include vp-1023 {
+      height: 622px;
+    }
+
+    @include vp-767 {
+      width: 288px;
+      height: 485px;
+      margin: 0 auto;
+    }
+  }
+
+  &__box {
+    margin-left: auto;
+  }
+
+  &__inner {
+    margin-top: 81px;
+
+    .title--h2 {
+      margin: 0 0 12px;
+    }
+
+    p {
+      margin: 0 0 12px;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 58px;
+      letter-spacing: -0.24px;
+
+      @include vp-1023 {
+        margin: 0 0 32px;
+        font-size: 32px;
+        line-height: normal;
+        letter-spacing: -0.16px;
+      }
+    }
+  }
+
+  &__text {
+    p {
+      margin: 0 0 24px;
+      font-weight: 300;
+      color: $color-light-grey;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 32px;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    span {
+      width: 16px;
+      height: 16px;
+      margin: 2px 12px auto 0;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__decor-man {
+    width: 1029px;
+    height: 785px;
+    position: absolute;
+    top: -60px;
+    right: -30%;
+
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1279 {
+      right: -45%;
+    }
+
+    @include vp-1023 {
+      top: 0;
+      right: -15%;
+    }
+
+    @include vp-767 {
+      width: 774px;
+      height: 591px;
+      right: -81%;
+    }
+  }
+
+  &__decor-glasses {
+    width: 196px;
+    height: 128px;
+    position: absolute;
+    top: 520px;
+    right: 12%;
+
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1279 {
+      right: 15%;
+    }
+
+    @include vp-1023 {
+      top: 560px;
+      right: 14%;
+    }
+
+    @include vp-767 {
+      width: 147px;
+      height: 96px;
+      top: 430px;
+      right: -20%;
+    }
+  }
+}
