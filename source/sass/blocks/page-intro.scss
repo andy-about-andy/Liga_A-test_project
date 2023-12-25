@@ -58,14 +58,15 @@
   }
 
   &__decor-line {
-    z-index: -1;
+    z-index: -2;
     width: 2682px;
     height: 721px;
     position: absolute;
     top: -470px;
-    right: 23%;
+    right: 24%;
 
-    svg {
+    svg,
+    img {
       width: 100%;
       height: 100%;
     }
@@ -76,6 +77,7 @@
 
     @include vp-1023 {
       top: -632px;
+      right: -30%;
     }
 
     @include vp-767 {
@@ -83,52 +85,33 @@
     }
   }
 
-  &__decor-light {
+  &__decor-man {
+    position: absolute;
+    top: -633px;
+    left: 46%;
     z-index: -1;
     width: 987px;
     height: 760px;
-    position: absolute;
-    top: -508px;
-    left: 45%;
 
-    svg {
+    svg,
+    img {
       width: 100%;
       height: 100%;
     }
 
+    @include vp-1919 {
+      left: 39%;
+    }
+
     @include vp-1023 {
-      top: -470px;
+      width: 680px;
+      height: 548px;
+      top: -436px;
       left: 30%;
     }
 
     @include vp-767 {
-      width: 802px;
-      height: 649px;
-      top: -430px;
-      left: 20%;
-    }
-  }
-
-  &__decor-man {
-    width: 526px;
-    height: 626px;
-    position: absolute;
-    top: -626px;
-    left: 55.3%;
-
-    @include vp-1279 {
-      left: 62%;
-    }
-
-    @include vp-1023 {
-      width: 354px;
-      height: 422px;
-      top: -422px;
-      left: 46%;
-    }
-
-    @include vp-767 {
-      left: 44%;
+      left: 7%;
     }
   }
 
@@ -139,12 +122,18 @@
     top: -200px;
     left: 44%;
 
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
     @include vp-1919 {
-      left: 40%;
+      left: 33%;
     }
 
     @include vp-1439 {
-      left: 32%;
+      left: 35%;
     }
 
     @include vp-1279 {
