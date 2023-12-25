@@ -1,9 +1,10 @@
 .page-content {
-  padding: 52px 0 67px;
+  overflow: hidden;
+  padding: 139px 0 67px;
   margin: 0 auto;
 
   @include vp-1023 {
-    padding: 52px 0 52px;
+    padding: 154px 0 52px;
   }
 
   @include vp-767 {

@@ -1,0 +1,163 @@
+.page-intro {
+
+  .container {
+    position: relative;
+  }
+
+  &__wrapper {
+    width: 540px;
+
+    @include vp-767 {
+      max-width: 700px;
+      width: auto;
+    }
+  }
+
+  &__inner {
+    p {
+      width: 446px;
+      margin: 12px 0 0;
+
+      @include vp-767 {
+        max-width: 400px;
+        width: auto;
+      }
+    }
+
+    .btn {
+      margin-top: 32px;
+    }
+  }
+
+  &__decor {
+    z-index: -1;
+    width: 1120px;
+    height: 716px;
+    position: absolute;
+    top: -455px;
+    right: -350px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1023 {
+      width: 655px;
+      height: 419px;
+      top: -330px;
+      right: -130px;
+    }
+
+    @include vp-767 {
+      width: 655px;
+      height: 419px;
+      top: -295px;
+      right: -210px;
+    }
+  }
+
+  &__decor-line {
+    z-index: -1;
+    width: 2682px;
+    height: 721px;
+    position: absolute;
+    top: -470px;
+    right: 23%;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1279 {
+      right: 5%;
+    }
+
+    @include vp-1023 {
+      top: -632px;
+    }
+
+    @include vp-767 {
+      right: -160%;
+    }
+  }
+
+  &__decor-light {
+    z-index: -1;
+    width: 987px;
+    height: 760px;
+    position: absolute;
+    top: -508px;
+    left: 45%;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1023 {
+      top: -470px;
+      left: 30%;
+    }
+
+    @include vp-767 {
+      width: 802px;
+      height: 649px;
+      top: -430px;
+      left: 20%;
+    }
+  }
+
+  &__decor-man {
+    width: 526px;
+    height: 626px;
+    position: absolute;
+    top: -626px;
+    left: 55.3%;
+
+    @include vp-1279 {
+      left: 62%;
+    }
+
+    @include vp-1023 {
+      width: 354px;
+      height: 422px;
+      top: -422px;
+      left: 46%;
+    }
+
+    @include vp-767 {
+      left: 44%;
+    }
+  }
+
+  &__decor-rectangle {
+    width: 196px;
+    height: 128px;
+    position: absolute;
+    top: -200px;
+    left: 44%;
+
+    @include vp-1919 {
+      left: 40%;
+    }
+
+    @include vp-1439 {
+      left: 32%;
+    }
+
+    @include vp-1279 {
+      left: 40%;
+    }
+
+    @include vp-1023 {
+      top: -280px;
+      left: 14%;
+    }
+
+    @include vp-767 {
+      left: 4%;
+    }
+  }
+}
