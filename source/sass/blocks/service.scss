@@ -1,0 +1,143 @@
+.service {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 46px;
+
+    @include vp-1023 {
+      flex-direction: column;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    min-width: 259px;
+    margin-right: 80px;
+
+    .title--h2 {
+      margin: 0 0 12px;
+    }
+
+    p {
+      margin: 0 0 12px;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 58px;
+      letter-spacing: -0.24px;
+
+      @include vp-1023 {
+        margin: 0 0 12px;
+        font-size: 32px;
+        line-height: normal;
+        letter-spacing: -0.16px;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 625px;
+    p {
+      margin: 0;
+      font-weight: 300;
+      color: $color-light-grey;
+    }
+  }
+
+  &__main-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include vp-1279 {
+      gap: 15px;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include vp-1279 {
+      gap: 15px;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  &__main-item {
+    &--2 {
+      margin-top: 57px;
+
+      @include vp-1023 {
+        margin: 0;
+      }
+    }
+
+    &--3 {
+      margin-top: 135px;
+
+      @include vp-1023 {
+        margin: 0;
+      }
+    }
+  }
+
+  &__item {
+    padding: 38px 56px 25px 32px;
+    background-color: $color-second-black;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    cursor: pointer;
+
+    @include hover-focus {
+      .service__button {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .privilege-card .title--h3 {
+      margin-top: 60px;
+    }
+
+    .privilege-card__icon {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .privilege-card {
+    position: relative;
+  }
+
+  &__button {
+    position: absolute;
+    left: -32px;
+    bottom: -25px;
+    display: flex;
+    width: calc(100% + 32px + 56px);
+    height: 152px;
+    padding: 74px 0 28px;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(37, 37, 50, 0.00) 0%, rgba(37, 37, 50, 0.91) 53.06%, #252532 100%);;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity $trans-default, visibility $trans-modal;
+  }
+}
