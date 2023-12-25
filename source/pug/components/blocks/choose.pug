@@ -1,9 +1,18 @@
 mixin choose(data = {})
   -
     const list = [
-      {text: "Cutting-Edge Technology"},
-      {text: "Versatile Applications"},
-      {text: "Affordable and Accessible"},
+      {
+        text: "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        buttonText: "Passionate and Experienced Team",
+      },
+      {
+        text: "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        buttonText: "Customized Solutions",
+      },
+      {
+        text: "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        buttonText: "Exceptional Customer Service",
+      },
     ]
 
   .choose
@@ -13,13 +22,18 @@ mixin choose(data = {})
           .choose__inner
             +title({tag: "h2", text: "WHY CHOOSE US"}).title--h2
             p Why Choose Us&nbsp;for Your VR&nbsp;Needs
-          .choose__content
-            .choose__text
-              p VRNas is&nbsp;a&nbsp;leading provider of&nbsp;VR services for education, entertainment, architecture, and events. Our mission is&nbsp;to&nbsp;bring the power of&nbsp;virtual reality to&nbsp;everyone, allowing them to&nbsp;explore new worlds, learn in&nbsp;new ways, and experience events in&nbsp;a&nbsp;whole new light.
+          .choose__accordion.accordion(data-accordion="parent" data-single)
             ul.choose__list
               each item in list
                 li.choose__item
-                  p!=item.text
+                  .accordion__element(data-accordion="element")
+                    .choose__button
+                      +btn({text: item.buttonText})(aria-label="открывает элемент аккордиона").accordion__button(data-accordion="button")
+                      span
+                        +icon("icon-arrow", 7, 4)
+                    .accordion__content(data-accordion="content")
+                      .accordion__wrapper
+                        p!=item.text
         .choose__decor
           .choose__decor-man(data-parallax-mouse, data-movement="50")
             +picture("content", "choose-man", "png", 1029, 785, "мужчина в очках виртуальной реальности")
