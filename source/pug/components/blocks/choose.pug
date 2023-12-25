@@ -1,0 +1,27 @@
+mixin choose(data = {})
+  -
+    const list = [
+      {text: "Cutting-Edge Technology"},
+      {text: "Versatile Applications"},
+      {text: "Affordable and Accessible"},
+    ]
+
+  .choose
+    .container
+      .choose__wrapper
+        .choose__box
+          .choose__inner
+            +title({tag: "h2", text: "WHY CHOOSE US"}).title--h2
+            p Why Choose Us&nbsp;for Your VR&nbsp;Needs
+          .choose__content
+            .choose__text
+              p VRNas is&nbsp;a&nbsp;leading provider of&nbsp;VR services for education, entertainment, architecture, and events. Our mission is&nbsp;to&nbsp;bring the power of&nbsp;virtual reality to&nbsp;everyone, allowing them to&nbsp;explore new worlds, learn in&nbsp;new ways, and experience events in&nbsp;a&nbsp;whole new light.
+            ul.choose__list
+              each item in list
+                li.choose__item
+                  p!=item.text
+        .choose__decor
+          .choose__decor-man(data-parallax-mouse, data-movement="50")
+            +picture("content", "choose-man", "png", 1029, 785, "мужчина в очках виртуальной реальности")
+          .choose__decor-glasses(data-parallax-mouse, data-movement="20")
+            +picture("content", "choose-glasses", "png", 196, 128, "очки виртуальной реальности")
