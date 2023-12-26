@@ -1,6 +1,10 @@
 .accordion {
-  //max-width: 500px;
+  max-width: 548px;
   margin: 0 auto 50px auto;
+
+  @include vp-1023 {
+    max-width: 100%;
+  }
 
   & & {
     width: 90%;
@@ -9,10 +13,15 @@
 
   &__element {
     margin-bottom: 48px;
+      svg {
+        transition: transform $trans-default;
+      }
   }
 
-  &__element.is-active > &__button {
-    opacity: 0.5;
+  &__element.is-active {
+      svg {
+        transform: rotate(180deg);
+      }
   }
 
   &__button {
@@ -22,11 +31,17 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
     text-transform: capitalize;
     background: transparent;
   }
 
   &__wrapper {
     padding-top: 12px;
+
+    p {
+      color: $color-light-grey;
+    }
   }
 }

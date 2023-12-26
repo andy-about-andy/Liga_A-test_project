@@ -28,6 +28,11 @@
 
   &__box {
     margin-right: auto;
+
+    @include vp-1023 {
+      margin: 0;
+      order: 1;
+    }
   }
 
   &__inner {
@@ -93,7 +98,7 @@
     height: 785px;
     position: absolute;
     top: -60px;
-    right: -30%;
+    right: -50%;
 
     svg,
     img {
@@ -102,7 +107,7 @@
     }
 
     @include vp-1279 {
-      right: -45%;
+      right: -78%;
     }
 
     @include vp-1023 {
@@ -113,7 +118,7 @@
     @include vp-767 {
       width: 774px;
       height: 591px;
-      right: -81%;
+      right: -83%;
     }
   }
 
@@ -122,7 +127,7 @@
     height: 128px;
     position: absolute;
     top: 520px;
-    right: 12%;
+    right: 1%;
 
     svg,
     img {
@@ -131,7 +136,7 @@
     }
 
     @include vp-1279 {
-      right: 15%;
+      right: -15%;
     }
 
     @include vp-1023 {
