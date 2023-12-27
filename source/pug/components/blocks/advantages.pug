@@ -1,6 +1,24 @@
 mixin advantages(data = {})
   - const textName = data.textName ? data.textName : false
   - const title = data.title ? data.title : false
+  -
+    const card = [
+      {
+        icon: {name: "icon-expertise", width: "69", height: "45", gradient: true},
+        title: "Expertise",
+        text: "Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;passion for&nbsp;VR and a&nbsp;commitment to&nbsp;delivering quality work and give the best service",
+      },
+      {
+        icon: {name: "icon-customization", width: "64", height: "60", gradient: true},
+        title: "Customization",
+        text: "Every client is&nbsp;unique, and we&nbsp;believe every&nbsp;VR experience should be&nbsp;too. We&rsquo;ll work with you to&nbsp;create a&nbsp;customized solution that meets your specific needs and goals",
+      },
+      {
+        icon: {name: "icon-service", width: "60", height: "64", gradient: true},
+        title: "Service",
+        text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery. Our goal is&nbsp;to&nbsp;ensure you&rsquo;re satisfied with every aspect of&nbsp;your&nbsp;VR experience.",
+      },
+    ]
 
   .advantages
     .container
@@ -9,20 +27,10 @@ mixin advantages(data = {})
           +title({tag: "h2", text: "WHY CHOOSE US"}).title--h2
         if textName
           p Empowering Your Virtual<br>Reality Experience
-      .advantages__content
-        +privilege-card({
-          icon: {name: "icon-expertise", width: "69", height: "45", gradient: true},
-          title: "Expertise",
-          text: "Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;passion for&nbsp;VR and a&nbsp;commitment to&nbsp;delivering quality work and give the best service",
-        }).advantages__content-card
-        +privilege-card({
-          icon: {name: "icon-customization", width: "64", height: "60", gradient: true},
-          title: "Customization",
-          text: "Every client is&nbsp;unique, and we&nbsp;believe every&nbsp;VR experience should be&nbsp;too. We&rsquo;ll work with you to&nbsp;create a&nbsp;customized solution that meets your specific needs and goals",
-        }).advantages__content-card
-        +privilege-card({
-          icon: {name: "icon-service", width: "60", height: "64", gradient: true},
-          title: "Service",
-          text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery. Our goal is&nbsp;to&nbsp;ensure you&rsquo;re satisfied with every aspect of&nbsp;your&nbsp;VR experience.",
-        }).advantages__content-card
+      ul.advantages__list
+        each item in card
+          li.advantages__item
+            +privilege-card({
+              icon: item.icon, title: item.title, text: item.text
+            }).advantages__content-card
     block

@@ -1,0 +1,79 @@
+.video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  margin-bottom: 48px;
+  padding-top: 43.50%;
+  cursor: pointer;
+
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transition: opacity $trans-default;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  }
+
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    border-radius: 50%;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    transition: opacity $trans-default, backdrop-filter $trans-default;
+
+    @include vp-1023 {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include hover-focus {
+      backdrop-filter: blur();
+    }
+
+    span {
+      border-radius: 50%;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      backdrop-filter: blur(8px);
+    }
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .is-play &__button,
+  .is-play &__cover {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

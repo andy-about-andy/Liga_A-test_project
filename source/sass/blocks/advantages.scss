@@ -24,11 +24,13 @@
     }
   }
 
-  &__content {
+  &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
+    margin: 0;
     padding: 42px 63px 53px 65px;
+    list-style-type: none;
     background-color: $color-second-black;
     border: 1px solid;
     border-image-slice: 1;

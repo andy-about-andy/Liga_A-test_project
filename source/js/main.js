@@ -7,6 +7,7 @@ import {StickyHeader} from './modules/burger/sticky-header';
 import {initScrollTo} from './modules/init-scroll-to';
 import {initParallax} from './modules/init-parallax';
 import {initAccordions} from './modules/accordion/init-accordion';
+import {initPlayer} from './modules/init-player';
 
 // ---------------------------------
 
@@ -37,6 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const stickyHeader = new StickyHeader();
     stickyHeader.init();
     initAccordions();
+    initPlayer();
   });
 });
 

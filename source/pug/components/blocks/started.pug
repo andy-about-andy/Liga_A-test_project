@@ -1,0 +1,27 @@
+mixin started(data = {})
+
+  .started
+    .container
+      .started__wrapper
+        .started__inner
+          +title({tag: "h2", text: "HOW TO GET STARTED"}).title--h2
+          p Bringing Your Virtual Reality <br>Dreams to Life
+        .started__content
+          +video({
+            image: {
+              path: "content",
+              image: "video-posterimage",
+              format: "jpg",
+              width: "1200",
+              height: "522",
+              altText: "Постер-заглушка на видео",
+            },
+            video: {
+              src: "./video/video.mp4",
+              dataSrc: "./video/video.mp4"
+            }
+          })
+          .started__button
+            +btn({href: "#", text: "discover more"})(aria-label="Переход по ссылке")
+        .started__decor-light
+          +icon("icon-decor-video-light", 874, 619, true)

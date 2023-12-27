@@ -13,4 +13,4 @@ mixin btn(options = {})
   #{tag}.btn(href=href, target=target, rel=rel, type=type, data-move-to=scrollTo, data-offset=offset, data-index=index)&attributes(attributes)!= text
     if icon
       span.btn__icon
-        +icon(icon.name, icon.width, icon.height)
+        +icon(icon.name, icon.width, icon.height, icon.gradient)
