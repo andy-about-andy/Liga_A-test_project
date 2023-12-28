@@ -4,9 +4,11 @@ mixin privilege-card(data = {})
   - const text = data.text || "";
 
   .privilege-card&attributes(attributes)
-    span.privilege-card__icon
-      +icon(name, width, height, gradient)
-    +title({text: title}).title--h3
-    .privilege-card__text
-      p!=text
+    .privilege-card__box
+      span.privilege-card__icon
+        +icon(name, width, height, gradient)
+    .privilege-card__inner
+      +title({text: title}).title--h3
+      .privilege-card__text
+        p!=text
     block

@@ -1,0 +1,234 @@
+.price {
+  &__wrapper {
+    position: relative;
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__inner {
+    margin-top: 81px;
+
+    .title--h2 {
+      margin: 0 0 12px;
+    }
+
+    p {
+      margin: 0 0 12px;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 58px;
+      letter-spacing: -0.24px;
+
+      @include vp-1023 {
+        margin: 0 0 32px;
+        font-size: 32px;
+        line-height: normal;
+        letter-spacing: -0.16px;
+      }
+    }
+  }
+
+  &__text {
+    p {
+      margin: 0 0 24px;
+      font-weight: 300;
+      color: $color-light-grey;
+    }
+  }
+
+  &__description {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 40px;
+    padding: 55px 0 0 42px;
+    background-color: $color-second-black;
+    opacity: 0.81;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+
+    @include vp-1279 {
+      grid-template-columns: 1fr 280px;
+      padding: 32px 0 0 22px;
+    }
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      gap: 85px;
+      padding: 32px 22px 0 22px;
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 118px 55px 0;
+    padding: 0;
+    list-style-type: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -14px;
+      right: -118px;
+      width: 1px;
+      height: calc(100% - 85px);
+      background-color: $color-default-white;
+      opacity: 0.1;
+    }
+
+    @include vp-1279 {
+      margin: 0 10px 55px 0;
+
+      &::after {
+        right: -10px;
+      }
+    }
+
+    @include vp-1023 {
+      margin: 0;
+
+      &::after {
+        top: inherit;
+        bottom: -48px;
+        right: 0;
+        width: 100%;
+        height: 1px;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    span {
+      width: 16px;
+      height: 16px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .privilege-card__box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 42px;
+      height: 42px;
+      background: $color-accent-main border-box;
+      border-radius: 50%;
+    }
+
+    .privilege-card__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 39px;
+      height: 39px;
+      background-color: $color-default-black;
+      border-radius: 50%;
+    }
+
+    .privilege-card {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 16px;
+    }
+
+    .privilege-card__inner p {
+      margin: 0;
+    }
+
+    .privilege-card__text p {
+      margin-top: 12px;
+    }
+  }
+
+  &__image {
+    margin-top: auto;
+    padding-top: 12px;
+
+    svg,
+    img {
+      width: 100%;
+    }
+
+    @include vp-1023 {
+      margin: 0 -22px 0 252px;
+      padding: 0;
+    }
+
+    @include vp-767 {
+      margin: 0 -22px 0 142px;
+    }
+
+    @include vp-374 {
+      margin: 0 -22px 0 42px;
+    }
+  }
+
+  &__decor-light {
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: -20%;
+    z-index: -1;
+
+    @include vp-1279 {
+      top: 150px;
+      right: -27%;
+    }
+
+    @include vp-1023 {
+      top: auto;
+      bottom: 150px;
+      right: -27%;
+    }
+
+    @include vp-767 {
+      display: none;    }
+  }
+
+  .price-card {
+    position: absolute;
+    bottom: -48px;
+    right: 172px;
+
+    @include vp-1279 {
+      bottom: -60px;
+      right: 8px;
+    }
+
+    @include vp-1023 {
+      bottom: -60px;
+      right: 35%;
+    }
+
+    @include vp-767 {
+      bottom: -88px;
+      right: 15%;
+      left: 5%;
+    }
+
+    @include vp-374 {
+      width: 270px;
+      padding: 20px 40px 18px;
+    }
+  }
+}
