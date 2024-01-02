@@ -1,0 +1,19 @@
+mixin form(data = {})
+  .form
+    .container
+      .form__wrapper
+        +title({tag: "h2", text: "Subscribe to&nbsp;our newsletter for latest updates"}).form__title
+        .form__inner
+          form(method="post")
+            +custom-input({
+              inputType: "email",
+              inputPlaceholder: "Enter your email address",
+              inputName: "user-mail",
+            })
+              span
+                +icon("icon-message", 24, 24)
+            +btn({tag: "button", type: "submit", icon:
+              {
+                name: "icon-send", width: "17", height: "17"
+              }
+            })(aria-label="отрпавить вашу почту").btn--icon

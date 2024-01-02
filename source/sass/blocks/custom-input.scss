@@ -1,13 +1,20 @@
 .custom-input,
 .custom-textarea {
   position: relative;
-
   display: flex;
-  width: 530px;
-  padding: 14px 0 28px 0;
+  width: 365px;
+  height: 56px;
+  padding: 0;
+
+  @media screen and (max-width: 1279px) {
+    width: 330px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    width: 365px;
+  }
 
   @media screen and (max-width: 767px) {
-    padding: 4px 0 48px 0;
     width: 100%;
   }
 
@@ -16,28 +23,42 @@
     align-items: center;
     width: 100%;
 
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
+    span {
+      position: absolute;
+      top: 50%;
+      left: 14px;
+      width: 24px;
+      height: 24px;
+      transform: translate(0, -50%);
+
+      @media screen and (max-width: 374px) {
+        left: 6px;
+      }
     }
 
     input,
     textarea {
       flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
-
-      border: 2px solid rgba(#000000, 0.2);
+      max-width: 520px;
+      width: 100%;
+      min-width: 254px;
+      min-height: 56px;
+      padding: 14px 70px 14px 46px;
+      background-color: rgba(255, 255, 255, 0.07);
+      border: 2px solid $color-transparent;
       border-radius: 5px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      color: $color-default-white;
       outline: none;
+      transition: border $trans-default;
 
-      transition: border 0.3s ease;
-
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
+      &::placeholder {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        color: $color-default-white;
       }
 
       &:hover {
@@ -46,6 +67,21 @@
 
       &:focus {
         border: 2px solid rgba(#000000, 0.8);
+      }
+
+      @media screen and (max-width: 767px) {
+        max-width: 100%;
+      }
+
+      @media screen and (max-width: 374px) {
+        padding: 14px 58px 14px 32px;
+        font-size: 14px;
+        line-height: 20px;
+
+        &::placeholder {
+          font-size: 14px;
+          line-height: 20px;
+        }
       }
     }
   }
