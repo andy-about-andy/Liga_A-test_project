@@ -8,6 +8,7 @@ import {initScrollTo} from './modules/init-scroll-to';
 import {initParallax} from './modules/init-parallax';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {initPlayer} from './modules/init-player';
+import {initGenerateRandomScale} from './modules/init-generate-random-scale';
 
 // ---------------------------------
 
@@ -39,6 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
     stickyHeader.init();
     initAccordions();
     initPlayer();
+    // initGenerateRandomScale();
   });
 });
 

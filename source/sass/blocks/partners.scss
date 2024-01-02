@@ -1,0 +1,229 @@
+.partners {
+  &__inner {
+    text-align: center;
+
+    .title--h2 {
+      margin: 0 0 12px;
+    }
+
+    p {
+      margin: 0 0 54px;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 58px;
+      letter-spacing: -0.24px;
+
+      @include vp-1023 {
+        margin: 0 0 32px;
+        font-size: 32px;
+        line-height: normal;
+        letter-spacing: -0.16px;
+      }
+    }
+  }
+
+  .container {
+    @include vp-1023 {
+      padding: 0;
+    }
+  }
+
+  &__inner-content {
+    position: relative;
+    max-width: 1082px;
+    max-height: 887px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: minmax(150px, 1fr) 42.5%;
+    max-width: 102px;
+    width: 100%;
+    height: 100%;
+    margin: 18px auto 0;
+
+    @include vp-767 {
+      margin: 10px auto 0;
+    }
+
+    @include vp-374 {
+      margin: 5px auto 0;
+    }
+  }
+
+  &__list {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform-origin: 50% 100%;
+
+    &--1 {
+      transform: rotate(-85deg);
+
+      .partners__box::before {
+        transform: rotate(85deg);
+      }
+
+      .partners__box svg {
+        transform: rotate(85deg);
+        top: 0%;
+        left: 0%;
+        padding: 6px;
+      }
+    }
+
+    &--2 {
+      transform: rotate(-60deg);
+
+      .partners__box::before {
+        transform: rotate(60deg);
+      }
+
+      .partners__box svg {
+        transform: rotate(60deg);
+        top: 0%;
+        left: 0%;
+      }
+    }
+
+    &--3 {
+      transform: rotate(-27deg);
+
+      .partners__box::before {
+        transform: rotate(27deg);
+      }
+
+      .partners__box svg {
+        transform: rotate(27deg);
+        top: 0%;
+        left: 0%;
+      }
+    }
+
+    &--5 {
+      transform: rotate(27deg);
+
+      .partners__box::before {
+        transform: rotate(-27deg);
+      }
+
+      .partners__box svg {
+        transform: rotate(-27deg);
+        top: 0%;
+        left: 0%;
+      }
+    }
+
+    &--6 {
+      transform: rotate(60deg);
+
+      .partners__box::before {
+        transform: rotate(-60deg);
+      }
+
+      .partners__box svg {
+        transform: rotate(-60deg);
+        top: 0%;
+        left: 0%;
+      }
+    }
+
+    &--7 {
+      transform: rotate(85deg);
+
+      .partners__box::before {
+        transform: rotate(-85deg);
+      }
+
+      .partners__box svg {
+        transform: rotate(-85deg);
+        top: 0%;
+        left: 0%;
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    max-width: 102px;
+    max-height: 102px;
+    width: 100%;
+    padding-top: 100%;
+    background-color: $color-second-black;
+    opacity: 0.8;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      padding: 1px;
+      background: linear-gradient(90deg,rgba(255,255,255,.3),rgba(255,255,255,0));
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+    }
+
+    svg,
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      padding: 8px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__decor-man {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto 0 15px;
+
+    @include vp-1023 {
+      margin: 0 auto 0 10px;
+    }
+
+    @include vp-767 {
+      margin: 0 auto 0 5px;
+    }
+  }
+
+  &__wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 43.65% 9.44% 46.91%;
+    max-width: 1082px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__stub {
+    width: 100%;
+    height: 250px;
+  }
+}
