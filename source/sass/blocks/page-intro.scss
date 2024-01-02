@@ -29,34 +29,6 @@
     }
   }
 
-  &__decor {
-    z-index: -1;
-    width: 1120px;
-    height: 716px;
-    position: absolute;
-    top: -455px;
-    right: -350px;
-
-    svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    @include vp-1023 {
-      width: 655px;
-      height: 419px;
-      top: -330px;
-      right: -130px;
-    }
-
-    @include vp-767 {
-      width: 655px;
-      height: 419px;
-      top: -295px;
-      right: -210px;
-    }
-  }
-
   &__decor-line {
     z-index: -2;
     width: 2682px;

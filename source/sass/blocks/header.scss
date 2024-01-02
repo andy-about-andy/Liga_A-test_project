@@ -1,24 +1,52 @@
 .header {
   width: 100%;
-  padding: 31px 0;
+  // padding: 31px 0;
   background-color: $color-transparent;
-  position: sticky;
-  top: 0;
+  // top: 0;
   z-index: 50;
 
-  &--sticky {
+  &__box--sticky {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-  }
+    padding: 31px 0;
 
-  @include vp-767 {
-    padding: 43px 0;
-  }
+    @include vp-767 {
+      padding: 43px 0;
+    }
 
-  &.is-hidden {
-    backdrop-filter: blur(5px);
+    &.is-hidden {
+      backdrop-filter: blur(5px);
+    }
+
+    &.is-open {
+      .header__menu {
+        @include vp-1023 {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      .header__item {
+        @include vp-1023 {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      .header__button {
+        @include vp-1023 {
+          &--icon-open {
+            opacity: 0;
+          }
+
+          &--icon-close {
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
 
   &__wrapper {
@@ -142,6 +170,35 @@
     // }
   }
 
+  &__decor {
+    z-index: -1;
+    width: 1120px;
+    height: 716px;
+    position: absolute;
+    top: -300px;
+    right: -350px;
+    overflow: hidden;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1023 {
+      width: 655px;
+      height: 419px;
+      top: -180px;
+      right: -170px;
+    }
+
+    @include vp-767 {
+      width: 655px;
+      height: 419px;
+      top: -180px;
+      right: -205px;
+    }
+  }
+
   &__menu {
     display: flex;
     justify-content: space-between;
@@ -168,34 +225,6 @@
       background-color: $color-default-black;
       visibility: hidden;
       opacity: 0;
-    }
-  }
-
-  &.is-open {
-    .header__menu {
-      @include vp-1023 {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-
-    .header__item {
-      @include vp-1023 {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-
-    .header__button {
-      @include vp-1023 {
-        &--icon-open {
-          opacity: 0;
-        }
-
-        &--icon-close {
-          opacity: 1;
-        }
-      }
     }
   }
 }

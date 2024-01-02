@@ -28,20 +28,23 @@ mixin header(headerMods, currentUrl)
       text: "Contact&nbsp;us",
     }
 
-  header.header.header--sticky(class=headerMods, data-header="sticky")
-    .container
-      .header__wrapper
-        if(currentUrl === "index.html")
-          +logo({header: true})
-        else
-          +logo({header: true, href: "index.html"})
-        nav.header__nav
-          button.btn--with-border.header__button(type="button", aria-label="Открыть меню", data-burger)
-            +icon("icon-burger-open", 16, 16).header__button--icon-open
-            +icon("icon-burger-close", 16, 16).header__button--icon-close
-          .header__menu
-            ul.header__list
-              each link in headerLinks
-                li.header__item
-                  +link({href: link.href, label: link.label, isExternal: false, text: link.text, isHeader: true})(data-close-menu)
-            +btn({text: button.text, scrollTo: button.href})(aria-label="Переход к разделу контакты", data-close-menu).btn--with-border.btn--capitalize
+  header.header(class=headerMods)
+    .header__box.header__box--sticky(data-header="sticky")
+      .container
+        .header__wrapper
+          if(currentUrl === "index.html")
+            +logo({header: true})
+          else
+            +logo({header: true, href: "index.html"})
+          nav.header__nav
+            button.btn--with-border.header__button(type="button", aria-label="Открыть меню", data-burger)
+              +icon("icon-burger-open", 16, 16).header__button--icon-open
+              +icon("icon-burger-close", 16, 16).header__button--icon-close
+            .header__menu
+              ul.header__list
+                each link in headerLinks
+                  li.header__item
+                    +link({href: link.href, label: link.label, isExternal: false, text: link.text, isHeader: true})(data-close-menu)
+              +btn({text: button.text, scrollTo: button.href})(aria-label="Переход к разделу контакты", data-close-menu).btn--with-border.btn--capitalize
+    .header__decor
+      +icon("icon-decor-header", 1120, 716, true)
