@@ -7,7 +7,7 @@ block variables
   - const headerMods = ""
   - const hasFooter = true
   - const footerMods = ""
-  - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const currentUrl = "" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
 block main
   main
@@ -15,18 +15,14 @@ block main
     //- все блоки вставляются из папки pug/components/blocks
 
     +page-content()
+      //- +page-section()
+      //-   +page-intro()
       +page-section()
-        +page-intro({advantages: true})
+        +about-page-about()
       +page-section()
-        +about-page-main()
+        +advantages({textName: true, title: true})
       +page-section()
-        +service()
-      +page-section()
-        +choose()
-      +page-section()
-        +started()
-      +page-section()
-        +price()
+        +choose().choose--page-about
       +page-section()
         +partners()
       +page-section()

@@ -28,7 +28,7 @@ mixin choose(data = {})
                 li.choose__item
                   .accordion__element(data-accordion="element")
                     .choose__button
-                      +btn({text: item.buttonText})(aria-label="открывает элемент аккордиона").accordion__button(data-accordion="button")
+                      +btn({text: item.buttonText})(aria-label="открывает элемент аккордиона", data-accordion="button").accordion__button
                       span
                         +icon("icon-arrow", 7, 4)
                     .accordion__content(data-accordion="content")

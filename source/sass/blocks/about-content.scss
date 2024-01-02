@@ -1,4 +1,4 @@
-.about {
+.about-content {
 
   &__wrapper {
     display: grid;
@@ -149,6 +149,61 @@
       height: 96px;
       top: 430px;
       right: -20%;
+    }
+  }
+
+  &--page-about {
+    .about-content__wrapper {
+      grid-template-columns: 52% 1fr;
+    }
+
+    .about-content__decor {
+      order: 1;
+    }
+
+    .about-content__decor-man {
+      width: 1030px;
+      height: 786px;
+      top: -60px;
+      left: -15%;
+
+      @include vp-1023 {
+        left: -10%;
+      }
+
+      @include vp-767 {
+        width: 885px;
+        height: 693px;
+        left: -81%;
+      }
+
+      @include vp-374 {
+        width: 774px;
+        height: 591px;
+        left: -60%;
+      }
+    }
+
+    .about-content__decor-glasses {
+      left: 18%;
+
+      @include vp-1023 {
+        left: 14%;
+      }
+
+      @include vp-767 {
+        width: 155px;
+        height: 101px;
+        top: 455px;
+        left: -21%;
+      }
+
+      @include vp-374 {
+        width: 147px;
+        height: 96px;
+        top: 410px;
+        left: -8%;
+      }
     }
   }
 }

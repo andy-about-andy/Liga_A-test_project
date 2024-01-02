@@ -2,11 +2,11 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "#",
+        href: "index.html",
         text: "Home"
       },
       {
-        href: "#",
+        href: "about.html",
         text: "About&nbsp;us"
       },
       {
@@ -28,7 +28,7 @@ mixin header(headerMods, currentUrl)
       text: "Contact&nbsp;us",
     }
 
-  header.header.header--sticky(class=headerMods)(data-header="sticky")
+  header.header.header--sticky(class=headerMods, data-header="sticky")
     .container
       .header__wrapper
         if(currentUrl === "index.html")
@@ -36,7 +36,7 @@ mixin header(headerMods, currentUrl)
         else
           +logo({header: true, href: "index.html"})
         nav.header__nav
-          button.btn--with-border.header__button(type="button", aria-label="Открыть меню")(data-burger)
+          button.btn--with-border.header__button(type="button", aria-label="Открыть меню", data-burger)
             +icon("icon-burger-open", 16, 16).header__button--icon-open
             +icon("icon-burger-close", 16, 16).header__button--icon-close
           .header__menu
