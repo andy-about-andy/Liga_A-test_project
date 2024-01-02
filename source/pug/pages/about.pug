@@ -15,8 +15,10 @@ block main
     //- все блоки вставляются из папки pug/components/blocks
 
     +page-content()
-      //- +page-section()
-      //-   +page-intro()
+      +page-section()
+        //- +breadcrumbs(
+        //-   {list: [{text: "Home", href: "index.html"}, {text: "Поиск"}, {text: "Home", href: "index.html"}]}
+        //- )
       +page-section()
         +about-page-about()
       +page-section()
