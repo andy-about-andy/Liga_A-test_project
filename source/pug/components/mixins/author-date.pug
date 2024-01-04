@@ -1,0 +1,8 @@
+mixin author-date(data = {})
+  - const authorName = data.authorName || "";
+  - const date = data.date || "";
+
+  .author-date
+    if authorName
+      p!=authorName + "&nbsp;|"
+    +date({text: date})
