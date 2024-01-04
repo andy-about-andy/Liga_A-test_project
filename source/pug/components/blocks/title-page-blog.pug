@@ -1,0 +1,9 @@
+mixin title-page-blog(data = {})
+  .title-page-about
+    .container
+      .title-page-about__wrapper
+        +breadcrumbs(
+          {list:
+            [{text: "Home", href: "index.html"}, {text: "Blog", href: "#"}, {text: "Bringing Designs to&nbsp;Life: How VR&nbsp;is&nbsp;Changing Architecture"}]
+          }
+        )
