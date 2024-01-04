@@ -1,12 +1,17 @@
 mixin title-page-about(data = {})
+  -
+    const title = {
+      text: "About Us"
+    }
+
   .title-page-about
     .container
-      .title-page-about__wrapper
-        +title({tag: "h1", text: "About Us"}).title--h1
-        .title-page-about__decor-element
-          +icon("decor-element", 669, 367, true)
+      +title-page({title})
         +breadcrumbs(
           {list:
-            [{text: "Home", href: "index.html"}, {text: "About us"}]
+            [
+              {text: "Home", href: "index.html"},
+              {text: "About us"},
+            ]
           }
         )

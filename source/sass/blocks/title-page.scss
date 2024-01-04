@@ -1,4 +1,4 @@
-.title-page-about {
+.title-page {
   &__wrapper {
     position: relative;
     display: flex;
@@ -28,6 +28,18 @@
 
     @include vp-767 {
       margin-bottom: 27px;;
+    }
+  }
+
+  &--no-line {
+    .title-page__wrapper::before {
+      content: none;
+    }
+
+    .title-page__wrapper {
+      align-items: start;
+      padding: 0;
+      margin-bottom: 53px;
     }
   }
 }

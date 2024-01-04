@@ -1,9 +1,13 @@
 mixin title-page-blog(data = {})
-  .title-page-about
+  .title-page-blog
     .container
-      .title-page-about__wrapper
+      +title-page().title-page--no-line
         +breadcrumbs(
           {list:
-            [{text: "Home", href: "index.html"}, {text: "Blog", href: "#"}, {text: "Bringing Designs to&nbsp;Life: How VR&nbsp;is&nbsp;Changing Architecture"}]
+            [
+              {text: "Home", href: "index.html"},
+              {text: "Blog", href: "#"},
+              {text: "Bringing Designs to&nbsp;Life: How VR&nbsp;is&nbsp;Changing Architecture"},
+            ]
           }
         )
