@@ -1,0 +1,37 @@
+.team-card {
+  position: relative;
+  max-width: 293px;
+  min-width: 155px;
+  width: 100%;
+  padding: 9px;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+  background: rgba(37, 37, 50, 0.60);
+  transition: border-image-source $trans-default;
+
+
+  &__inner {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    p {
+      margin: 0;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+
+  &__job-title {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $color-spun-pearl;
+  }
+
+  @include hover-focus {
+    border-image-source: $color-accent-main;
+  }
+}
