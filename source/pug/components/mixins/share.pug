@@ -1,0 +1,11 @@
+mixin share(data = {})
+  - const title = data.title || "";
+  - const shareLink = data.shareLink || "";
+
+  .share&attributes(attributes)
+    +title({tag: "h3", text: title}).title--h3.title--600
+    ul.share__list
+      each item in shareLink
+          li.share__item
+            a.share__link(href=item.href, rel="nofollow noopener noreferrer", aria-label="Переход на наши социальные сети")
+              +icon(item.iconName, item.iconWidth, item.iconHeight).share__icon
