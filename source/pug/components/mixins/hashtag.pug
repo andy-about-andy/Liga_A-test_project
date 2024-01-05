@@ -1,0 +1,16 @@
+mixin hashtag(data = {})
+  - const hashtags = data.hashtags || "";
+
+  .hashtag&attributes(attributes)
+    if data.postTags
+      +title({tag: "h3", text: "Post Tags :"}).title--h3.title--post-tags
+      ul.hashtag__list
+        each item in hashtags
+            li.hashtag__item
+              span!="#" + item.text + "&nbsp;"
+    else
+      +title({tag: "h3", text: "Popular Hashtag"}).title--h3.title--popular-hashtag
+      ul.hashtag__list.hashtag__list--popular
+        each item in hashtags
+          li.hashtag__item
+            span!="#" + item.text

@@ -1,0 +1,45 @@
+.hashtag {
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background: $color-accent-main;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__list--popular {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: $color-default-white;
+
+    .hashtag__item {
+      padding: 1.5px 7px;
+      background: rgba(255, 255, 255, 0.30);
+      border-radius: 11.518px;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    font-weight: 300;
+  }
+
+  .title--post-tags {
+    margin-bottom: 12px;
+  }
+
+  .title--popular-hashtag {
+    margin-bottom: 24px;
+  }
+}
