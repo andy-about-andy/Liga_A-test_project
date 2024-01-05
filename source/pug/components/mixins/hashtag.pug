@@ -10,7 +10,7 @@ mixin hashtag(data = {})
             li.hashtag__item
               span!="#" + item.text + "&nbsp;"
     else
-      +title({tag: "h3", text: title}).title--h3.title--popular-hashtag
+      +title({tag: "h3", text: title}).title--h3.title--500
       ul.hashtag__list.hashtag__list--popular
         each item in hashtags
           li.hashtag__item

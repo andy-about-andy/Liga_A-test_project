@@ -129,6 +129,87 @@ mixin blog-page(data = {})
       ],
     }
 
+    const sidebar = {
+      title: "Recent Article",
+      sidebarContent: [
+        {
+          path: "content",
+          image: "sidebar-content-1",
+          format: "jpg",
+          width: "102",
+          height: "65",
+          altText: "очки виртуальной реальности",
+          badge: "VR Education",
+          text: "The Future of&nbsp;Education: How VR&nbsp;is&nbsp;Revolutionizing the Classroom"
+        },
+        {
+          path: "content",
+          image: "sidebar-content-2",
+          format: "jpg",
+          width: "102",
+          height: "65",
+          altText: "мужчина в очках виртуальной реальности",
+          badge: "VR Architecture",
+          text: "Bringing Designs to&nbsp;Life: How VR&nbsp;is&nbsp;Changing Architecture"
+        },
+        {
+          path: "content",
+          image: "sidebar-content-3",
+          format: "jpg",
+          width: "102",
+          height: "65",
+          altText: "игра в очках виртуальной реальности",
+          badge: "VR Entertainment ",
+          text: "Making Events Memorable: The Power of&nbsp;VR for Corporate and Special Occasions"
+        },
+        {
+          path: "content",
+          image: "sidebar-content-4",
+          format: "jpg",
+          width: "102",
+          height: "65",
+          altText: "очки виртуальной реальности",
+          badge: "VR Event",
+          text: "Exploring New Worlds: The Benefits of&nbsp;VR&nbsp;Travel"
+        },
+      ]
+    }
+
+    const popularHashtag = {
+      title: "Popular Hashtag",
+      hashtags: [
+        {
+          text: "VRDesign"
+        },
+        {
+          text: "ArchitectureInnovation"
+        },
+        {
+          text: "DesignThinking"
+        },
+        {
+          text: "VirtualRealityArchitecture"
+        },
+        {
+          text: "BringingDesignsToLife"
+        },
+        {
+          text: "DesignVisualization"
+        },
+        {
+          text: "ArchitecturalVisualization"
+        },
+        {
+          text: "RevolutionizingArchitecture"
+        },
+        {
+          text: "BuildingInVR"
+        },
+      ],
+    }
+
   .blog-page
     .container
-      +blog-content({badge, title, authorDate, picture, texts, pictureAdd, textsAdd, hashtag, share})
+      .blog-page__wrapper
+        +blog-content({badge, title, authorDate, picture, texts, pictureAdd, textsAdd, hashtag, share})
+        +sidebar({sidebar, popularHashtag})

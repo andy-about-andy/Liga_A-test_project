@@ -1,0 +1,19 @@
+mixin sidebar(data = {})
+  - const {title, sidebarContent} = data.sidebar;
+  - const popularHashtag = data.popularHashtag;
+
+  aside.sidebar&attributes(attributes)
+    if title
+      +title({tag: "h3", text: title}).title--h3.title--500
+    ul.sidebar__list
+      each item in sidebarContent
+        li.sidebar__item
+          +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+          .sidebar__inner
+            +badge({text: item.badge})
+            .sidebar__text
+              p!=item.text
+    +hashtag({
+      title: popularHashtag.title,
+      hashtags: popularHashtag.hashtags,
+    })

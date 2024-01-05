@@ -1,0 +1,17 @@
+.blog-page {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 65.84% 1fr;
+    gap: 77px;
+
+    @include vp-1279 {
+      grid-template-columns: 61% 1fr;
+      gap: 50px;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      gap: 100px;
+    }
+  }
+}
