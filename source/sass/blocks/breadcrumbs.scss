@@ -23,6 +23,12 @@
 
       span {
         color: $color-light-grey;
+        display: -webkit-box;
+        text-align: left;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
 
