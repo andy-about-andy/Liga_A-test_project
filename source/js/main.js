@@ -9,7 +9,8 @@ import {initParallax} from './modules/init-parallax';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {initPlayer} from './modules/init-player';
 import {initGenerateRandomScale} from './modules/init-generate-random-scale';
-import {showMessage} from './modules/form-validate/show message';
+import {showMessage} from './modules/form-validate/show-message';
+import {initScrollTrigger} from './modules/init-scroll-trigger';
 
 // ---------------------------------
 
@@ -24,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   initParallax();
   initScrollTo();
+  initScrollTrigger();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -41,9 +43,8 @@ window.addEventListener('DOMContentLoaded', () => {
     stickyHeader.init();
     initAccordions();
     initPlayer();
-    // initGenerateRandomScale();
+    initGenerateRandomScale();
     showMessage();
-
   });
 });
 

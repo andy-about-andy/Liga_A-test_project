@@ -1,6 +1,6 @@
 const uploadForm = document.querySelector('.form');
-const messageSuccess = uploadForm.querySelector('.form__box-modal');
-const inputForm = uploadForm.querySelector('.form__box');
+const messageSuccess = document.querySelector('.form__box-modal');
+const inputForm = document.querySelector('.form__box');
 
 const sendData = async (onSuccess, body) => {
   try {
@@ -31,6 +31,9 @@ const onSuccessFormSend = () => {
 };
 
 const showMessage = () => {
+  if (!uploadForm) {
+    return;
+  }
   uploadForm.addEventListener('submit', (evt) => {
     evt.preventDefault();
 
