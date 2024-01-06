@@ -3,23 +3,28 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "index.html",
-        text: "Home"
+        text: "Home",
+        page: "index"
       },
       {
         href: "about.html",
-        text: "About&nbsp;us"
+        text: "About&nbsp;us",
+        page: "about"
       },
       {
         href: "#",
-        text: "Service"
+        text: "Service",
+        page: "service"
       },
       {
         href: "#",
-        text: "Pricing&nbsp;Plan"
+        text: "Pricing&nbsp;Plan",
+        page: "price"
       },
       {
         href: "blog.html",
-        text: "Blog"
+        text: "Blog",
+        page: "blog"
       },
     ]
 
@@ -44,7 +49,7 @@ mixin header(headerMods, currentUrl)
               ul.header__list
                 each link in headerLinks
                   li.header__item
-                    +link({href: link.href, label: link.label, isExternal: false, text: link.text, isHeader: true})(data-close-menu)
+                    +link({href: link.href, label: link.label, isExternal: false, text: link.text, isHeader: true})(data-close-menu, class=`header__item--${link.page}`)
               +btn({text: button.text, scrollTo: button.href})(aria-label="Переход к разделу контакты", data-close-menu).btn--with-border.btn--capitalize
     .header__decor
       +icon("icon-decor-header", 1120, 716, true)

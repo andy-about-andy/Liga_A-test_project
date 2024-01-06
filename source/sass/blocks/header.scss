@@ -13,6 +13,24 @@
     backdrop-filter: blur(5px);
   }
 
+  &--nav-index {
+    .header__item--index {
+      font-weight: 500;
+    }
+  }
+
+  &--nav-about {
+    .header__item--about {
+      font-weight: 500;
+    }
+  }
+
+  &--nav-blog {
+    .header__item--blog {
+      font-weight: 500;
+    }
+  }
+
   &__box--sticky {
     position: fixed;
     top: 0;
