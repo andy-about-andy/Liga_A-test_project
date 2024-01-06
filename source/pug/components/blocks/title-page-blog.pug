@@ -1,7 +1,13 @@
 mixin title-page-blog(data = {})
+  -
+    const title = {
+      text: "Blog",
+      hidden: true,
+    }
+
   .title-page-blog
     .container
-      +title-page().title-page--no-line
+      +title-page({title}).title-page--no-line
         +breadcrumbs(
           {list:
             [

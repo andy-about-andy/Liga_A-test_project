@@ -16,7 +16,7 @@ mixin blog-content(data = {})
 
   .blog-content&attributes(attributes)
     +badge({text: badge.text})
-    +title({tag: "h1", text: title.text}).title--h1
+    +title({tag: "h2", text: title.text}).title--h2
     +author-date({authorName: authorDate.authorName, date: authorDate.date})
     if image
       .blog-content__basic-img

@@ -3,12 +3,16 @@
     margin-bottom: 12px;
   }
 
-  .title--h1 {
+  .title--h2 {
     margin-bottom: 12px;
     font-size: 40px;
     font-weight: 600;
     line-height: 58px;
     letter-spacing: -0.2px;
+    text-transform: initial;
+    background: none;
+    color: $color-default-white;
+    -webkit-text-fill-color: initial;
 
     @include vp-767 {
       font-size: 32px;
