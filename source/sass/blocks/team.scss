@@ -4,6 +4,7 @@
   }
 
   &__inner {
+    max-width: 650px;
     margin-bottom: 46px;
 
     @include vp-1023 {
@@ -57,6 +58,7 @@
     right: 0;
 
     .btn {
+      max-width: 150px;
       background-color: rgba(255, 255, 255, 0.06);
     }
 
