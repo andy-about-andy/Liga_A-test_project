@@ -19,9 +19,14 @@
 
   &__text {
     p {
+      overflow: hidden;
+      display: -webkit-box;
       margin: 12px 0 0;
       font-size: 14px;
       color: $color-spun-pearl;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
     }
   }
 }

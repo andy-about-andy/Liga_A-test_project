@@ -38,7 +38,8 @@
     border-radius: 50%;
     background: transparent;
     transform: translate(-50%, -50%);
-    transition: opacity $trans-default, backdrop-filter $trans-default;
+    box-shadow: none;
+    transition: opacity $trans-default, box-shadow $trans-default;
 
     @include vp-1023 {
       width: 40px;
@@ -46,7 +47,8 @@
     }
 
     @include hover-focus {
-      backdrop-filter: blur();
+      opacity: 1;
+      box-shadow: 0 0 8px $color-accent-second;
     }
 
     span {

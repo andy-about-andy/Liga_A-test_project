@@ -18,7 +18,7 @@ mixin header(headerMods, currentUrl)
         text: "Pricing&nbsp;Plan"
       },
       {
-        href: "#",
+        href: "blog.html",
         text: "Blog"
       },
     ]
@@ -37,9 +37,9 @@ mixin header(headerMods, currentUrl)
           else
             +logo({header: true, href: "index.html"})
           nav.header__nav
-            button.btn--with-border.header__button(type="button", aria-label="Открыть меню", data-burger)
-              +icon("icon-burger-open", 16, 16).header__button--icon-open
-              +icon("icon-burger-close", 16, 16).header__button--icon-close
+            button.header__button(type="button", aria-label="Открыть меню", data-burger)
+              +icon("icon-burger-open", 16, 16).header__button-icon-open
+              +icon("icon-burger-close", 16, 16).header__button-icon-close
             .header__menu
               ul.header__list
                 each link in headerLinks

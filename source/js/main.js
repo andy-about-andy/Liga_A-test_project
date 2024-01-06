@@ -9,6 +9,7 @@ import {initParallax} from './modules/init-parallax';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {initPlayer} from './modules/init-player';
 import {initGenerateRandomScale} from './modules/init-generate-random-scale';
+import {showMessage} from './modules/form-validate/show message';
 
 // ---------------------------------
 
@@ -41,6 +42,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initAccordions();
     initPlayer();
     // initGenerateRandomScale();
+    showMessage();
+
   });
 });
 

@@ -1,19 +1,23 @@
 mixin form(data = {})
-  .form
+  .form&attributes(attributes)(data-form-validate, data-callback="base", data-parent-validate="base")
     .container
       .form__wrapper
         +title({tag: "h2", text: "Subscribe to&nbsp;our newsletter for latest updates"}).form__title
-        .form__inner
-          form(method="post")
-            +custom-input({
-              inputType: "email",
-              inputPlaceholder: "Enter your email address",
-              inputName: "user-mail",
-            })
-              span
-                +icon("icon-message", 24, 24)
-            +btn({tag: "button", type: "submit", icon:
-              {
-                name: "icon-send", width: "17", height: "17"
-              }
-            })(aria-label="отрпавить вашу почту").btn--icon
+        .form__inner(data-form-validate)
+          .form__box
+            form(method="post" action="https://echo.htmlacademy.ru/")
+              fieldset
+                +custom-input({
+                  inputType: "email",
+                  inputPlaceholder: "Enter your email address",
+                  inputName: "user-mail",
+                })(data-validate-type="email", data-message-base="Поле обязательно к заполнению", data-message-succes="Это поле является обязательным", data-required)
+                  span
+                    +icon("icon-message", 24, 24)
+                +btn({tag: "button", type: "submit", icon:
+                  {
+                    name: "icon-send", width: "17", height: "17"
+                  }
+                })(aria-label="отрпавить вашу почту").btn--icon
+          .form__box-modal
+            p!="Your message has sent"

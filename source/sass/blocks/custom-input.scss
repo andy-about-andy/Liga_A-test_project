@@ -5,6 +5,7 @@
   width: 365px;
   height: 56px;
   padding: 0;
+  opacity: 1.0;
 
   @media screen and (max-width: 1279px) {
     width: 330px;
@@ -97,7 +98,7 @@
     right: 0;
     bottom: 35px;
 
-    color: #ff1553;
+    color: $color-coral-red;
 
     opacity: 0;
 
@@ -111,37 +112,38 @@
   &.is-invalid {
     input,
     textarea {
-      border: 2px solid #ff1553;
+      border: 2px solid $color-coral-red;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        border: 2px solid rgba($color-coral-red, 0.5);
       }
     }
   }
 
   &.is-valid {
     input {
-      border: 2px solid #22b259;
+      border: 2px solid $color-jade;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
+        border: 2px solid rgba($color-jade, 0.5);
       }
     }
   }
 
   .input-message {
     position: absolute;
-    right: 0;
-    bottom: -5px;
+    width: 100%;
+    left: 5px;
+    bottom: -25px;
 
     &.is-invalid {
-      color: #ff0000;
+      color: $color-coral-red;
     }
 
     &.is-valid {
-      color: #15ab07;
+      color: $color-jade;
     }
   }
 }

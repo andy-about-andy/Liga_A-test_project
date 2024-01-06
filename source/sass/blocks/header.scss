@@ -39,15 +39,27 @@
         }
       }
 
-      .header__button {
-        @include vp-1023 {
-          &--icon-open {
-            opacity: 0;
-          }
+      // .header__button {
+      //   @include vp-1023 {
+      //     &--icon-open {
+      //       opacity: 0;
+      //     }
 
-          &--icon-close {
-            opacity: 1;
-          }
+      //     &--icon-close {
+      //       opacity: 1;
+      //     }
+      //   }
+      // }
+
+      .header__button-icon-open {
+        @include vp-1023 {
+          opacity: 0;
+        }
+      }
+
+      .header__button-icon-close {
+        @include vp-1023 {
+          opacity: 1;
         }
       }
     }
@@ -83,6 +95,10 @@
     width: 32px;
     height: 32px;
     margin: 0 0 0 auto;
+    background: none;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: $color-accent-main;
     transition: opacity $trans-default;
 
     @include vp-1023 {
@@ -91,31 +107,31 @@
       justify-content: center;
     }
 
-    &--icon-open,
-    &--icon-close {
-      position: absolute;
-      width: 16px;
-      height: auto;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      transition: opacity $trans-default;
-    }
-
-    &--icon-open {
-      opacity: 1;
-    }
-
-    &--icon-close {
-      opacity: 0;
-    }
-
     &:hover,
     &:focus {
       opacity: 0.8;
     }
+  }
+
+  &__button-icon-open,
+  &__button-icon-close {
+    position: absolute;
+    width: 16px;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: opacity $trans-default;
+  }
+
+  &__button-icon-open {
+    opacity: 1;
+  }
+
+  &__button-icon-close {
+    opacity: 0;
   }
 
   &__list {
