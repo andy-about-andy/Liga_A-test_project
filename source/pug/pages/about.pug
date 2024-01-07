@@ -15,7 +15,7 @@ block main
     //- все блоки вставляются из папки pug/components/blocks
 
     +page-content()
-      +page-section().page-section--no-padding-top
+      +page-section().page-section--fourth-padding-top
         +title-page-about()
       +page-section()
         +about-page-about()
@@ -26,6 +26,6 @@ block main
       +page-section()
         +team()
       +page-section()
-        +partners()
-      +page-section()
+        +partners().partners--about
+      +page-section().page-section--third-padding-top
         +form()

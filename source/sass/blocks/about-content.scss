@@ -175,6 +175,18 @@
       grid-template-columns: 52% 1fr;
     }
 
+    .about-content__inner {
+      margin-top: 36px;
+
+      p {
+        margin-bottom: 18px;
+      }
+    }
+
+    .about-content__box {
+      margin-bottom: 65px;
+    }
+
     .about-content__decor {
       order: 1;
     }
@@ -182,8 +194,8 @@
     .about-content__decor-man {
       width: 1030px;
       height: 786px;
-      top: -60px;
-      left: -15%;
+      top: -97px;
+      left: -20.5%;
 
       @include vp-1023 {
         left: -10%;
@@ -203,7 +215,8 @@
     }
 
     .about-content__decor-glasses {
-      left: 18%;
+      top: 478px;
+      left: 8.6%;
 
       @include vp-1023 {
         left: 14%;

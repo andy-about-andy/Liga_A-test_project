@@ -5,7 +5,7 @@
 
   &__inner {
     max-width: 650px;
-    margin-bottom: 46px;
+    margin-bottom: 41px;
 
     @include vp-1023 {
       flex-direction: column;
@@ -59,6 +59,7 @@
 
     .btn {
       max-width: 150px;
+      padding: 17px 37px;
       background-color: rgba(255, 255, 255, 0.06);
     }
 
