@@ -17,6 +17,7 @@
     p {
       width: 446px;
       margin: 12px 0 0;
+      font-weight: 300;
 
       @include vp-767 {
         max-width: 400px;
@@ -35,7 +36,7 @@
     height: 721px;
     position: absolute;
     top: -470px;
-    right: 24%;
+    right: 23.8%;
 
     svg,
     img {
@@ -53,13 +54,14 @@
     }
 
     @include vp-767 {
-      right: -160%;
+      top: -636px;
+      right: -155.5%;
     }
   }
 
   &__decor-man {
     position: absolute;
-    top: -633px;
+    top: -634px;
     left: 46%;
     z-index: -1;
     width: 987px;
@@ -72,18 +74,25 @@
     }
 
     @include vp-1919 {
-      left: 39%;
+      left: 39.3%;
+    }
+
+    @include vp-1439 {
+      top: -564px;
+      width: 880px;
+      height: 677px;
     }
 
     @include vp-1023 {
-      width: 680px;
-      height: 548px;
+      width: 659px;
+      height: 515px;
       top: -436px;
       left: 30%;
     }
 
     @include vp-767 {
-      left: 7%;
+      top: -429px;
+      left: 9.4%;
     }
   }
 
@@ -91,7 +100,7 @@
     width: 196px;
     height: 128px;
     position: absolute;
-    top: -200px;
+    top: -195px;
     left: 44%;
 
     svg,
@@ -101,7 +110,7 @@
     }
 
     @include vp-1919 {
-      left: 33%;
+      left: 32.9%;
     }
 
     @include vp-1439 {
@@ -118,6 +127,7 @@
     }
 
     @include vp-767 {
+      top: -273px;
       left: 4%;
     }
   }

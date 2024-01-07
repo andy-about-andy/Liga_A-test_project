@@ -15,8 +15,7 @@ mixin choose-content(data = {})
                   .accordion__element(data-accordion="element")
                     .choose-content__button
                       +btn({text: item.buttonText}).accordion__button(aria-label="открывает элемент аккордиона", data-accordion="button")
-                      span
-                        +icon("icon-arrow", 7, 4)
+                      +icon("icon-arrow", 7, 4)
                     .accordion__content(data-accordion="content")
                       .accordion__wrapper
                         p !{item.text}

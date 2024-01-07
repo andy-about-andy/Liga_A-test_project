@@ -1,6 +1,6 @@
 .page-content {
   overflow: hidden;
-  padding: 139px 0 67px;
+  padding: 112px 0 67px;
   margin: 0 auto;
 
   @include vp-1023 {
@@ -8,6 +8,6 @@
   }
 
   @include vp-767 {
-    padding: 116px 0 92px;
+    padding: 154px 0 92px;
   }
 }

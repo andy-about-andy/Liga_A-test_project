@@ -18,7 +18,7 @@ mixin service(data = {})
               name: "icon-games",
             },
             title: "VR Games",
-            text: "We&nbsp;offer a&nbsp;wide selection of&nbsp;VR games that are suitable for players of&nbsp;all ages and skill levels.",
+            text: "We&nbsp;offer a&nbsp;wide selection of&nbsp;VR games that are&nbsp;suitable for players of&nbsp;all ages and skill levels.",
             button: {
               href: "#",
             }
@@ -100,5 +100,5 @@ mixin service(data = {})
                           title: item.title,
                           text: item.text,
                         })
-                          .service__button
-                            +btn({href: item.button.href, text: "LEARN MORE"}).btn--with-border(aria-label="Переход по ссылке")
+                        .service__button
+                          +btn({href: item.button.href, text: "LEARN MORE"}).btn--with-border(aria-label="Переход по ссылке")

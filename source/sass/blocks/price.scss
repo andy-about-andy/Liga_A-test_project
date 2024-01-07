@@ -5,25 +5,24 @@
     @include vp-1023 {
       display: flex;
       flex-direction: column;
+      margin-bottom: 41px;
     }
   }
 
   &__inner {
-    margin-top: 81px;
-
     .title--h2 {
       margin: 0 0 12px;
     }
 
     p {
-      margin: 0 0 12px;
+      margin: 0 0 16px;
       font-size: 48px;
       font-weight: 600;
       line-height: 58px;
       letter-spacing: -0.24px;
 
       @include vp-1023 {
-        margin: 0 0 32px;
+        margin: 0 0 16px;
         font-size: 32px;
         line-height: normal;
         letter-spacing: -0.16px;
@@ -33,9 +32,14 @@
 
   &__text {
     p {
-      margin: 0 0 24px;
+      max-width: 625px;
+      margin: 0 0 40px;
       font-weight: 300;
       color: $color-light-grey;
+
+      @include vp-767 {
+        margin: 0 0 47px;
+      }
     }
   }
 
@@ -43,7 +47,7 @@
     display: grid;
     grid-template-columns: 1fr 360px;
     gap: 40px;
-    padding: 55px 0 0 42px;
+    padding: 53px 0 0 41px;
     background-color: $color-second-black;
     opacity: 0.81;
     border: 1px solid;
@@ -60,6 +64,11 @@
       flex-direction: column;
       gap: 85px;
       padding: 32px 22px 0 22px;
+    }
+
+    @include vp-767 {
+      gap: 85px;
+      padding: 30px 22px 0 20px;
     }
   }
 
@@ -105,7 +114,7 @@
 
   &__item {
     display: flex;
-    margin-bottom: 32px;
+    margin-bottom: 31px;
 
     &:last-child {
       margin: 0;
@@ -156,13 +165,17 @@
     }
 
     .privilege-card__text p {
-      margin-top: 12px;
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    .privilege-card .title--h3 {
+      font-size: 18px;
     }
   }
 
   &__image {
     margin-top: auto;
-    padding-top: 12px;
 
     svg,
     img {
@@ -175,7 +188,7 @@
     }
 
     @include vp-767 {
-      margin: 0 -22px 0 142px;
+      margin: 0 -22px 0 120px;
     }
 
     @include vp-374 {
@@ -207,8 +220,8 @@
 
   .price-card {
     position: absolute;
-    bottom: -48px;
-    right: 172px;
+    bottom: -47px;
+    right: 173px;
 
     @include vp-1279 {
       bottom: -60px;
@@ -222,8 +235,8 @@
 
     @include vp-767 {
       bottom: -88px;
-      right: 15%;
-      left: 5%;
+      right: 16%;
+      left: 3.5%;
     }
 
     @include vp-374 {

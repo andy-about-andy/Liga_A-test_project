@@ -1,5 +1,4 @@
 .choose-content {
-
   &__wrapper {
     display: grid;
     grid-template-columns: 45.67% 1fr;
@@ -36,7 +35,11 @@
   }
 
   &__inner {
-    margin-top: 81px;
+    margin-top: 91px;
+
+    @include vp-767 {
+      margin-top: 80px;
+    }
 
     .title--h2 {
       margin: 0 0 12px;
@@ -55,6 +58,10 @@
         line-height: normal;
         letter-spacing: -0.16px;
       }
+
+      @include vp-767 {
+        margin: 0 0 31px;
+      }
     }
   }
 
@@ -72,6 +79,10 @@
     margin: 0 0 32px;
     padding: 0;
     list-style-type: none;
+
+    @include vp-767 {
+      margin: 0;
+    }
   }
 
   &__item {
@@ -80,12 +91,12 @@
 
     &:last-child {
       margin: 0;
-    }
 
-    span {
-      width: 16px;
-      height: 16px;
-      margin: 2px 12px auto 0;
+      @include vp-767 {
+        .accordion__element {
+          margin: 0;
+        }
+      }
     }
 
     p {
@@ -95,10 +106,10 @@
 
   &__decor-man {
     width: 1029px;
-    height: 785px;
+    height: 806px;
     position: absolute;
-    top: -60px;
-    right: -50%;
+    top: 0;
+    right: -47.9%;
 
     svg,
     img {
@@ -116,9 +127,9 @@
     }
 
     @include vp-767 {
-      width: 774px;
-      height: 591px;
-      right: -83%;
+      width: 769px;
+      height: 600px;
+      right: -82%;
     }
   }
 
@@ -126,8 +137,8 @@
     width: 196px;
     height: 128px;
     position: absolute;
-    top: 520px;
-    right: 1%;
+    top: 571px;
+    right: 0.1%;
 
     svg,
     img {
@@ -147,8 +158,8 @@
     @include vp-767 {
       width: 147px;
       height: 96px;
-      top: 430px;
-      right: -20%;
+      top: 424px;
+      right: -0.6%;
     }
   }
 
@@ -159,9 +170,16 @@
     width: 100%;
     cursor: pointer;
 
-    span {
+    svg {
+      position: absolute;
+      top: 30%;
+      right: 2px;
       width: 7px;
       height: 4px;
+
+      @include vp-767 {
+        right: 13px;
+      }
     }
 
     &::before {

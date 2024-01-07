@@ -15,7 +15,7 @@ block main
     //- все блоки вставляются из папки pug/components/blocks
 
     +page-content()
-      +page-section()
+      +page-section().page-section--second-padding-top
         +page-intro({advantages: true})
       +page-section()
         +about-page-main()
@@ -29,5 +29,5 @@ block main
         +price()
       +page-section()
         +partners()
-      +page-section()
+      +page-section().page-section--third-padding-top
         +form()

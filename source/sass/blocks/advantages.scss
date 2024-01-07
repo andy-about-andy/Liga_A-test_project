@@ -27,9 +27,9 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
+    gap: 51px;
     margin: 0;
-    padding: 42px 63px 53px 65px;
+    padding: 41px 63px 52px 64px;
     list-style-type: none;
     background-color: $color-second-black;
     border: 1px solid;
@@ -47,7 +47,8 @@
     }
 
     @include vp-767 {
-      padding: 36px 37px;
+      padding: 36px 36px;
+      gap: 52px;
     }
   }
 }

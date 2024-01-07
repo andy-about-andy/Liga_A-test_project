@@ -1,8 +1,7 @@
 .about-content {
-
   &__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 48.2%;
 
     @include vp-1023 {
       display: flex;
@@ -31,7 +30,11 @@
   }
 
   &__inner {
-    margin-top: 81px;
+    margin-top: 48px;
+
+    @include vp-767 {
+      margin-top: 44px;
+    }
 
     .title--h2 {
       margin: 0 0 12px;
@@ -49,6 +52,20 @@
         font-size: 32px;
         line-height: normal;
         letter-spacing: -0.16px;
+      }
+
+      @include vp-767 {
+        margin: 0 0 12px;
+      }
+    }
+  }
+
+  &__content {
+    .btn {
+      margin-bottom: 12px;
+
+      @include vp-767 {
+        margin-bottom: 2px;
       }
     }
   }
@@ -97,8 +114,8 @@
     width: 1029px;
     height: 785px;
     position: absolute;
-    top: -60px;
-    right: -30%;
+    top: -77px;
+    right: -23.1%;
 
     svg,
     img {
@@ -118,7 +135,8 @@
     @include vp-767 {
       width: 774px;
       height: 591px;
-      right: -81%;
+      top: -37px;
+      right: -80.9%;
     }
   }
 
@@ -126,8 +144,8 @@
     width: 196px;
     height: 128px;
     position: absolute;
-    top: 520px;
-    right: 12%;
+    top: 487px;
+    right: 15%;
 
     svg,
     img {
@@ -147,8 +165,8 @@
     @include vp-767 {
       width: 147px;
       height: 96px;
-      top: 430px;
-      right: -20%;
+      top: 388px;
+      right: -18.9%;
     }
   }
 
