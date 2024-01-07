@@ -50,6 +50,6 @@ mixin header(headerMods, currentUrl)
                 each link in headerLinks
                   li.header__item
                     +link({href: link.href, label: link.label, isExternal: false, text: link.text, isHeader: true})(data-close-menu, class=`link--${link.page}`)
-              +btn({text: button.text, scrollTo: button.href})(aria-label="Переход к разделу контакты", data-close-menu).btn--with-border.btn--capitalize
+              +btn({text:button.text, scrollTo:button.href}).btn--with-border.btn--capitalize(aria-label="Переход к разделу контакты", data-close-menu)
     .header__decor
       +icon("icon-decor-header", 1120, 716, true)

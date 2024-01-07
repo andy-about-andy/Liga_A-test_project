@@ -12,16 +12,16 @@ mixin about-content(data = {})
         .about-content__box
           .about-content__inner
             +title({tag: "h2", text: "ABOUT US"}).title--h2
-            p!=text.text1
+            p !{text.text1}
           .about-content__content
             .about-content__text
-              p!=text.text2
+              p !{text.text2}
             if list
               ul.about-content__list
                 each item in list
                   li.about-content__item
                     span
                       +icon("icon-check-mark", 16, 16, true)
-                    p!=item.text
+                    p !{item.text}
             if button
               +btn({href: button.href, text: button.text})(aria-label="Переход по ссылке")

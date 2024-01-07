@@ -9,5 +9,5 @@ mixin video(data = {})
       {
         name: "button-play", width: "100", height: "100"
       }
-    })(aria-label="Воспроизвести видео").video__button
-    video(src=src data-src=dataSrc data-video controls="controls")
+    }).video__button(aria-label="Воспроизвести видео")
+    video(src=src, data-src=dataSrc, data-video, controls="controls")

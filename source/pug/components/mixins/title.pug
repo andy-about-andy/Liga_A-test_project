@@ -2,4 +2,4 @@ mixin title(data = {})
   - const tag = data.tag || "p";
   - const text = data.text || "";
 
-  #{tag}.title()&attributes(attributes)!=text
+  #{tag}.title()&attributes(attributes) !{text}

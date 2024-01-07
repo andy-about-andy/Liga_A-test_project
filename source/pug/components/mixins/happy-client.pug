@@ -9,7 +9,7 @@ mixin happy-client(data = {})
           li.happy-client__item(class=`happy-client__item--${item.number}`)
             +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
     .happy-client__text-inner
-      span!=number
+      span !{number}
         span
           +icon("icon-decor-element", 48, 7, true)
-      span!=text
+      span !{text}

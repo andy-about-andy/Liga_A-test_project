@@ -4,4 +4,4 @@ mixin list-link(data)
     ul.list-link__list
       each item in data.filling
         li.list-link__item
-          +link({href: item.href, text: item.text})(aria-label="Переход по ссылке для дополнительной информации").list-link__link
+          +link({href: item.href, text: item.text}).list-link__link(aria-label="Переход по ссылке для дополнительной информации")

@@ -101,5 +101,4 @@ mixin service(data = {})
                           text: item.text,
                         })
                           .service__button
-                            +btn({href: item.button.href, text: "LEARN MORE"})(aria-label="Переход по ссылке").btn--with-border
-
+                            +btn({href: item.button.href, text: "LEARN MORE"}).btn--with-border(aria-label="Переход по ссылке")

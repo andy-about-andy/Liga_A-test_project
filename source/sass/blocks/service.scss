@@ -77,6 +77,17 @@
       grid-template-columns: 1fr;
       gap: 32px;
     }
+
+    .privilege-card__text {
+      p {
+        overflow: hidden;
+        display: -webkit-box;
+        color: $color-spun-pearl;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+      }
+    }
   }
 
   &__main-item {

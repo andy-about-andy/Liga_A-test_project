@@ -10,5 +10,5 @@ mixin privilege-card(data = {})
     .privilege-card__inner
       +title({text: title}).title--h3
       .privilege-card__text
-        p!=text
+        p !{text}
     block

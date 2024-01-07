@@ -7,19 +7,19 @@ mixin choose-content(data = {})
         .choose-content__box
           .choose-content__inner
             +title({tag: "h2", text: "WHY CHOOSE US"}).title--h2
-            p!=text.text
-          .choose-content__accordion.accordion(data-accordion="parent" data-single)
+            p !{text.text}
+          .choose-content__accordion.accordion(data-accordion="parent", data-single)
             ul.choose-content__list
               each item in list
                 li.choose-content__item
                   .accordion__element(data-accordion="element")
                     .choose-content__button
-                      +btn({text: item.buttonText})(aria-label="открывает элемент аккордиона", data-accordion="button").accordion__button
+                      +btn({text: item.buttonText}).accordion__button(aria-label="открывает элемент аккордиона", data-accordion="button")
                       span
                         +icon("icon-arrow", 7, 4)
                     .accordion__content(data-accordion="content")
                       .accordion__wrapper
-                        p!=item.text
+                        p !{item.text}
         .choose-content__decor
           .choose-content__decor-man(data-parallax-mouse, data-movement="50")
             +picture(decorMan.path, decorMan.image, decorMan.format, decorMan.width, decorMan.height, decorMan.altText)

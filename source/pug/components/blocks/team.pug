@@ -9,7 +9,7 @@ mixin team(data = {})
         picture: {
           path: "content",
           image: "team-foto-1",
-          format: "png",
+          format: "webp",
           width: "276",
           height: "371",
           altText: "фото сотрудника нашей компании",
@@ -21,7 +21,7 @@ mixin team(data = {})
         picture: {
           path: "content",
           image: "team-foto-2",
-          format: "png",
+          format: "webp",
           width: "276",
           height: "371",
           altText: "фото сотрудника нашей компании",
@@ -33,7 +33,7 @@ mixin team(data = {})
         picture: {
           path: "content",
           image: "team-foto-3",
-          format: "png",
+          format: "webp",
           width: "276",
           height: "371",
           altText: "фото сотрудника нашей компании",
@@ -45,7 +45,7 @@ mixin team(data = {})
         picture: {
           path: "content",
           image: "team-foto-4",
-          format: "png",
+          format: "webp",
           width: "276",
           height: "371",
           altText: "фото сотрудника нашей компании",
@@ -79,4 +79,4 @@ mixin team(data = {})
                   jobTitle: item.jobTitle,
                 })
         .team__button
-          +btn({href: button.href, text: "See all"})(aria-label="Переход по ссылке").btn--with-border
+          +btn({href: button.href, text: "See all"}).btn--with-border(aria-label="Переход по ссылке")

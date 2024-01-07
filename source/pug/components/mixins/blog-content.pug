@@ -22,12 +22,12 @@ mixin blog-content(data = {})
       .blog-content__basic-img
         +picture(path, image, format, width, height, altText)
     each item in texts
-      p!=item.text
+      p !{item.text}
     .blog-content__additional-img
       each item in pictureAdd
         +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
     each item in textsAdd
-      p!=item.text
+      p !{item.text}
     +hashtag({
       postTags: hashtag.postTags,
       title: hashtag.title,

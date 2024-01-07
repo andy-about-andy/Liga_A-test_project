@@ -3,12 +3,12 @@ mixin logo(data = {})
   - const header = data.header || false;
 
     if (header && href)
-      a(href=href, aria-label="Переход на главную страницу").logo&attributes(attributes)
+      a.logo(href=href, aria-label="Переход на главную страницу")&attributes(attributes)
         +icon("icon-logo", 101, 30, true)
     else if (header)
       span.logo&attributes(attributes)
         +icon("icon-logo", 101, 30, true)
     else
       if (href)
-        a(href=href, aria-label="Переход на страницу").logo&attributes(attributes)
+        a.logo(href=href, aria-label="Переход на страницу")&attributes(attributes)
           +icon("icon-logo", 101, 30, true)

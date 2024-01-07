@@ -5,6 +5,6 @@ mixin team-card(data = {})
     +picture(picture.path, picture.image, picture.format, picture.width, picture.height, picture.altText)
     .team-card__inner
       .team-card__name
-        p!=data.name
+        p !{data.name}
       .team-card__job-title
-        p!=data.jobTitle
+        p !{data.jobTitle}

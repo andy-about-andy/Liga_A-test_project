@@ -5,7 +5,7 @@ mixin form(data = {})
         +title({tag: "h2", text: "Subscribe to&nbsp;our newsletter for latest updates"}).form__title
         .form__inner(data-form-validate)
           .form__box
-            form(method="post" action="https://echo.htmlacademy.ru/")
+            form(method="post", action="https://echo.htmlacademy.ru/")
               fieldset
                 +custom-input({
                   inputType: "email",
@@ -18,6 +18,6 @@ mixin form(data = {})
                   {
                     name: "icon-send", width: "17", height: "17"
                   }
-                })(aria-label="отрпавить вашу почту").btn--icon
+                }).btn--icon(aria-label="отрпавить вашу почту")
           .form__box-modal
-            p!="Your message has sent"
+            p Your message has sent
