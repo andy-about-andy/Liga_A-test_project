@@ -20,7 +20,7 @@ mixin advantages(data = {})
       },
     ]
 
-  .advantages
+  .advantages&attributes(attributes)
     .container
       .advantages__inner
         if title
@@ -33,4 +33,6 @@ mixin advantages(data = {})
             +privilege-card({
               icon: item.icon, title: item.title, text: item.text
             }).advantages__content-card
+    .advantages__decor-line
+      +icon("icon-decor-line-header", 2682, 721, true)
     block
