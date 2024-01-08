@@ -8,18 +8,10 @@
 
   &--second-padding-top {
     padding: 89px 0 0;
-
-    // @include vp-1023 {
-    //   padding: 0;
-    // }
   }
 
   &--third-padding-top {
     padding: 23px 0 0;
-
-    // @include vp-1023 {
-    //   padding: 0;
-    // }
   }
 
   &--fourth-padding-top {
@@ -28,5 +20,17 @@
     @include vp-1023 {
       padding: 0;
     }
+  }
+
+  &--fifth-padding-top {
+    padding: 51px 0 0;
+
+    @include vp-1023 {
+      padding: 0;
+    }
+  }
+
+  &--no-padding-top {
+    padding: 0;
   }
 }

@@ -15,16 +15,16 @@
   &__list--popular {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 13px 12px;
     font-size: 10px;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 14px;
     background: none;
     -webkit-background-clip: initial;
     -webkit-text-fill-color: $color-default-white;
 
     .hashtag__item {
-      padding: 1.5px 7px;
+      padding: 1px 9px 1px;
       background: rgba(255, 255, 255, 0.30);
       border-radius: 11.518px;
     }

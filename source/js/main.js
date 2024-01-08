@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
-  // initParallax();
+  initParallax();
   initScrollTo();
   // initScrollTrigger();
 

@@ -1,9 +1,5 @@
 .author-date {
   display: inline-block;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 2.24px;
-  text-transform: uppercase;
   background: $color-accent-main;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -11,5 +7,9 @@
   p {
     display: inline-block;
     margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2.24px;
+    text-transform: uppercase;
   }
 }

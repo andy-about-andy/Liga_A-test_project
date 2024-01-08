@@ -18,22 +18,23 @@ mixin blog-content(data = {})
     +badge({text: badge.text})
     +title({tag: "h2", text: title.text}).title--h2
     +author-date({authorName: authorDate.authorName, date: authorDate.date})
-    if image
-      .blog-content__basic-img
-        +picture(path, image, format, width, height, altText)
-    each item in texts
-      p !{item.text}
-    .blog-content__additional-img
-      each item in pictureAdd
-        +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
-    each item in textsAdd
-      p !{item.text}
-    +hashtag({
-      postTags: hashtag.postTags,
-      title: hashtag.title,
-      hashtags: hashtag.hashtags,
-    })
-    +share({
-      title: share.title,
-      shareLink: share.shareLink,
-    })
+    .blog-content__content
+      if image
+        .blog-content__basic-img
+          +picture(path, image, format, width, height, altText)
+      each item in texts
+        p !{item.text}
+      .blog-content__additional-img
+        each item in pictureAdd
+          +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+      each item in textsAdd
+        p !{item.text}
+      +hashtag({
+        postTags: hashtag.postTags,
+        title: hashtag.title,
+        hashtags: hashtag.hashtags,
+      })
+      +share({
+        title: share.title,
+        shareLink: share.shareLink,
+      })

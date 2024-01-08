@@ -8,7 +8,7 @@ mixin hashtag(data = {})
       ul.hashtag__list
         each item in hashtags
             li.hashtag__item
-              span !{"#" + item.text + "&nbsp;"}
+              span !{"#" + item.text}
     else
       +title({tag: "h3", text: title}).title--h3.title--500
       ul.hashtag__list.hashtag__list--popular

@@ -4,7 +4,7 @@
   }
 
   .title--h2 {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     font-size: 40px;
     font-weight: 600;
     line-height: 58px;
@@ -15,6 +15,7 @@
     -webkit-text-fill-color: initial;
 
     @include vp-767 {
+      margin-bottom: 12px;
       font-size: 32px;
       font-weight: 600;
       line-height: normal;
@@ -23,7 +24,7 @@
   }
 
   .author-date {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   &__basic-img {
@@ -32,14 +33,20 @@
       max-height: 528px;
       margin: 0 0 30px;
       object-fit: contain;
+
+      @include vp-1023 {
+        margin-bottom: 25px;
+      }
     }
   }
 
-  p {
-    margin: 0 0 24px;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 28px;
+  &__content {
+    p {
+      margin: 0 0 24px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 28px;
+    }
   }
 
   &__additional-img {
@@ -67,5 +74,9 @@
 
   .hashtag {
     margin-bottom: 17px;
+
+    @include vp-767 {
+      margin-bottom: 24px;
+    }
   }
 }

@@ -52,6 +52,16 @@
       align-items: start;
       padding: 0;
       margin-bottom: 53px;
+
+      @include vp-767 {
+        margin-bottom: 42px;
+      }
+    }
+
+    .breadcrumbs__item {
+      span {
+        font-weight: 400;
+      }
     }
   }
 }

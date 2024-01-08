@@ -14,10 +14,10 @@ block main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
 
-    +page-content()
-      +page-section()
+    +page-content().page-content--105
+      +page-section().page-section--fifth-padding-top
         +title-page-blog()
-      +page-section()
+      +page-section().page-section--no-padding-top
         +blog-page()
       +page-section()
         +form()

@@ -10,4 +10,10 @@
   @include vp-767 {
     padding: 154px 0 92px;
   }
+
+  &--105 {
+    @include vp-767 {
+      padding: 105px 0 92px;
+    }
+  }
 }
