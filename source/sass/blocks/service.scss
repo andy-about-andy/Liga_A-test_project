@@ -51,7 +51,7 @@
 
   &__main-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
     gap: 30px;
     margin: 0;
     padding: 0;
@@ -69,7 +69,7 @@
 
   &__list {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin: 0;
     padding: 0;
@@ -96,20 +96,22 @@
     }
   }
 
-  &__main-item {
+  &__item {
+    transform: translateY(0);
+
     &--2 {
-      margin-top: 57px;
+      transform: translateY(57px);
 
       @include vp-1023 {
-        margin: 0;
+        transform: translateY(0);
       }
     }
 
     &--3 {
-      margin-top: 135px;
+      transform: translateY(135px);
 
       @include vp-1023 {
-        margin: 0;
+        transform: translateY(0);
       }
     }
   }

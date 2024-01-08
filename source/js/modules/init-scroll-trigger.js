@@ -7,7 +7,6 @@ export const initScrollTrigger = () => {
   const pageIntroDecor = document.querySelectorAll('.page-intro__decor-man');
   const aboutContentDecor = document.querySelectorAll('.about-content__decor');
   const footer = document.querySelectorAll('.footer');
-  const serviceItem = document.querySelectorAll('.service__item');
   const teamItem = document.querySelectorAll('.team__item');
   const sidebar = document.querySelectorAll('.sidebar');
   const sidebarItem = document.querySelectorAll('.sidebar__item');
@@ -25,10 +24,6 @@ export const initScrollTrigger = () => {
   }
 
   if (!footer) {
-    return;
-  }
-
-  if (!serviceItem) {
     return;
   }
 
@@ -72,17 +67,6 @@ export const initScrollTrigger = () => {
       gsap.from(elements, {
         autoAlpha: 0,
         y: 400,
-        stagger: 0.15,
-      });
-    },
-    once: true,
-  });
-
-  ScrollTrigger.batch(serviceItem, {
-    onEnter: (elements) => {
-      gsap.from(elements, {
-        autoAlpha: 0,
-        y: 250,
         stagger: 0.15,
       });
     },
