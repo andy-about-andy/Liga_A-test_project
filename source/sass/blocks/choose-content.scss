@@ -200,10 +200,21 @@
 
     .choose-content__inner {
       margin-top: 65px;
+
+      p {
+        @include vp-767 {
+          margin: 0 0 32px;        }
+      }
     }
 
     .choose-content__box {
       order: 1;
+    }
+
+    .choose-content__decor {
+      @include vp-767 {
+        height: 490px;
+      }
     }
 
     .choose-content__decor-man {
@@ -224,7 +235,8 @@
       @include vp-767 {
         width: 840px;
         height: 641px;
-        right: -100%;
+        top: -78px;
+        right: -101.5%;
       }
     }
 
@@ -242,8 +254,10 @@
       }
 
       @include vp-767 {
-        top: 480px;
-        right: -15%;
+        width: 160px;
+        height: 104px;
+        top: 406px;
+        right: -17.5%;
       }
     }
 

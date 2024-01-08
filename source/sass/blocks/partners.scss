@@ -252,7 +252,15 @@
     .partners__inner {
       p {
         margin-bottom: 58px;
+
+        @include vp-767 {
+          margin: 0 16px 23px;
+        }
       }
+    }
+
+    .partners__inner-content {
+      margin: 0 auto 27px;
     }
   }
 }
