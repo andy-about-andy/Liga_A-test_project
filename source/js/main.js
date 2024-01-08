@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   initParallax();
   initScrollTo();
-  // initScrollTrigger();
+  initScrollTrigger();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

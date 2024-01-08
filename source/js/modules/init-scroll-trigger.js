@@ -3,7 +3,6 @@ import {ScrollTrigger} from '../vendor/scroll-trigger.js';
 export const initScrollTrigger = () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  const header = document.querySelectorAll('.header');
   const bottomToTop = document.querySelectorAll('.page-section');
   const pageIntroDecor = document.querySelectorAll('.page-intro__decor-man');
   const aboutContentDecor = document.querySelectorAll('.about-content__decor');
@@ -12,10 +11,6 @@ export const initScrollTrigger = () => {
   const teamItem = document.querySelectorAll('.team__item');
   const sidebar = document.querySelectorAll('.sidebar');
   const sidebarItem = document.querySelectorAll('.sidebar__item');
-
-  if (!header) {
-    return;
-  }
 
   if (!bottomToTop) {
     return;
@@ -48,18 +43,6 @@ export const initScrollTrigger = () => {
   if (!sidebarItem) {
     return;
   }
-
-
-  ScrollTrigger.batch(header, {
-    onEnter: (elements) => {
-      gsap.from(elements, {
-        autoAlpha: 0,
-        y: 100,
-        stagger: 0.15,
-      });
-    },
-    once: true,
-  });
 
   ScrollTrigger.batch(bottomToTop, {
     onEnter: (elements) => {
