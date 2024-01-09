@@ -1,13 +1,28 @@
 mixin video(data = {})
   - const { path, image, format, width, height, altText } = data.image
   - const { src, dataSrc } = data.video
+  - const shadow = data.shadow
+  - const linePlay = data.linePlay
+  - const badge = data.badge
+  - const text = data.text
 
   .video(data-player="container")&attributes(attributes)
     .video__cover
-      +img(path, image, format, width, height, altText)
+      .video__img-content
+        +img(path, image, format, width, height, altText)
+      .video__img-shadow
+        +img(shadow.path, shadow.image, shadow.format, shadow.width, shadow.height, shadow.altText)
+      .video__line-play
+        +img(linePlay.path, linePlay.image, linePlay.format, linePlay.width, linePlay.height, linePlay.altText)
     +btn({icon:
       {
         name: "button-play", width: "100", height: "100"
       }
     }).video__button(aria-label="Воспроизвести видео")
     video(src=src, data-src=dataSrc, data-video, controls="controls")
+    if badge
+      .video__badge
+        +badge({text: badge})
+    if  text
+      .video__text
+        p !{text}

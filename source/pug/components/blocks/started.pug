@@ -13,13 +13,31 @@ mixin started(data = {})
               image: "video-posterimage",
               format: "jpg",
               width: "1200",
-              height: "522",
+              height: "676",
               altText: "Постер-заглушка на видео",
+            },
+            shadow: {
+              path: "content",
+              image: "video-shadow",
+              format: "png",
+              width: "1200",
+              height: "522",
+              altText: "Декор элемент для постера-заглушки",
+            },
+            linePlay: {
+              path: "content",
+              image: "line-play",
+              format: "png",
+              width: "1135",
+              height: "16",
+              altText: "Полоса прокрутки плеера",
             },
             video: {
               src: "./video/video.mp4",
               dataSrc: "./video/video.mp4"
-            }
+            },
+            badge: "VR Service",
+            text: "How to get started",
           })
           .started__button
             +btn({href: "#", text: "GET STARTED"})(aria-label="Переход по ссылке")
