@@ -7,8 +7,6 @@
     padding: 0 0 21px;
   }
 
-
-
   &__wrapper {
     position: relative;
   }
@@ -68,6 +66,7 @@
     width: 366px;
     min-width: 250px;
     margin: 2px 20px 0 81px;
+    user-select: none;
 
     @include vp-1023 {
       margin: 0 0 62px;
@@ -141,13 +140,6 @@
       height: 1px;
       background: $color-accent-main;
     }
-
-    // @include vp-767 {
-    //   width: 637px;
-    //   height: 314px;
-    //   // left: 50%;
-    //   // top: -213px;
-    // }
   }
 
   &__decor {

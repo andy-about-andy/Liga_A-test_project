@@ -60,6 +60,7 @@
         font-weight: 400;
         line-height: 28px;
         color: $color-default-white;
+        user-select: none;
       }
 
       &:hover {

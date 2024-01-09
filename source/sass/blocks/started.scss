@@ -39,6 +39,7 @@
   &__button {
     display: flex;
     justify-content: center;
+    user-select: none;
   }
 
   &__decor-light {

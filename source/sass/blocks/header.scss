@@ -190,11 +190,6 @@
     }
   }
 
-  &__link {
-    color: $color-default-white;
-    transition: opacity $trans-default;
-  }
-
   &__decor {
     z-index: -1;
     width: 1120px;
@@ -251,5 +246,10 @@
       visibility: hidden;
       opacity: 0;
     }
+  }
+
+  .link,
+  .btn {
+    user-select: none;
   }
 }

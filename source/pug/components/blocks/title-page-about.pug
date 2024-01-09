@@ -7,11 +7,10 @@ mixin title-page-about(data = {})
   .title-page-about
     .container
       +title-page({title})
-        +breadcrumbs(
-          {list:
+        +breadcrumbs({
+          list:
             [
               {text: "Home", href: "index.html"},
               {text: "About us"},
             ]
-          }
-        )
+        })

@@ -171,6 +171,7 @@
     visibility: hidden;
     opacity: 0;
     transition: opacity $trans-default, visibility $trans-modal;
+    user-select: none;
 
     .btn {
       padding: 18px 36px;

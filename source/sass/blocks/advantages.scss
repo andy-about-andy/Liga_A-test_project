@@ -70,8 +70,8 @@
     }
 
     @include vp-1023 {
-      grid-template-columns: none;
-      grid-template-rows: repeat(3, 1fr);
+      display: flex;
+      flex-direction: column;
       gap: 50px;
     }
 

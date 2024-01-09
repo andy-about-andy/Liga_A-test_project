@@ -8,12 +8,11 @@ mixin title-page-blog(data = {})
   .title-page-blog
     .container
       +title-page({title}).title-page--no-line
-        +breadcrumbs(
-          {list:
+        +breadcrumbs({
+            list:
             [
               {text: "Home", href: "index.html"},
               {text: "Blog", href: "about.html"},
               {text: "Bringing Designs to&nbsp;Life: How VR&nbsp;is&nbsp;Changing Architecture"},
             ]
-          }
-        )
+        })

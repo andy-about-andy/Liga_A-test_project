@@ -25,14 +25,14 @@
   }
 
   &__element.is-active {
-      svg {
-        transform-origin: center;
-        transform: rotate(180deg);
-      }
+    svg {
+      transform-origin: center;
+      transform: rotate(180deg);
+    }
 
-      .accordion__button {
-        font-weight: 500;
-      }
+    .accordion__button {
+      font-weight: 500;
+    }
   }
 
   &__button {
@@ -46,6 +46,7 @@
     text-align: left;
     text-transform: initial;
     background: transparent;
+    user-select: none;
   }
 
   &__wrapper {
