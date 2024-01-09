@@ -103,4 +103,14 @@
       left: 4%;
     }
   }
+
+  .privilege-card__inner {
+    .title--h3 {
+      margin-top: 43px;
+
+      @include vp-767 {
+        margin-top: 41px;
+      }
+    }
+  }
 }

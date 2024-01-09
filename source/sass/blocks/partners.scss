@@ -278,7 +278,11 @@
     }
 
     .partners__inner-content {
-      margin: 0 auto 27px;
+      margin: 0 auto 3px;
+
+      @include vp-1023 {
+        margin: 0 auto 48px;
+      }
     }
   }
 }

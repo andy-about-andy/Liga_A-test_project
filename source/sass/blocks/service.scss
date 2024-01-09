@@ -177,4 +177,13 @@
       padding: 18px 36px;
     }
   }
+
+  &__box {
+    margin-bottom: 135px;
+
+    @include vp-1023 {
+      margin-bottom: 0;
+
+    }
+  }
 }

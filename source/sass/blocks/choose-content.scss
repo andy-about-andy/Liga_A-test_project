@@ -179,6 +179,10 @@
       @include vp-767 {
         right: 13px;
       }
+
+      @include vp-374 {
+        right: 1px;
+      }
     }
 
     &::before {
