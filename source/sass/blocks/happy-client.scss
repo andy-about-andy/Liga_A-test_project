@@ -1,11 +1,6 @@
 .happy-client {
   display: flex;
   align-items: center;
-  margin: 81px 0 104px;
-
-  @include vp-1023 {
-    margin: 32px 0 417px;
-  }
 
   &__list {
     position: relative;

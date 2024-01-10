@@ -13,7 +13,8 @@ mixin sidebar(data = {})
             +badge({text: item.badge})
             .sidebar__text
               p !{item.text}
-    +hashtag({
-      title: popularHashtag.title,
-      hashtags: popularHashtag.hashtags,
-    })
+    if popularHashtag
+      +hashtag({
+        title: popularHashtag.title,
+        hashtags: popularHashtag.hashtags,
+      })
