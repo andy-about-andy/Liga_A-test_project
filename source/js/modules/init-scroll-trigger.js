@@ -1,4 +1,4 @@
-import {ScrollTrigger} from '../vendor/scroll-trigger.js';
+import {ScrollTrigger} from '../vendor/scroll-trigger';
 
 export const initScrollTrigger = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -11,109 +11,95 @@ export const initScrollTrigger = () => {
   const sidebar = document.querySelectorAll('.sidebar');
   const sidebarItem = document.querySelectorAll('.sidebar__item');
 
-  if (!bottomToTop) {
-    return;
+  if (bottomToTop) {
+    ScrollTrigger.batch(bottomToTop, {
+      onEnter: (elements) => {
+        gsap.from(elements, {
+          autoAlpha: 0,
+          y: 250,
+          stagger: 0.15,
+        });
+      },
+      once: true,
+    });
   }
 
-  if (!pageIntroDecor) {
-    return;
+  if (pageIntroDecor) {
+    ScrollTrigger.batch(pageIntroDecor, {
+      onEnter: (elements) => {
+        gsap.from(elements, {
+          delay: 0.2,
+          autoAlpha: 0,
+          x: 200,
+          stagger: 0.15,
+        });
+      },
+      once: true,
+    });
   }
 
-  if (!aboutContentDecor) {
-    return;
+  if (aboutContentDecor) {
+    ScrollTrigger.batch(aboutContentDecor, {
+      onEnter: (elements) => {
+        gsap.from(elements, {
+          autoAlpha: 0,
+          y: 400,
+          stagger: 0.15,
+        });
+      },
+      once: true,
+    });
   }
 
-  if (!footer) {
-    return;
+  if (teamItem) {
+    ScrollTrigger.batch(teamItem, {
+      onEnter: (elements) => {
+        gsap.from(elements, {
+          autoAlpha: 0,
+          y: 500,
+          stagger: 0.2,
+        });
+      },
+      once: true,
+    });
   }
 
-  if (!teamItem) {
-    return;
+  if (footer) {
+    ScrollTrigger.batch(footer, {
+      onEnter: (elements) => {
+        gsap.from(elements, {
+          autoAlpha: 0,
+          y: 250,
+          stagger: 0.15,
+        });
+      },
+      once: true,
+    });
   }
 
-  if (!sidebar) {
-    return;
+  if (sidebar) {
+    ScrollTrigger.batch(sidebar, {
+      onEnter: (elements) => {
+        gsap.from(elements, {
+          autoAlpha: 0,
+          x: 450,
+          stagger: 0.15,
+        });
+      },
+      once: true,
+    });
   }
 
-  if (!sidebarItem) {
-    return;
+  if (sidebarItem) {
+    ScrollTrigger.batch(sidebarItem, {
+      onEnter: (elements) => {
+        gsap.from(elements, {
+          autoAlpha: 0,
+          x: 500,
+          stagger: 0.15,
+        });
+      },
+      once: true,
+    });
   }
-
-  ScrollTrigger.batch(bottomToTop, {
-    onEnter: (elements) => {
-      gsap.from(elements, {
-        autoAlpha: 0,
-        y: 250,
-        stagger: 0.15,
-      });
-    },
-    once: true,
-  });
-
-  ScrollTrigger.batch(pageIntroDecor, {
-    onEnter: (elements) => {
-      gsap.from(elements, {
-        delay: 0.2,
-        autoAlpha: 0,
-        x: 200,
-        stagger: 0.15,
-      });
-    },
-    once: true,
-  });
-
-  ScrollTrigger.batch(aboutContentDecor, {
-    onEnter: (elements) => {
-      gsap.from(elements, {
-        autoAlpha: 0,
-        y: 400,
-        stagger: 0.15,
-      });
-    },
-    once: true,
-  });
-
-  ScrollTrigger.batch(teamItem, {
-    onEnter: (elements) => {
-      gsap.from(elements, {
-        autoAlpha: 0,
-        y: 500,
-        stagger: 0.2,
-      });
-    },
-    once: true,
-  });
-
-  ScrollTrigger.batch(footer, {
-    onEnter: (elements) => {
-      gsap.from(elements, {
-        autoAlpha: 0,
-        y: 250,
-        stagger: 0.15,
-      });
-    },
-    once: true,
-  });
-
-  ScrollTrigger.batch(sidebar, {
-    onEnter: (elements) => {
-      gsap.from(elements, {
-        autoAlpha: 0,
-        x: 450,
-        stagger: 0.15,
-      });
-    },
-    once: true,
-  });
-
-  ScrollTrigger.batch(sidebarItem, {
-    onEnter: (elements) => {
-      gsap.from(elements, {
-        autoAlpha: 0,
-        x: 500,
-        stagger: 0.15,
-      });
-    },
-    once: true,
-  });
 };
