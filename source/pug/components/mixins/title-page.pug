@@ -5,6 +5,8 @@ mixin title-page(data = {})
     .title-page__wrapper
       if hidden
         +title({tag: "h1", text: text}).title--h1.visually-hidden
+        .title-page__decor-element
+          +icon("decor-element", 669, 367, true)
       else
         +title({tag: "h1", text: text}).title--h1
         .title-page__decor-element
