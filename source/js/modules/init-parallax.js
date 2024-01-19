@@ -1,4 +1,5 @@
 const parallaxItems = document.querySelectorAll('[data-parallax-mouse]');
+const parallaxBox = document.querySelectorAll('[data-parallax-box]');
 
 const initParallax = () => {
   if (parallaxItems) {
@@ -12,7 +13,11 @@ const initParallax = () => {
       mouseCords.y = e.clientY - window.innerHeight / 2;
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    if (parallaxBox) {
+      parallaxBox.forEach((box) => {
+        box.addEventListener('mousemove', handleMouseMove);
+      });
+    }
 
     const updateParallax = () => {
       parallaxItems.forEach((item) => {

@@ -1,7 +1,7 @@
 mixin about-content(data = {})
   - const {list, button, decorMan, decorGlasses, text} = data
 
-  .about-content&attributes(attributes)
+  .about-content(data-parallax-box)&attributes(attributes)
     .container
       .about-content__wrapper
         .about-content__decor

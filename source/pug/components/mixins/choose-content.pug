@@ -1,7 +1,7 @@
 mixin choose-content(data = {})
   - const {text, list, decorMan, decorGlasses} = data
 
-  .choose-content&attributes(attributes)
+  .choose-content(data-parallax-box)&attributes(attributes)
     .container
       .choose-content__wrapper
         .choose-content__box
