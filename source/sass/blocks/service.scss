@@ -1,5 +1,6 @@
 .service {
   &__inner {
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-bottom: 46px;
@@ -7,6 +8,24 @@
     @include vp-1023 {
       flex-direction: column;
       margin-bottom: 24px;
+    }
+  }
+
+  &__decor-element {
+    position: absolute;
+    top: -220px;
+    right: -390px;
+    z-index: -1;
+    width: 874px;
+    height: 619px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1023 {
+      display: none;
     }
   }
 
