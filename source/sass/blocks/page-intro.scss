@@ -34,7 +34,7 @@
   &__decor-man {
     position: absolute;
     top: -634px;
-    left: 46%;
+    left: 38.5%;
     z-index: -1;
     width: 987px;
     height: 760px;
@@ -46,7 +46,7 @@
     }
 
     @include vp-1919 {
-      left: 39.3%;
+      left: 38.2%;
     }
 
     @include vp-1439 {
@@ -58,7 +58,7 @@
     @include vp-1023 {
       width: 659px;
       height: 515px;
-      top: -436px;
+      top: -428px;
       left: 30%;
     }
 
@@ -66,14 +66,21 @@
       top: -429px;
       left: 9.4%;
     }
+
+    @include vp-374 {
+      top: -326px;
+      left: -1.4%;
+      width: 500px;
+      height: 391px;
+    }
   }
 
   &__decor-rectangle {
-    width: 196px;
-    height: 128px;
     position: absolute;
     top: -195px;
-    left: 44%;
+    left: 37%;
+    width: 196px;
+    height: 128px;
 
     svg,
     img {
@@ -82,7 +89,7 @@
     }
 
     @include vp-1919 {
-      left: 32.9%;
+      left: 31.4%;
     }
 
     @include vp-1439 {
@@ -94,13 +101,20 @@
     }
 
     @include vp-1023 {
-      top: -280px;
+      top: -270px;
       left: 14%;
     }
 
     @include vp-767 {
       top: -273px;
       left: 4%;
+    }
+
+    @include vp-374 {
+      top: -173px;
+      left: 0;
+      width: 140px;
+      height: 92px;
     }
   }
 
@@ -119,6 +133,10 @@
 
     @include vp-1023 {
       margin: 32px 0 417px;
+    }
+
+    @include vp-374 {
+      margin: 32px 0 317px;
     }
   }
 }

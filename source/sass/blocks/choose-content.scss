@@ -22,6 +22,10 @@
       height: 485px;
       margin: 0 auto;
     }
+
+    @include vp-374 {
+      height: 340px;
+    }
   }
 
   &__box {
@@ -104,11 +108,11 @@
   }
 
   &__decor-man {
-    width: 1029px;
-    height: 806px;
     position: absolute;
     top: 0;
     right: -47.9%;
+    width: 1029px;
+    height: 806px;
 
     svg,
     img {
@@ -117,18 +121,27 @@
     }
 
     @include vp-1279 {
-      right: -78%;
+      top: 30px;
+      right: -39%;
+      width: 880px;
+      height: 688px;
     }
 
     @include vp-1023 {
       top: 0;
-      right: -15%;
+      right: -8%;
     }
 
     @include vp-767 {
       width: 769px;
       height: 600px;
       right: -82%;
+    }
+
+    @include vp-374 {
+      width: 550px;
+      height: 430px;
+      right: -45%;
     }
   }
 
@@ -146,11 +159,12 @@
     }
 
     @include vp-1279 {
-      right: -15%;
+      top: 560px;
+      right: 0;
     }
 
     @include vp-1023 {
-      top: 560px;
+      top: 540px;
       right: 14%;
     }
 
@@ -159,6 +173,13 @@
       height: 96px;
       top: 424px;
       right: -0.6%;
+    }
+
+    @include vp-374 {
+      top: 300px;
+      right: -2%;
+      width: 130px;
+      height: 85px;
     }
   }
 

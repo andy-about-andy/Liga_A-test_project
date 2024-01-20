@@ -22,6 +22,10 @@
       height: 485px;
       margin: 0 auto;
     }
+
+    @include vp-374 {
+      height: 340px;
+    }
   }
 
   &__box {
@@ -124,19 +128,29 @@
     }
 
     @include vp-1279 {
-      right: -45%;
+      top: -58px;
+      right: -28%;
+      width: 900px;
+      height: 687px;
     }
 
     @include vp-1023 {
       top: 0;
-      right: -15%;
+      right: -5%;
     }
 
     @include vp-767 {
-      width: 774px;
-      height: 591px;
       top: -37px;
       right: -80.9%;
+      width: 774px;
+      height: 591px;
+    }
+
+    @include vp-374 {
+      top: -20px;
+      right: -45%;
+      width: 550px;
+      height: 420px;
     }
   }
 
@@ -158,15 +172,22 @@
     }
 
     @include vp-1023 {
-      top: 560px;
-      right: 14%;
+      top: 520px;
+      right: 18%;
     }
 
     @include vp-767 {
-      width: 147px;
-      height: 96px;
       top: 388px;
       right: -18.9%;
+      width: 147px;
+      height: 96px;
+    }
+
+    @include vp-374 {
+      top: 270px;
+      right: -6%;
+      width: 130px;
+      height: 85px;
     }
   }
 
