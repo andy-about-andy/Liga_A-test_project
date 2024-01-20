@@ -29,6 +29,11 @@
     }
   }
 
+
+  &__box--scroll {
+    backdrop-filter: blur(5px);
+  }
+
   &__box--sticky {
     position: fixed;
     top: 0;

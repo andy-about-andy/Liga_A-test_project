@@ -11,6 +11,7 @@ import {initPlayer} from './modules/init-player';
 import {initGenerateRandomScale} from './modules/init-generate-random-scale';
 import {showMessage} from './modules/form-validate/show-message';
 import {initScrollTrigger} from './modules/init-scroll-trigger';
+import {initScrollHeaderChange} from './modules/init-scroll-header-change';
 
 // ---------------------------------
 
@@ -26,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initParallax();
   initScrollTo();
   initScrollTrigger();
+  initScrollHeaderChange();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

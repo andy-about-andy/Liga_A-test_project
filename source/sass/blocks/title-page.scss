@@ -49,6 +49,12 @@
   }
 
   &--no-line {
+    margin-bottom: 53px;
+
+    @include vp-767 {
+      margin-bottom: 42px;
+    }
+
     .title-page__wrapper::before {
       content: none;
     }
@@ -56,11 +62,6 @@
     .title-page__wrapper {
       align-items: start;
       padding: 0;
-      margin-bottom: 53px;
-
-      @include vp-767 {
-        margin-bottom: 42px;
-      }
     }
 
     .breadcrumbs__item {
