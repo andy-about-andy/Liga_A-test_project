@@ -6,9 +6,9 @@ mixin title-page(data = {})
       if hidden
         +title({tag: "h1", text: text}).title--h1.visually-hidden
         .title-page__decor-element
-          +icon("decor-element", 669, 367, true)
+          +picture("content", "decor-light-title", "webp", 669, 367, "декор элемент")
       else
         +title({tag: "h1", text: text}).title--h1
         .title-page__decor-element
-          +icon("decor-element", 669, 367, true)
+          +picture("content", "decor-light-title", "webp", 669, 367, "декор элемент")
       block

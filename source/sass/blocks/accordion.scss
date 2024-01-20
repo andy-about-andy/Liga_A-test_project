@@ -24,17 +24,6 @@
     }
   }
 
-  &__element.is-active {
-    svg {
-      transform-origin: center;
-      transform: rotate(180deg);
-    }
-
-    .accordion__button {
-      font-weight: 500;
-    }
-  }
-
   &__button {
     width: 100%;
     padding: 0 0 12px;
@@ -47,6 +36,18 @@
     text-transform: initial;
     background: transparent;
     user-select: none;
+    transition: font-weight $trans-default;
+  }
+
+  &__element.is-active {
+    svg {
+      transform-origin: center;
+      transform: rotate(180deg);
+    }
+
+    .accordion__button {
+      font-weight: 500;
+    }
   }
 
   &__wrapper {
