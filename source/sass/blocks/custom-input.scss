@@ -98,11 +98,8 @@
     position: absolute;
     right: 0;
     bottom: 35px;
-
     color: $color-coral-red;
-
     opacity: 0;
-
     transition: opacity 0.3s ease;
 
     @media screen and (max-width: 767px) {
@@ -146,5 +143,12 @@
     &.is-valid {
       color: $color-jade;
     }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px $color-transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
   }
 }
