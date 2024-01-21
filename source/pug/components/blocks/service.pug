@@ -1,8 +1,6 @@
 mixin service(data = {})
   -
-    const mainList = [
-      {
-        list: [
+    const list = [
           {
             icon: {
               name: "icon-development",
@@ -36,11 +34,6 @@ mixin service(data = {})
             },
             number: "3"
           },
-        ],
-
-      },
-      {
-        list: [
           {
             icon: {
               name: "icon-games",
@@ -74,10 +67,7 @@ mixin service(data = {})
             },
             number: "3"
           },
-        ],
-        number: "2"
-      },
-    ]
+        ]
 
   .service
     .container
@@ -91,16 +81,13 @@ mixin service(data = {})
           .service__text
             p We&nbsp;use the latest&nbsp;VR hardware and software to&nbsp;create high-quality VR&nbsp;experiences that are accessible and affordable. Our goal is&nbsp;to&nbsp;provide exceptional customer service and support, and our team is&nbsp;always available to&nbsp;answer any questions and address any concerns you may have.
         .service__box
-          ul.service__main-list
-              each mainItem in mainList
-                li.service__main-item
-                  ul.service__list
-                    each item in mainItem.list
-                      li.service__item(class=`service__item--${item.number}`)
-                        +privilege-card({
-                          icon: {name: item.icon.name, width: 48, height: 48, gradient: true},
-                          title: item.title,
-                          text: item.text,
-                        })
-                        .service__button
-                          +btn({href: item.button.href, text: "LEARN MORE"}).btn--with-border(aria-label="Переход по ссылке")
+          ul.service__list
+            each item in list
+              li.service__item(class=`service__item--${item.number}`)
+                +privilege-card({
+                  icon: {name: item.icon.name, width: 48, height: 48, gradient: true},
+                  title: item.title,
+                  text: item.text,
+                })
+                .service__button
+                  +btn({href: item.button.href, text: "LEARN MORE"}).btn--with-border(aria-label="Переход по ссылке")
