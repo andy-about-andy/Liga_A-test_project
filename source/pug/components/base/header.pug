@@ -46,10 +46,11 @@ mixin header(headerMods, currentUrl)
               +icon("icon-burger-open", 16, 16).header__button-icon-open
               +icon("icon-burger-close", 16, 16).header__button-icon-close
             .header__menu
-              ul.header__list
-                each link in headerLinks
-                  li.header__item
-                    +link({href: link.href, label: link.label, isExternal: false, text: link.text, isHeader: true})(data-close-menu, class=`link--${link.page}`)
-              +btn({text:button.text, scrollTo:button.href}).btn--with-border.btn--capitalize(aria-label="Переход к разделу контакты", data-close-menu)
+              .header__menu-inner
+                ul.header__list
+                  each link in headerLinks
+                    li.header__item
+                      +link({href: link.href, label: link.label, isExternal: false, text: link.text, isHeader: true})(data-close-menu, class=`link--${link.page}`)
+                +btn({text:button.text, scrollTo:button.href}).btn--with-border.btn--capitalize(aria-label="Переход к разделу контакты", data-close-menu)
     .header__decor
       +icon("icon-decor-header", 1120, 716, true)
