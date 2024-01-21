@@ -31,6 +31,7 @@
     z-index: -1;
     width: 669px;
     height: 367px;
+    user-select: none;
 
     @include vp-767 {
       width: 519px;

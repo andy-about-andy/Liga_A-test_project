@@ -12,6 +12,7 @@
   &__decor {
     position: relative;
     z-index: -1;
+    user-select: none;
 
     @include vp-1023 {
       height: 622px;

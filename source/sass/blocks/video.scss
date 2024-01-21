@@ -21,6 +21,7 @@
     transition: opacity $trans-default;
     opacity: 1;
     pointer-events: none;
+    user-select: none;
 
     svg,
     img {
@@ -120,6 +121,7 @@
     height: 100%;
     border-radius: 12px 12px 0 0;
     object-fit: cover;
+    user-select: none;
 
     @include vp-767 {
       border-radius: 12px;

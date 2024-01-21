@@ -1,6 +1,7 @@
 .title-page-blog {
   .title-page__decor-element {
     display: none;
+    user-select: none;
 
     @include vp-1023 {
       display: block;
