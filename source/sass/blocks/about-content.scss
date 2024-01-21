@@ -215,6 +215,10 @@
     .about-content__decor {
       order: 1;
 
+      @include vp-1023 {
+        height: 490px;
+      }
+
       @include vp-767 {
         height: 427px;
       }
@@ -226,8 +230,16 @@
       top: -97px;
       left: -20.5%;
 
+      @include vp-1279 {
+        top: -58px;
+        right: -28%;
+        width: 900px;
+        height: 687px;
+      }
+
       @include vp-1023 {
-        left: -10%;
+        top: -100px;
+        left: 8%;
       }
 
       @include vp-767 {
@@ -249,7 +261,8 @@
       left: 8.6%;
 
       @include vp-1023 {
-        left: 14%;
+        top: 425px;
+        left: 20%;
       }
 
       @include vp-767 {

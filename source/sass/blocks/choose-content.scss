@@ -190,6 +190,10 @@
     width: 100%;
     cursor: pointer;
 
+    @include vp-767 {
+      padding-right: 12px;
+    }
+
     svg {
       position: absolute;
       top: 30%;
@@ -236,8 +240,12 @@
     }
 
     .choose-content__decor {
-      @include vp-767 {
+      @include vp-1023 {
         height: 490px;
+      }
+
+      @include vp-374 {
+        height: 320px;
       }
     }
 
@@ -248,19 +256,28 @@
       right: -33%;
 
       @include vp-1279 {
-        right: -47%;
+        top: -70px;
+        right: -33%;
+        width: 880px;
+        height: 672px;
       }
 
       @include vp-1023 {
-        top: 0;
-        right: -15%;
+        top: -110px;
+        right: 0;
       }
 
       @include vp-767 {
-        width: 840px;
-        height: 641px;
         top: -78px;
         right: -101.5%;
+        width: 840px;
+        height: 641px;
+      }
+
+      @include vp-374 {
+        right: -45%;
+        width: 550px;
+        height: 430px;
       }
     }
 
@@ -269,19 +286,27 @@
       right: 15.8%;
 
       @include vp-1279 {
+        top: 450px;
         right: 12%;
       }
 
       @include vp-1023 {
-        top: 580px;
+        top: 400px;
         right: 20%;
       }
 
       @include vp-767 {
-        width: 160px;
-        height: 104px;
         top: 406px;
         right: -17.5%;
+        width: 160px;
+        height: 104px;
+      }
+
+      @include vp-374 {
+        top: 260px;
+        right: 0;
+        width: 130px;
+        height: 85px;
       }
     }
 
