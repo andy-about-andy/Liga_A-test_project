@@ -134,6 +134,7 @@
   .is-play &__badge {
     opacity: 0;
     pointer-events: none;
+    z-index: 0;
   }
 
   .is-play &__cover {
