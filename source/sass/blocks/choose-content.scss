@@ -111,9 +111,10 @@
   &__decor-man {
     position: absolute;
     top: 0;
-    right: -47.9%;
+    left: 68.9%;
     width: 1029px;
     height: 806px;
+    transform: translate(-50%, 0);
 
     svg,
     img {
@@ -123,26 +124,25 @@
 
     @include vp-1279 {
       top: 30px;
-      right: -39%;
+      left: 58%;
       width: 880px;
       height: 688px;
     }
 
     @include vp-1023 {
       top: 0;
-      right: -8%;
+      left: 50%;
     }
 
     @include vp-767 {
       width: 769px;
       height: 600px;
-      right: -82%;
+      left: 48.3%;
     }
 
     @include vp-374 {
       width: 550px;
       height: 430px;
-      right: -45%;
     }
   }
 
@@ -166,7 +166,7 @@
 
     @include vp-1023 {
       top: 540px;
-      right: 14%;
+      right: 20%;
     }
 
     @include vp-767 {
@@ -254,29 +254,27 @@
       width: 1030px;
       height: 786px;
       top: -95px;
-      right: -33%;
+      left: 48.5%;
 
       @include vp-1279 {
         top: -70px;
-        right: -33%;
         width: 880px;
         height: 672px;
       }
 
       @include vp-1023 {
         top: -110px;
-        right: 0;
       }
 
       @include vp-767 {
         top: -78px;
-        right: -101.5%;
+        left: 55.7%;
         width: 840px;
         height: 641px;
       }
 
       @include vp-374 {
-        right: -45%;
+        left: 50%;
         width: 550px;
         height: 430px;
       }
