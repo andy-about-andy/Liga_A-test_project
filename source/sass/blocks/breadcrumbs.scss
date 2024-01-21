@@ -15,20 +15,23 @@
     font-weight: 600;
     line-height: normal;
 
+    .link {
+      display: -webkit-box;
+      text-align: left;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     &:last-child {
       margin: 0;
       font-weight: 300;
       line-height: 28px;
       pointer-events: none;
 
-      span {
+      .link {
         color: $color-light-grey;
-        display: -webkit-box;
-        text-align: left;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
       }
     }
 
