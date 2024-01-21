@@ -48,8 +48,7 @@
     grid-template-columns: 1fr 360px;
     gap: 40px;
     padding: 53px 0 0 41px;
-    background-color: $color-second-black;
-    opacity: 0.81;
+    background-color: rgba(37,37,50, 0.81);
     border: 1px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
