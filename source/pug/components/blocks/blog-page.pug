@@ -209,7 +209,7 @@ mixin blog-page(data = {})
     }
 
   .blog-page
-    .container
+    .container(data-trigger)
       .blog-page__wrapper
         +blog-content({badge, title, authorDate, picture, texts, pictureAdd, textsAdd, hashtag, share})
         +sidebar({sidebar, popularHashtag})

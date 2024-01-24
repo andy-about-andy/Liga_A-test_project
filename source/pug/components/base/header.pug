@@ -35,7 +35,7 @@ mixin header(headerMods, currentUrl)
 
   header.header(class=headerMods)
     .header__box.header__box--sticky(data-header="sticky", data-header-theme-class="header--base", data-hide-point="50")
-      .container
+      .container(data-trigger)
         .header__wrapper
           if(currentUrl === "index.html")
             +logo({header: true})

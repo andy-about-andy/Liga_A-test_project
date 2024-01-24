@@ -3,12 +3,27 @@ import {ScrollTrigger} from '../vendor/scroll-trigger';
 export const initScrollTrigger = () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  const bottomToTop = document.querySelectorAll('.container');
+  const bottomToTop = document.querySelectorAll('[data-trigger]');
+  const advantages = document.querySelectorAll('.trigger');
   const footer = document.querySelectorAll('.footer');
   const teamItem = document.querySelectorAll('.team__item');
 
   if (bottomToTop) {
     ScrollTrigger.batch(bottomToTop, {
+      onEnter: (elements) => {
+        gsap.from(elements, {
+          delay: 0.65,
+          autoAlpha: 0,
+          y: 250,
+          stagger: 0.15,
+        });
+      },
+      once: true,
+    });
+  }
+
+  if (advantages) {
+    ScrollTrigger.batch(advantages, {
       onEnter: (elements) => {
         gsap.from(elements, {
           delay: 0.65,

@@ -1,6 +1,7 @@
 mixin advantages(data = {})
   - const textName = data.textName ? data.textName : false
   - const title = data.title ? data.title : false
+  - const trigger = data.trigger ? data.trigger : ""
   -
     const card = [
       {
@@ -21,7 +22,7 @@ mixin advantages(data = {})
     ]
 
   .advantages&attributes(attributes)
-    .container
+    .container(class=`${trigger}`)
       .advantages__inner
         if title
           +title({tag: "h2", text: "WHY CHOOSE US"}).title--h2

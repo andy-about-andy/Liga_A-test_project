@@ -46,7 +46,7 @@ mixin partners(data={})
     ]
 
   .partners&attributes(attributes)
-    .container
+    .container(data-trigger)
       .partners__wrapper
         .partners__inner
           +title({tag: "h2", text: "Our Trusted Partners"}).title--h2

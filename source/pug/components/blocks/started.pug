@@ -1,7 +1,7 @@
 mixin started(data = {})
 
   .started
-    .container
+    .container(data-trigger)
       .started__wrapper
         .started__inner
           +title({tag: "h2", text: "HOW TO GET STARTED"}).title--h2

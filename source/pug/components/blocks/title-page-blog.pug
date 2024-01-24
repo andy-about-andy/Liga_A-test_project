@@ -6,7 +6,7 @@ mixin title-page-blog(data = {})
     }
 
   .title-page-blog
-    .container
+    .container(data-trigger)
       +title-page({title}).title-page--no-line
         +breadcrumbs({
           list:
