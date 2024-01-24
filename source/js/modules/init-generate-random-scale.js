@@ -1,12 +1,16 @@
 const circle = document.querySelectorAll('.partners__box');
 
-gsap.set(circle, {scale: 1.0});
-
 const initGenerateRandomScale = () => {
   gsap.utils.toArray(circle).forEach(animateCircle);
 };
 
 function animateCircle(evt) {
+  gsap.set(circle, {scale: 1.0});
+
+  if (!circle) {
+    return;
+  }
+
   gsap.to(evt, {
     duration: gsap.utils.random(1.7, 3.2),
     scale: gsap.utils.random(1, 1.25),
