@@ -108,19 +108,13 @@
     }
   }
 
-  &__decor-man {
+  &__decor-man-inner {
     position: absolute;
     top: 0;
     left: 68.9%;
     width: 1029px;
     height: 806px;
     transform: translate(-50%, 0);
-
-    svg,
-    img {
-      width: 100%;
-      height: 100%;
-    }
 
     @include vp-1279 {
       top: 30px;
@@ -143,6 +137,16 @@
     @include vp-374 {
       width: 550px;
       height: 430px;
+    }
+  }
+
+  &__decor-man {
+    transform: translateZ(0);
+
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -250,7 +254,7 @@
       }
     }
 
-    .choose-content__decor-man {
+    .choose-content__decor-man-inner {
       width: 1030px;
       height: 786px;
       top: -95px;

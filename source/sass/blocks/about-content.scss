@@ -115,19 +115,13 @@
     }
   }
 
-  &__decor-man {
+  &__decor-man-inner {
     width: 1029px;
     height: 785px;
     position: absolute;
     top: -77px;
     left: 40%;
     transform: translate(-50%, 0);
-
-    svg,
-    img {
-      width: 100%;
-      height: 100%;
-    }
 
     @include vp-1279 {
       top: -58px;
@@ -151,6 +145,16 @@
       top: -20px;
       width: 550px;
       height: 420px;
+    }
+  }
+
+  &__decor-man {
+    transform: translateZ(0);
+
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -224,7 +228,7 @@
       }
     }
 
-    .about-content__decor-man {
+    .about-content__decor-man-inner {
       width: 1030px;
       height: 786px;
       top: -97px;

@@ -5,8 +5,9 @@ mixin about-content(data = {})
     .container
       .about-content__wrapper
         .about-content__decor
-          .about-content__decor-man(data-parallax-mouse, data-movement="50")
-            +picture(decorMan.path, decorMan.image, decorMan.format, decorMan.width, decorMan.height, decorMan.altText)
+          .about-content__decor-man-inner
+            .about-content__decor-man(data-parallax-mouse, data-movement="50")
+              +picture(decorMan.path, decorMan.image, decorMan.format, decorMan.width, decorMan.height, decorMan.altText)
           .about-content__decor-glasses(data-parallax-mouse, data-movement="20")
             +picture(decorGlasses.path, decorGlasses.image, decorGlasses.format, decorGlasses.width, decorGlasses.height, decorGlasses.altText)
         .about-content__box

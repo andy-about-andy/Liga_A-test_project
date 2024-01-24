@@ -20,7 +20,8 @@ mixin choose-content(data = {})
                       .accordion__wrapper
                         p !{item.text}
         .choose-content__decor
-          .choose-content__decor-man(data-parallax-mouse, data-movement="50")
-            +picture(decorMan.path, decorMan.image, decorMan.format, decorMan.width, decorMan.height, decorMan.altText)
+          .choose-content__decor-man-inner
+            .choose-content__decor-man(data-parallax-mouse, data-movement="50")
+              +picture(decorMan.path, decorMan.image, decorMan.format, decorMan.width, decorMan.height, decorMan.altText)
           .choose-content__decor-glasses(data-parallax-mouse, data-movement="20")
             +picture(decorGlasses.path, decorGlasses.image, decorGlasses.format, decorGlasses.width, decorGlasses.height, decorGlasses.altText)
