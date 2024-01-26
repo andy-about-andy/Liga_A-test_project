@@ -24,6 +24,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+  const burger = new Burger();
+  burger.init();
+  const stickyHeader = new StickyHeader();
+  stickyHeader.init();
   initParallax();
   initScrollTo();
   initScrollTrigger();
@@ -32,8 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    const burger = new Burger();
-    burger.init();
     uploadFile();
     uploadImageDrop();
     const select = new CustomSelect();
@@ -41,8 +43,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
-    const stickyHeader = new StickyHeader();
-    stickyHeader.init();
     initAccordions();
     initPlayer();
     initGenerateRandomScale();
