@@ -241,21 +241,21 @@
       }
 
       @include vp-1023 {
-        top: -100px;
+        top: -135px;
         left: 54%;
       }
 
       @include vp-767 {
-        width: 816px;
-        height: 621px;
         top: -125px;
         left: 76.3%;
+        width: 816px;
+        height: 621px;
       }
 
       @include vp-414 {
+        left: 70%;
         width: 774px;
         height: 591px;
-        left: 70%;
       }
     }
 
@@ -264,21 +264,21 @@
       left: 8.6%;
 
       @include vp-1023 {
-        top: 425px;
+        top: 362px;
         left: 20%;
       }
 
       @include vp-767 {
-        width: 155px;
-        height: 101px;
         top: 329px;
         left: -19.1%;
+        width: 155px;
+        height: 101px;
       }
 
       @include vp-414 {
+        left: -3%;
         width: 147px;
         height: 96px;
-        left: -3%;
       }
     }
   }
