@@ -15,6 +15,7 @@ const onVideoClick = (evt) => {
 
   const onEnded = () => {
     player.classList.remove('is-play');
+    player.classList.remove('is-pause');
   };
 
   if (video) {
@@ -22,6 +23,7 @@ const onVideoClick = (evt) => {
 
     if (!player.classList.contains('is-play')) {
       player.classList.add('is-play');
+      player.classList.remove('is-pause');
       video.play();
 
       video.addEventListener('ended', onEnded);
@@ -31,6 +33,7 @@ const onVideoClick = (evt) => {
 
     video.pause();
     player.classList.remove('is-play');
+    player.classList.add('is-pause');
     video.removeEventListener('ended', onEnded);
   }
 

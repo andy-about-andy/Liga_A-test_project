@@ -19,7 +19,7 @@ mixin video(data = {})
         name: "button-play", width: "100", height: "100", gradient: true
       }
     }).video__button(aria-label="Воспроизвести видео")
-    video(src=src, data-src=dataSrc, data-video, controls="controls")
+    video(src=src, data-src=dataSrc, data-video, controls)
     if badge
       .video__badge
         +badge({text: badge})
