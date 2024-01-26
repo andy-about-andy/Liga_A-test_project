@@ -2,8 +2,9 @@
 .custom-textarea {
   position: relative;
   display: flex;
+  flex-direction: column;
   width: 365px;
-  height: 56px;
+  min-height: 56px;
   padding: 0;
   opacity: 1.0;
 
@@ -20,6 +21,7 @@
   }
 
   label {
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
@@ -44,7 +46,7 @@
       width: 100%;
       min-width: 254px;
       min-height: 56px;
-      padding: 12px 70px 13px 44px;
+      padding: 13px 70px 13px 44px;
       background-color: rgba(255, 255, 255, 0.07);
       border: 2px solid $color-transparent;
       border-radius: 2px;
@@ -131,10 +133,7 @@
   }
 
   .input-message {
-    position: absolute;
     width: 100%;
-    left: 5px;
-    top: 55px;
 
     &.is-invalid {
       color: $color-coral-red;

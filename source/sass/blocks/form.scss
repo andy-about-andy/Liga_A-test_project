@@ -13,7 +13,7 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     padding: 38px 74px 31px;
     background: $color-accent-main;
     border-radius: 4px;
@@ -52,7 +52,7 @@
 
   &__inner {
     position: relative;
-    margin: 0 1px 5px 0;
+    margin: 25px 1px 5px 0;
 
     @include vp-767 {
       width: 100%;
@@ -65,7 +65,7 @@
 
       .btn {
         position: absolute;
-        top: 50%;
+        top: 29px;
         right: 4px;
         z-index: 1;
         transform: translate(0, -50%);
@@ -85,7 +85,7 @@
     display: inline-flex;
     width: 100%;
     height: calc(100% + 2px);
-    padding: 13px 70px 13px 44px;
+    padding: 15px 70px 13px 44px;
     background: $color-accent-main;
     opacity: 0;
     visibility: hidden;
