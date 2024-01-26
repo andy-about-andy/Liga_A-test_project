@@ -5,31 +5,41 @@ export const initScrollTrigger = () => {
 
   const bottomToTop = document.querySelectorAll('[data-trigger]');
   const advantages = document.querySelectorAll('.trigger');
-  const footer = document.querySelectorAll('.footer');
   const teamItem = document.querySelectorAll('.team__item');
 
   if (bottomToTop) {
     ScrollTrigger.batch(bottomToTop, {
       onEnter: (elements) => {
-        gsap.from(elements, {
-          delay: 0.65,
-          autoAlpha: 0,
+        gsap.fromTo(elements, {
+          opacity: 0,
           y: 250,
-          stagger: 0.15,
+          delay: 0.65,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          immediateRender: false,
         });
       },
       once: true,
     });
   }
 
+
   if (advantages) {
     ScrollTrigger.batch(advantages, {
       onEnter: (elements) => {
-        gsap.from(elements, {
-          delay: 0.65,
-          autoAlpha: 0,
+        gsap.fromTo(elements, {
+          opacity: 0,
           y: 250,
-          stagger: 0.15,
+          delay: 0.65,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          immediateRender: false,
         });
       },
       once: true,
@@ -40,23 +50,9 @@ export const initScrollTrigger = () => {
     ScrollTrigger.batch(teamItem, {
       onEnter: (elements) => {
         gsap.from(elements, {
-          autoAlpha: 0,
-          y: 500,
+          opacity: 0,
+          y: 400,
           stagger: 0.2,
-        });
-      },
-      once: true,
-    });
-  }
-
-  if (footer) {
-    ScrollTrigger.batch(footer, {
-      onEnter: (elements) => {
-        gsap.from(elements, {
-          delay: 0.65,
-          autoAlpha: 0,
-          y: 250,
-          stagger: 0.15,
         });
       },
       once: true,
