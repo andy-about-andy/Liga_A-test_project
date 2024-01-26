@@ -15,10 +15,14 @@
       letter-spacing: -0.24px;
 
       @include vp-1023 {
-        margin: 0;
+        margin: 0 0 30px;
         font-size: 32px;
         line-height: normal;
         letter-spacing: -0.16px;
+      }
+
+      @include vp-767 {
+        margin: 0;
       }
     }
   }
@@ -219,6 +223,14 @@
     max-width: 1082px;
     max-height: 887px;
 
+    @include vp-1023 {
+      margin: 0 auto 0 10px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 0 1.2%;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -232,14 +244,6 @@
       @include vp-767 {
         max-height: 629px;
       }
-    }
-
-    @include vp-1023 {
-      margin: 0 auto 0 10px;
-    }
-
-    @include vp-767 {
-      margin: 0 auto 0 5px;
     }
   }
 
