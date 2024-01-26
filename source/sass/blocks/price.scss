@@ -183,12 +183,14 @@
     }
 
     @include vp-1023 {
-      margin: 0 -22px 0 455px;
+      margin: 0 -22px 0 64%;
       padding: 0;
     }
 
     @include vp-767 {
-      margin: 0 -22px 0 120px;
+      width: 256px;
+      height: 369px;
+      margin: 0 -22px 0 auto;
     }
 
     @include vp-374 {
@@ -242,13 +244,12 @@
 
     @include vp-1023 {
       bottom: -60px;
-      right: 34%;
+      right: 16%;
+      padding: 18px 68px 17px 68px;
     }
 
     @include vp-767 {
       bottom: -86px;
-      right: 16%;
-      left: 3.5%;
     }
 
     @include vp-374 {
