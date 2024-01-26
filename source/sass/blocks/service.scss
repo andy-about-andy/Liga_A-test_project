@@ -105,7 +105,7 @@
   &__item {
     transform: translateY(0);
 
-    &--2 {
+    &:nth-child(3n+2) {
       transform: translateY(57px);
 
       @include vp-1023 {
@@ -113,11 +113,21 @@
       }
     }
 
-    &--3 {
+    &:nth-child(3n+3) {
       transform: translateY(135px);
 
       @include vp-1023 {
         transform: translateY(0);
+      }
+    }
+
+    @include vp-1023 {
+      &:nth-child(2n+2) {
+        transform: translateY(57px);
+
+        @include vp-767 {
+          transform: translateY(0);
+        }
       }
     }
   }
