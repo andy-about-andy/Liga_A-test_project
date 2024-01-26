@@ -38,14 +38,15 @@
     }
 
     p {
-      margin: 0 0 55px;
+      max-width: 700px;
+      margin: 0 auto 55px;
       font-size: 48px;
       font-weight: 600;
       line-height: 58px;
       letter-spacing: -0.24px;
 
       @include vp-1023 {
-        margin: 0 0 32px;
+        margin: 0 auto 32px;
         font-size: 32px;
         line-height: normal;
         letter-spacing: -0.16px;
