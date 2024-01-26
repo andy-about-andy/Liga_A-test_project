@@ -77,9 +77,13 @@
 
   &__text {
     p {
-      margin: 0 0 24px;
+      margin: 0;
       font-weight: 300;
       color: $color-light-grey;
+
+      &:last-child {
+        margin: 0 0 24px;
+      }
     }
   }
 

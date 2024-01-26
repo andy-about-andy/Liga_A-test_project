@@ -1,5 +1,5 @@
 mixin about-content(data = {})
-  - const {list, button, decorMan, decorGlasses, text} = data
+  - const {list, button, decorMan, decorGlasses, textTitle, text} = data
 
   .about-content(data-parallax-box)&attributes(attributes)
     .container(data-trigger)
@@ -13,10 +13,11 @@ mixin about-content(data = {})
         .about-content__box
           .about-content__inner
             +title({tag: "h2", text: "ABOUT US"}).title--h2
-            p !{text.text1}
+            p !{textTitle.text}
           .about-content__content
             .about-content__text
-              p !{text.text2}
+              each item in text
+                p !{item.textParagraph}
             if list
               ul.about-content__list
                 each item in list
