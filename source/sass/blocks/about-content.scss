@@ -24,7 +24,7 @@
       margin: 0 auto;
     }
 
-    @include vp-399 {
+    @include vp-414 {
       height: 340px;
     }
   }
@@ -141,7 +141,7 @@
       height: 591px;
     }
 
-    @include vp-399 {
+    @include vp-414 {
       top: -20px;
       width: 550px;
       height: 420px;
@@ -187,7 +187,7 @@
       height: 96px;
     }
 
-    @include vp-399 {
+    @include vp-414 {
       top: 270px;
       right: -6%;
       width: 130px;
@@ -252,7 +252,7 @@
         left: 76.3%;
       }
 
-      @include vp-399 {
+      @include vp-414 {
         width: 774px;
         height: 591px;
         left: 70%;
@@ -275,7 +275,7 @@
         left: -19.1%;
       }
 
-      @include vp-399 {
+      @include vp-414 {
         width: 147px;
         height: 96px;
         left: -3%;

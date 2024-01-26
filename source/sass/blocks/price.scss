@@ -193,8 +193,8 @@
       margin: 0 -22px 0 auto;
     }
 
-    @include vp-399 {
-      margin: 0 -22px 0 42px;
+    @include vp-414 {
+      margin: 0 -22px 0 auto;
     }
   }
 
@@ -252,9 +252,10 @@
       bottom: -86px;
     }
 
-    @include vp-399 {
-      width: 270px;
-      padding: 20px 40px 18px;
+    @include vp-414 {
+      right: 13%;
+      width: 240px;
+      padding: 15px 26px;
     }
   }
 }

@@ -24,7 +24,7 @@
       margin: 0 auto;
     }
 
-    @include vp-399 {
+    @include vp-414 {
       height: 340px;
     }
   }
@@ -134,7 +134,7 @@
       left: 48.3%;
     }
 
-    @include vp-399 {
+    @include vp-414 {
       width: 550px;
       height: 430px;
     }
@@ -180,7 +180,7 @@
       right: -0.6%;
     }
 
-    @include vp-399 {
+    @include vp-414 {
       top: 300px;
       right: -2%;
       width: 130px;
@@ -210,7 +210,7 @@
         right: 13px;
       }
 
-      @include vp-399 {
+      @include vp-414 {
         right: 1px;
       }
     }
@@ -249,7 +249,7 @@
         height: 490px;
       }
 
-      @include vp-399 {
+      @include vp-414 {
         height: 320px;
       }
     }
@@ -277,7 +277,7 @@
         height: 641px;
       }
 
-      @include vp-399 {
+      @include vp-414 {
         left: 50%;
         width: 550px;
         height: 430px;
@@ -305,7 +305,7 @@
         height: 104px;
       }
 
-      @include vp-399 {
+      @include vp-414 {
         top: 260px;
         right: 0;
         width: 130px;
