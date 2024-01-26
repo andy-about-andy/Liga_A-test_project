@@ -30,7 +30,7 @@ block main
             li
               a(href="#title") Заголовок
             li
-              a(href="#happyСlient") Счастиливые клиенты
+              a(href="#fotosСlients") Фото клиентов
             li
               a(href="#socials") Социальные сети
             li
@@ -235,13 +235,13 @@ block main
               code(class="language-pug").
                 +title({tag: "h3", text: "Заголовок H3"}).title--h3.title--600
 
-        //- Счастиливые клиенты
-        section.uikit__section(id="happyСlient")
-          h2.uikit__h2 Счастиливые клиенты
-          p.uikit__text Счастиливые клиенты \ всегда три фото
+        //- Фото клиентов с текстом
+        section.uikit__section(id="fotosСlients")
+          h2.uikit__h2 Фото клиентов с текстом
+          p.uikit__text Фото клиентов с текстом \ всегда три фото
           .uikit__component
-            p.uikit__text.uikit__text--class .happy-client
-            +happy-client({
+            p.uikit__text.uikit__text--class .fotos-clients
+            +fotos-clients({
               foto: [
                 {
                   path: "content",
@@ -271,11 +271,13 @@ block main
                   number: "3"
                 },
               ],
+              quantity: "32k+ ",
+              text: "Happy Client"
             })
             pre
               |
               code(class="language-pug").
-                +happy-client({
+                +fotos-clients({
                   foto: [
                     {
                       path: "content",
@@ -305,6 +307,8 @@ block main
                       number: "3"
                     },
                   ],
+                  quantity: "32k+ ",
+                  text: "Happy Client"
                 })
 
         //- Социальные сети

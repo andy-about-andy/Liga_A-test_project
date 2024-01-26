@@ -1,15 +1,15 @@
-mixin happy-client(data = {})
+mixin fotos-clients(data = {})
   - const quantity = data.quantity || "";
   - const text = data.text || "";
 
-  .happy-client&attributes(attributes)
-    .happy-client__foto
-      ul.happy-client__list
+  .fotos-clients&attributes(attributes)
+    .fotos-clients__foto
+      ul.fotos-clients__list
         each item in data.foto
-          li.happy-client__item(class=`happy-client__item--${item.number}`)
+          li.fotos-clients__item
             +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
     if quantity
-      .happy-client__text-inner
+      .fotos-clients__text-inner
         span !{quantity}
           span
             +icon("icon-decor-element", 48, 7, true)
