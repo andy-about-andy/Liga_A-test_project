@@ -202,6 +202,13 @@
     top: 100px;
     right: -20%;
     z-index: -1;
+    width: 1246px;
+    height: 783px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
 
     @include vp-1279 {
       top: 150px;
@@ -210,12 +217,16 @@
 
     @include vp-1023 {
       top: auto;
-      bottom: 150px;
-      right: -27%;
+      bottom: 0;
+      right: -32%;
+      width: 1023px;
+      height: 685px;
     }
 
     @include vp-767 {
-      display: none;    }
+      bottom: -140px;
+      right: -100%;
+    }
   }
 
   .price-card {

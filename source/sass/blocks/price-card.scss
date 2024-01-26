@@ -39,9 +39,18 @@
   .btn {
     margin: 14px 0;
     user-select: none;
+
+    @include vp-767 {
+      min-width: 182px;
+      justify-content: center;
+      padding: 18px 34px;
+    }
   }
 
   &__warranty {
+    @include vp-767 {
+      min-width: 171px;
+    }
     p {
       text-align: center;
       font-size: 12px;
