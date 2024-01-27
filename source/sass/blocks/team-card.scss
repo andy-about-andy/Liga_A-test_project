@@ -20,15 +20,16 @@
     bottom: 17px;
     left: 50%;
     transform: translate(-50%, 0);
-
-    p {
-      margin: 0;
-      text-align: center;
-      font-weight: 600;
-    }
   }
 
-  &__job-title p {
+  &__name,
+  &__job-title {
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  &__job-title {
     font-size: 12px;
     font-weight: 400;
     line-height: 20px;

@@ -11,8 +11,7 @@ mixin sidebar(data = {})
           +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
           .sidebar__inner
             +badge({text: item.badge})
-            .sidebar__text
-              p !{item.text}
+            p.sidebar__text !{item.text}
     if popularHashtag
       +hashtag({
         title: popularHashtag.title,

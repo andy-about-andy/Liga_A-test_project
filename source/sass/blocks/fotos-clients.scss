@@ -47,20 +47,20 @@
     @include vp-767 {
       margin-left: 18px;
     }
+  }
 
-    & span:first-child {
-      position: relative;
+  &__quantity {
+    position: relative;
 
-      span {
-        position: absolute;
-        bottom: -10px;
-        left: -6px;
-      }
+    span {
+      position: absolute;
+      bottom: -10px;
+      left: -6px;
     }
+  }
 
-    & span:last-child {
-      font-weight: 300;
-      color: $color-light-grey;
-    }
+  &__text {
+    font-weight: 300;
+    color: $color-light-grey;
   }
 }

@@ -154,9 +154,20 @@
     top: 88px;
     left: 33px;
     z-index: 2;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.72px;
     opacity: 1;
     pointer-events: none;
     transition: opacity $trans-default;
+
+    @include vp-1023 {
+      font-size: 20px;
+      line-height: normal;
+      letter-spacing: normal;
+    }
 
     @include vp-767 {
       top: 58px;
@@ -167,21 +178,8 @@
       top: 40px;
       left: 12px;
     }
-
-    p {
-      margin: 0;
-      font-size: 36px;
-      font-weight: 500;
-      line-height: 44px;
-      letter-spacing: -0.72px;
-
-      @include vp-1023 {
-        font-size: 20px;
-        line-height: normal;
-        letter-spacing: normal;
-      }
-    }
   }
+
   .is-play &__button,
   .is-play &__cover,
   .is-play &__text,

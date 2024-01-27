@@ -48,32 +48,24 @@
     .title--h2 {
       margin: 0 0 12px;
     }
-
-    p {
-      margin: 0 0 32px;
-      font-size: 48px;
-      font-weight: 600;
-      line-height: 58px;
-      letter-spacing: -0.24px;
-
-      @include vp-1023 {
-        margin: 0 0 32px;
-        font-size: 32px;
-        line-height: normal;
-        letter-spacing: -0.16px;
-      }
-
-      @include vp-767 {
-        margin: 0 0 31px;
-      }
-    }
   }
 
-  &__text {
-    p {
-      margin: 0 0 24px;
-      font-weight: 300;
-      color: $color-light-grey;
+  &__designation {
+    margin: 0 0 32px;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 58px;
+    letter-spacing: -0.24px;
+
+    @include vp-1023 {
+      margin: 0 0 32px;
+      font-size: 32px;
+      line-height: normal;
+      letter-spacing: -0.16px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 31px;
     }
   }
 
@@ -103,7 +95,7 @@
       }
     }
 
-    p {
+    .accordion__text {
       margin: 0;
     }
   }
@@ -233,10 +225,11 @@
 
     .choose-content__inner {
       margin-top: 65px;
+    }
 
-      p {
-        @include vp-767 {
-          margin: 0 0 32px;        }
+    .choose-content__designation {
+      @include vp-767 {
+        margin: 0 0 32px;
       }
     }
 

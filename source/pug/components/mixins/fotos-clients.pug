@@ -10,7 +10,7 @@ mixin fotos-clients(data = {})
             +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
     if quantity
       .fotos-clients__text-inner
-        span !{quantity}
+        span.fotos-clients__quantity !{quantity}
           span
             +icon("icon-decor-element", 48, 7, true)
-        span !{text}
+        span.fotos-clients__text !{text}

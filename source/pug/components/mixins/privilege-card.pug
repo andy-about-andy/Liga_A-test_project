@@ -9,6 +9,5 @@ mixin privilege-card(data = {})
         +icon(name, width, height, gradient)
     .privilege-card__inner
       +title({text: title}).title--h3
-      .privilege-card__text
-        p !{text}
+      p.privilege-card__text !{text}
     block
