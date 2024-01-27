@@ -14,4 +14,4 @@ mixin hashtag(data = {})
       ul.hashtag__list.hashtag__list--popular
         each item in hashtags
           li.hashtag__item
-            span !{"#" + item.text}
+            +badge({hashtag: item.text})
