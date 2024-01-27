@@ -8,10 +8,7 @@ mixin sidebar(data = {})
     ul.sidebar__list
       each item in sidebarContent
         li.sidebar__item
-          +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
-          .sidebar__inner
-            +badge({text: item.badge})
-            p.sidebar__text !{item.text}
+          +sidebar-card(item)
     if popularHashtag
       +hashtag({
         title: popularHashtag.title,
