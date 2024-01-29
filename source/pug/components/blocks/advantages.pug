@@ -23,11 +23,12 @@ mixin advantages(data = {})
 
   .advantages&attributes(attributes)
     .container(class=`${trigger}`)
-      .advantages__inner
-        if title
-          +title({tag: "h2", text: "WHY CHOOSE US"}).title--h2
-        if textName
-          p Empowering Your Virtual Reality Experience
+      if title || textName
+        .advantages__inner
+          if title
+            +title({tag: "h2", text: "WHY CHOOSE US"}).title--h2
+          if textName
+            p Empowering Your Virtual Reality Experience
       ul.advantages__list
         each item in card
           li.advantages__item
