@@ -38,6 +38,8 @@ block main
             li
               a(href="#video") Видео
             li
+              a(href="#sidebarCard") Сайдбар карточка
+            li
               a(href="#sidebar") Сайдбар
             li
               a(href="#badge") Бэйдж (ярлык)
@@ -503,10 +505,38 @@ block main
                   text: "How to get started",
                 })
 
+        //- Сайдбар карточка
+        section.uikit__section(id="sidebarCard")
+          h2.uikit__h2 Сайдбар карточка \ ссылка
+          .uikit__component
+            p.uikit__text.uikit__text--class .sidebar-card
+            +sidebar-card({
+              path: "content",
+              image: "sidebar-content-1",
+              format: "jpg",
+              width: "102",
+              height: "65",
+              altText: "очки виртуальной реальности",
+              badge: "VR Education",
+              text: "The Future of&nbsp;Education: How VR&nbsp;is&nbsp;Revolutionizing the Classroom"
+            })
+            pre
+              |
+              code(class="language-pug").
+                +sidebar-card({
+                  path: "content",
+                  image: "sidebar-content-1",
+                  format: "jpg",
+                  width: "102",
+                  height: "65",
+                  altText: "очки виртуальной реальности",
+                  badge: "VR Education",
+                  text: "The Future of&nbsp;Education: How VR&nbsp;is&nbsp;Revolutionizing the Classroom"
+                })
+
         //- Сайдбар
         section.uikit__section(id="sidebar")
           h2.uikit__h2 Сайдбар
-          p.uikit__text Не кликабелен
           .uikit__component
             p.uikit__text.uikit__text--class .sidebar
             +sidebar({
