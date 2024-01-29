@@ -40,6 +40,8 @@ block main
             li
               a(href="#sidebar") Сайдбар
             li
+              a(href="#badge") Бэйдж
+            li
               a(href="#hashtag") Хэштег
             li
               a(href="#teamCard") Карточка сотрудника
@@ -604,6 +606,26 @@ block main
                     ]
                   }
                 })
+
+        //- Бэйдж
+        section.uikit__section(id="badge")
+          h2.uikit__h2 Бэйдж
+          p.uikit__text Бэйдж \ default
+          .uikit__component
+            p.uikit__text.uikit__text--class .badge \ postTags: true
+            +badge({text: "VR Service"})
+            pre
+              |
+              code(class="language-pug").
+                +badge({text: "VR Service"})
+          p.uikit__text Бэйдж для хэштега
+          .uikit__component
+            p.uikit__text.uikit__text--class .badge \ postTags: true
+            +badge({hashtag: "ArchitectureInnovation"})
+            pre
+              |
+              code(class="language-pug").
+                +badge({hashtag: "ArchitectureInnovation"})
 
         //- Хэштег
         section.uikit__section(id="hashtag")

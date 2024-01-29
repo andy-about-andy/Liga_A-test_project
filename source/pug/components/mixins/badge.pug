@@ -2,6 +2,6 @@ mixin badge(data = {})
 
   .badge&attributes(attributes)
     if data.hashtag
-      span !{"#" + data.hashtag}
+      span.badge__hashtag !{"#" + data.hashtag}
     else
       p.badge__text !{data.text}
