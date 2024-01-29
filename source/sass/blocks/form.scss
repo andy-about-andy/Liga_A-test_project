@@ -4,7 +4,7 @@
     margin: 0;
     border: none;
 
-    @include vp-767 {
+    @include vp-1023 {
       margin: 0 auto;
       width: 100%;
     }
@@ -54,7 +54,7 @@
     position: relative;
     margin: 25px 1px 5px 0;
 
-    @include vp-767 {
+    @include vp-1023 {
       width: 100%;
     }
 

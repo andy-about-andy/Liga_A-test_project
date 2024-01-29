@@ -1,8 +1,4 @@
 .list-link {
-  &:last-child {
-    margin-left: auto;
-  }
-
   &__list {
     display: grid;
     grid-template-rows: auto;
@@ -14,6 +10,7 @@
   }
 
   &__link {
+    text-align: left;
     font-weight: 300;
   }
 }
