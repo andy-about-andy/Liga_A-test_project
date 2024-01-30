@@ -32,57 +32,56 @@ mixin footer(footerMods)
               },
             ])
           .footer__box
-            .footer__link
-              +list-link({
-                title: "Quicklinks",
-                filling: [
-                  {
-                    href: "index.html",
-                    text: "Home",
-                  },
-                  {
-                    href: "#",
-                    text: "Pricing Plan",
-                  },
-                  {
-                    href: "#",
-                    text: "Service",
-                  },
-                  {
-                    href: "blog.html",
-                    text: "Blog",
-                  },
-                  {
-                    href: "#",
-                    text: "Our Team",
-                  },
-                ]
-              })
-              +list-link({
-                title: "Support",
-                filling: [
-                  {
-                    href: "about.html",
-                    text: "About us",
-                  },
-                  {
-                    href: "#",
-                    text: "Contact us",
-                  },
-                  {
-                    href: "#",
-                    text: "FAQ",
-                  },
-                  {
-                    href: "#",
-                    text: "Tems & Conditions",
-                  },
-                  {
-                    href: "#",
-                    text: "Privacy Policy",
-                  },
-                ]
-              })
+            +list-link({
+              title: "Quicklinks",
+              filling: [
+                {
+                  href: "index.html",
+                  text: "Home",
+                },
+                {
+                  href: "#",
+                  text: "Pricing Plan",
+                },
+                {
+                  href: "#",
+                  text: "Service",
+                },
+                {
+                  href: "blog.html",
+                  text: "Blog",
+                },
+                {
+                  href: "#",
+                  text: "Our Team",
+                },
+              ]
+            })
+            +list-link({
+              title: "Support",
+              filling: [
+                {
+                  href: "about.html",
+                  text: "About us",
+                },
+                {
+                  href: "#",
+                  text: "Contact us",
+                },
+                {
+                  href: "#",
+                  text: "FAQ",
+                },
+                {
+                  href: "#",
+                  text: "Tems & Conditions",
+                },
+                {
+                  href: "#",
+                  text: "Privacy Policy",
+                },
+              ]
+            })
             .footer__contacts
               +title({tag: "h3", text: "Need Help?"}).title--h3.title--600
               ul.footer__contacts-list
