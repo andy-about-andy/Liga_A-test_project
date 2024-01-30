@@ -88,6 +88,10 @@
     &:last-child {
       margin: 0;
 
+      .accordion__element {
+        margin-bottom: 40px;
+      }
+
       @include vp-767 {
         .accordion__element {
           margin: 0;

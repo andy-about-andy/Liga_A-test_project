@@ -159,16 +159,13 @@
       gap: 16px;
     }
 
-    .privilege-card__inner p {
-      margin: 0;
-    }
-
-    .privilege-card__text p {
+    .privilege-card__text {
       margin-top: 8px;
       font-size: 16px;
     }
 
     .privilege-card .title--h3 {
+      margin: 0;
       font-size: 18px;
     }
   }

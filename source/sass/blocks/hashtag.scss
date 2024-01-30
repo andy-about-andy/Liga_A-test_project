@@ -16,16 +16,19 @@
     display: flex;
     flex-wrap: wrap;
     gap: 13px 12px;
-    font-size: 10px;
-    line-height: 14px;
     background: none;
     -webkit-background-clip: initial;
     -webkit-text-fill-color: $color-default-white;
 
     .badge {
-      padding: 1px 7px 1px;
-      background: rgba(255, 255, 255, 0.3);
+      display: block;
       border-radius: 11.52px;
+    }
+
+    .badge__hashtag {
+      padding: 1px 7px 1px;
+      font-size: 10px;
+      line-height: 14px;
       font-weight: 500;
     }
   }

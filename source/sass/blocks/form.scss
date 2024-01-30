@@ -42,7 +42,7 @@
 
     @include vp-1023 {
       flex-direction: column;
-      margin: 0 auto 8px;
+      margin: 0 auto;
       text-align: center;
       font-size: 28px;
       line-height: normal;
@@ -56,6 +56,7 @@
 
     @include vp-1023 {
       width: 100%;
+      margin: 7px 1px 5px 0;
     }
 
     form {
