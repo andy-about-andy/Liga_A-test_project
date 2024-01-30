@@ -67,8 +67,6 @@ mixin service(data = {})
     .container(data-trigger)
       .service__wrapper
         .service__inner
-          .service__decor-element
-            +picture("content", "decor-light-service", "webp", 874, 619, "декор элемент")
           .service__title
             +title({tag: "h2", text: "OUR SERVICE"}).title--h2
             p Our Service
@@ -85,3 +83,5 @@ mixin service(data = {})
                 })
                 .service__button
                   +btn({href: item.button.href, text: "LEARN MORE"}).btn--with-border(aria-label="Переход по ссылке")
+    .service__decor-element
+      +picture("content", "decor-light-service", "webp", 874, 619, "декор элемент")

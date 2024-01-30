@@ -12,13 +12,12 @@ export const initScrollTrigger = () => {
       onEnter: (elements) => {
         gsap.fromTo(elements, {
           opacity: 0,
-          y: 250,
-          delay: 0.65,
+          y: 300,
         },
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: 0.8,
           immediateRender: false,
         });
       },
@@ -32,13 +31,12 @@ export const initScrollTrigger = () => {
       onEnter: (elements) => {
         gsap.fromTo(elements, {
           opacity: 0,
-          y: 250,
-          delay: 0.65,
+          y: 300,
         },
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: 0.8,
           immediateRender: false,
         });
       },
