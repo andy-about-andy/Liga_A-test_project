@@ -190,12 +190,12 @@
       inset: 0;
       border-radius: 50%;
       padding: 1px;
-      background: linear-gradient(90deg,rgba(255,255,255,.3),rgba(255,255,255,0));
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
       -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+        linear-gradient(#ffffff 0 0) content-box,
+        linear-gradient(#ffffff 0 0);
       -webkit-mask-composite: xor;
-              mask-composite: exclude;
+      mask-composite: exclude;
     }
 
     svg,
@@ -252,13 +252,13 @@
     top: 0;
     left: 0;
     display: grid;
-    grid-template-columns: 44.00% 9.44% 46.58%;
+    grid-template-columns: 44% 9.44% 46.58%;
     max-width: 1082px;
     width: 100%;
     height: 100%;
 
     @include vp-767 {
-      grid-template-columns: 43.70% 9.44% 46.58%;
+      grid-template-columns: 43.7% 9.44% 46.58%;
     }
   }
 

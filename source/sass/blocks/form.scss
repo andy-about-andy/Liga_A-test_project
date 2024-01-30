@@ -103,14 +103,15 @@
 
   &__box-modal--not-hidden {
     visibility: visible;
-    opacity: 1.0;
+    opacity: 1;
   }
 
   &__box {
-    opacity: 1.0;
+    opacity: 1;
     visibility: visible;
     transition: opacity $trans-default, visibility $trans-default;
   }
+
   &__box--hidden {
     opacity: 0;
     visibility: hidden;
