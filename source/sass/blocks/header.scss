@@ -283,4 +283,10 @@
   .btn {
     user-select: none;
   }
+
+  .btn {
+    @include vp-1023 {
+      margin-bottom: 25px;
+    }
+  }
 }
