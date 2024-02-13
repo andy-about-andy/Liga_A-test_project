@@ -175,4 +175,10 @@
   .title {
     margin-bottom: 16px;
   }
+
+  & .link {
+    @include vp-1023 {
+      text-align: left;
+    }
+  }
 }
