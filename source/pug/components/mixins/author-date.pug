@@ -4,5 +4,6 @@ mixin author-date(data = {})
 
   .author-date
     if authorName
-      p.author-date__text !{authorName + "&nbsp;|"}
+      .author-date__text
+        p !{authorName + "&nbsp;|"}
     +date({text: date})

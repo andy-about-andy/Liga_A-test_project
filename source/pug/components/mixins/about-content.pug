@@ -13,17 +13,20 @@ mixin about-content(data = {})
         .about-content__box
           .about-content__inner
             +title({tag: "h2", text: "ABOUT US"}).title--h2
-            p.about-content__designation !{textTitle.text}
+            .about-content__designation
+              p !{textTitle.text}
           .about-content__content
             .about-content__inner-text
               each item in text
-                p.about-content__text !{item.textParagraph}
+                .about-content__text
+                  p !{item.textParagraph}
             if list
               ul.about-content__list
                 each item in list
                   li.about-content__item
                     span.about-content__item-icon
                       +icon("icon-check-mark", 16, 16, true)
-                    p.about-content__item-text !{item.text}
+                    .about-content__item-text
+                      p !{item.text}
             if button
               +btn({href: button.href, text: button.text})(aria-label="Переход по ссылке")

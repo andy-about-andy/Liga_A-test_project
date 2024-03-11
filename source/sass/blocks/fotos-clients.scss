@@ -60,7 +60,11 @@
   }
 
   &__text {
-    font-weight: 300;
-    color: $color-light-grey;
+    display: inline-block;
+
+    span {
+      font-weight: 300;
+      color: $color-light-grey;
+    }
   }
 }

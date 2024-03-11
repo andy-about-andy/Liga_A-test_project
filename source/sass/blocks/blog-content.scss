@@ -42,11 +42,13 @@
   }
 
   &__text {
-    margin: 0 0 24px;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 28px;
-    color: $color-light-grey;
+    p {
+      margin: 0 0 24px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 28px;
+      color: $color-light-grey;
+    }
   }
 
   &__additional-img {

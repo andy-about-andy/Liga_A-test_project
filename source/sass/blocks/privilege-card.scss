@@ -16,8 +16,10 @@
   }
 
   &__text {
-    margin: 9px 0 0;
-    font-size: 14px;
-    color: $color-spun-pearl;
+    p {
+      margin: 9px 0 0;
+      font-size: 14px;
+      color: $color-spun-pearl;
+    }
   }
 }

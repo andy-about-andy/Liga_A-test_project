@@ -6,4 +6,5 @@ mixin sidebar-card(data = {})
       +picture(path, image, format, width, height, altText)
       .sidebar-card__inner
         +badge({text: badge})
-        p.sidebar-card__text !{text}
+        .sidebar-card__text
+          p !{text}

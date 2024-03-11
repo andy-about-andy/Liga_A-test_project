@@ -7,7 +7,8 @@ mixin choose-content(data = {})
         .choose-content__box
           .choose-content__inner
             +title({tag: "h2", text: "WHY CHOOSE US"}).title--h2
-            p.choose-content__designation !{text.text}
+            .choose-content__designation
+              p !{text.text}
           .choose-content__accordion.accordion(data-accordion="parent", data-single)
             ul.choose-content__list
               each item in list
@@ -18,7 +19,8 @@ mixin choose-content(data = {})
                       +icon("icon-arrow", 7, 4)
                     .accordion__content(data-accordion="content")
                       .accordion__wrapper
-                        p.accordion__text !{item.text}
+                        .accordion__text
+                          p !{item.text}
         .choose-content__decor
           .choose-content__decor-man-inner
             .choose-content__decor-man(data-parallax-mouse, data-movement="50")

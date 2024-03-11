@@ -6,7 +6,10 @@ mixin price-card(data={ })
   - const warranty = data.warranty;
 
   .price-card&attributes(attributes)
-    p.price-card__title !{title}
-    p.price-card__price !{price}
+    .price-card__title
+      p !{title}
+    .price-card__price
+      p !{price}
     +btn({href: href, text: text})(aria-label="Переход по ссылке")
-    p.price-card__warranty !{warranty}
+    .price-card__warranty
+      p !{warranty}

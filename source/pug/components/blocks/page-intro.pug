@@ -5,7 +5,8 @@ mixin page-intro(data = {})
         .page-intro__box
           .page-intro__inner
             +title({tag: "h1", text: "Immerse Yourself<br>in&nbsp;Virtual Reality"}).title--h1
-            p.page-intro__text Experience Unforgettable Events in&nbsp;VR. Bring your events to&nbsp;life like never before with our&nbsp;VR services
+            .page-intro__text
+              p Experience Unforgettable Events in&nbsp;VR. Bring your events to&nbsp;life like never before with our&nbsp;VR services
             +btn({href: "#", text: "discover more"})(aria-label="Переход по ссылке")
           +fotos-clients({
             foto: [

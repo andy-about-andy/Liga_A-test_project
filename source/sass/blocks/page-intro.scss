@@ -25,14 +25,16 @@
   }
 
   &__text {
-    width: 446px;
-    margin: 12px 0 0;
-    font-weight: 300;
-    color: $color-light-grey;
+    p {
+      width: 446px;
+      margin: 12px 0 0;
+      font-weight: 300;
+      color: $color-light-grey;
 
-    @include vp-767 {
-      max-width: 400px;
-      width: auto;
+      @include vp-767 {
+        max-width: 400px;
+        width: auto;
+      }
     }
   }
 
