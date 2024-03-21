@@ -1,19 +1,16 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "Main" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Main"
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = "header--nav-index"
   - const hasFooter = true
   - const footerMods = ""
-  - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const currentUrl = "index.html"
 
 block main
   main
-    //- на странице запрещен "голый" код
-    //- все блоки вставляются из папки pug/components/blocks
-
     +page-content()
       +page-section().page-section--second-padding-top
         +page-intro({advantages: true})
