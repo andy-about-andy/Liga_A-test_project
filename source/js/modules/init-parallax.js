@@ -23,6 +23,7 @@ const initParallax = () => {
       parallaxItems.forEach((item) => {
         const movement = item.dataset.movement ? item.dataset.movement : 1;
 
+        // eslint-disable-next-line no-undef
         gsap.to(item, {
           x: mouseCords.x / movement,
           y: mouseCords.y / movement,
@@ -32,6 +33,7 @@ const initParallax = () => {
       });
     };
 
+    // eslint-disable-next-line no-undef
     gsap.ticker.add(updateParallax);
   }
 };

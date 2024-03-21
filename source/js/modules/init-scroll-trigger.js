@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import {ScrollTrigger} from '../vendor/scroll-trigger';
 
 export const initScrollTrigger = () => {

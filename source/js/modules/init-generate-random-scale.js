@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const circle = document.querySelectorAll('.partners__box');
 
 const initGenerateRandomScale = () => {
