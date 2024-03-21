@@ -4,6 +4,7 @@ export const initScrollTrigger = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   const bottomToTop = document.querySelectorAll('[data-trigger]');
+  const bottomToTopForm = document.querySelectorAll('[data-trigger-form]');
   const advantages = document.querySelectorAll('.trigger');
   const teamItem = document.querySelectorAll('.team__item');
 
@@ -17,6 +18,24 @@ export const initScrollTrigger = () => {
         {
           opacity: 1,
           y: 0,
+          duration: 0.8,
+          immediateRender: false,
+        });
+      },
+      once: true,
+    });
+  }
+
+  if (bottomToTopForm) {
+    ScrollTrigger.batch(bottomToTopForm, {
+      onEnter: (elements) => {
+        gsap.fromTo(elements, {
+          opacity: 0,
+          x: 750,
+        },
+        {
+          opacity: 1,
+          x: 0,
           duration: 0.8,
           immediateRender: false,
         });
