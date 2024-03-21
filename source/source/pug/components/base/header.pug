@@ -1,0 +1,56 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "index.html",
+        text: "Home",
+        page: "index"
+      },
+      {
+        href: "about.html",
+        text: "About&nbsp;us",
+        page: "about"
+      },
+      {
+        href: "#",
+        text: "Service",
+        page: "service"
+      },
+      {
+        href: "#",
+        text: "Pricing&nbsp;Plan",
+        page: "price"
+      },
+      {
+        href: "blog.html",
+        text: "Blog",
+        page: "blog"
+      },
+    ]
+
+    const button = {
+      href: "#footer",
+      text: "Contact&nbsp;us",
+    }
+
+  header.header(class=headerMods)
+    .header__box.header__box--sticky(data-header="sticky", data-header-theme-class="header--base", data-hide-point="50")
+      .container(data-trigger)
+        .header__wrapper
+          if(currentUrl === "index.html")
+            +logo({header: true})
+          else
+            +logo({header: true, href: "index.html"})
+          nav.header__nav
+            button.header__button(type="button", aria-label="Открыть меню", data-burger)
+              +icon("icon-burger-open", 16, 16).header__button-icon-open
+              +icon("icon-burger-close", 16, 16).header__button-icon-close
+            .header__menu
+              .header__menu-inner
+                ul.header__list
+                  each link in headerLinks
+                    li.header__item
+                      +link({href: link.href, label: link.label, isExternal: false, text: link.text, isHeader: true})(data-close-menu, class=`link--${link.page}`)
+                +btn({text:button.text, scrollTo:button.href}).btn--with-border.btn--capitalize(aria-label="Переход к разделу контакты", data-close-menu)
+    .header__decor
+      +icon("icon-decor-header", 1120, 716, true)

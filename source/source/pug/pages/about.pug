@@ -1,0 +1,28 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "About Us"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = "header--nav-about"
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = ""
+
+block main
+  main
+    +page-content()
+      +page-section().page-section--fourth-padding-top
+        +title-page-about()
+      +page-section().page-section--top-position
+        +about-page-about()
+      +page-section().page-section--bottom-position
+        +advantages({textName: true, title: true, trigger: "trigger"}).advantages--about
+      +page-section()
+        +choose-page-about()
+      +page-section()
+        +team()
+      +page-section()
+        +partners().partners--about
+      +page-section().page-section--no-padding-top
+        +form()

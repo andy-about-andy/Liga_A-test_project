@@ -1,0 +1,877 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "UI-kit"
+
+block main
+  style
+    include ../../sass/inline/uikit.css
+    include ../../sass/inline/prism.css
+
+  main
+    .uikit
+      //----------------------- Разделы с компонентами
+      .uikit__sections(data-scroll-lock-fill-gap)
+        label(for="section-burger")
+          span Разделы&nbsp;компонентов
+        input.visually-hidden(type="checkbox", checked, id="section-burger")
+        div
+          ul
+            li
+              a(href="#buttons") Кнопки
+            li
+              a(href="#forms") Элементы форм
+            li
+              a(href="#date") Дата
+            li
+              a(href="#authorDate") Автор и дата
+            li
+              a(href="#logo") Логотип
+            li
+              a(href="#title") Заголовок
+            li
+              a(href="#fotosСlients") Фото клиентов
+            li
+              a(href="#socials") Социальные сети
+            li
+              a(href="#share") Делиться информацией
+            li
+              a(href="#video") Видео
+            li
+              a(href="#sidebarCard") Сайдбар карточка
+            li
+              a(href="#sidebar") Сайдбар
+            li
+              a(href="#badge") Бэйдж (ярлык)
+            li
+              a(href="#hashtag") Хэштег
+            li
+              a(href="#teamCard") Карточка сотрудника
+            li
+              a(href="#titlePage") Заголовок страницы
+            li
+              a(href="#breadcrumbs") Хлебные крошки
+            li
+              a(href="#priceCard") Ценник
+            li
+              a(href="#privilegeCard") Карточка преимуществ
+
+
+      //----------------------------------------------
+      .container
+        a.uikit__header-link(href="sitemap.html")
+          img(src="img/svg/logo.svg", width="300", alt="Логотип проекта")
+        h1.uikit__h1 Компоненты, используемые на проекте
+
+        section.uikit__section
+          h2.uikit__h2 Название компонента или группы компонентов
+          p.uikit__text Информация о компоненте (подсказки \ предупреждение \ важная информация)
+          .uikit__component
+            p.uikit__text  Класс компонента \ модификаторы
+            pre
+              |
+              code(class="language-pug").
+                p Пример кода
+
+        //- Кнопки
+        section.uikit__section(id="buttons")
+          h2.uikit__h2 Кнопки
+          p.uikit__text Шрифт все заглавные - text-transform: uppercase;
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ default \ button
+            +btn({text: "Кнопка"})
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Текст", href: "#"})
+          p.uikit__text Шрифт без изменений - text-transform: none;
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ .btn--capitalize
+            +btn({text: "Текст", href: "#", isExternal: true}).btn--capitalize(aria-label="Просто ссылка")
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Текст", href: "#", isExternal: true}).btn--capitalize(aria-label="Просто ссылка")
+          p.uikit__text Фон отсутствует
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ .btn--with-border
+            +btn({text: "Текст", href: "#", isExternal: true}).btn--with-border(aria-label="Просто ссылка")
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Текст", href: "#", isExternal: true}).btn--with-border(aria-label="Просто ссылка")
+          p.uikit__text Кнопка с иконкой \ фон background-color: $color-transparent-second
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ .btn--icon
+            +btn({tag: "button", type: "submit", icon: { name: "icon-send", width: "17", height: "17" } }).btn--icon(aria-label="отрпавить вашу почту")
+            pre
+              |
+              code(class="language-pug").
+                +btn({tag: "button", type: "submit", icon: { name: "icon-send", width: "17", height: "17" } }).btn--icon(aria-label="отрпавить вашу почту")
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ disabled \ button
+            +btn({text: "Текст"})(disabled)
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Текст"})(disabled)
+
+        //- Элементы форм
+        section.uikit__section(id="forms")
+          h2.uikit__h2 Элементы форм
+          p.uikit__text Почта \ фон прозрачный
+          .uikit__component
+            p.uikit__text.uikit__text--class .custom-input \ type="email"
+            .form__inner(data-form-validate)
+              .form__box
+                form(method="post", action="https://echo.htmlacademy.ru/")
+                  +custom-input({
+                    inputType: "email",
+                    inputPlaceholder: "Enter your email address",
+                    inputName: "user-mail",
+                  })(data-validate-type="email", data-message-base="Поле обязательно к заполнению", data-message-succes="Это поле является обязательным", data-required)
+                    span
+                      +icon("icon-message", 24, 24)
+                  +btn({tag: "button", type: "submit", icon: { name: "icon-send", width: "17", height: "17" } }).btn--icon(aria-label="отрпавить вашу почту")
+            pre
+              |
+              code(class="language-pug").
+                +custom-input({
+                  inputType: "email",
+                  inputPlaceholder: "Enter your email address",
+                  inputName: "user-mail",
+                })(data-validate-type="email", data-message-base="Поле обязательно к заполнению", data-message-succes="Это поле является обязательным", data-required)
+                  span
+                    +icon("icon-message", 24, 24)
+                +btn({tag: "button", type: "submit", icon: { name: "icon-send", width: "17", height: "17" } }).btn--icon(aria-label="отрпавить вашу почту")
+
+        //- Дата
+        section.uikit__section(id="date")
+          h2.uikit__h2 Дата
+          .uikit__component
+            p.uikit__text.uikit__text--class .date
+            +date({text: "25 NOV 2022"})
+            pre
+              |
+              code(class="language-pug").
+                +date({text: "25 NOV 2022"})
+
+        //- Автор и дата
+        section.uikit__section(id="authorDate")
+          h2.uikit__h2 Автор и дата для Блога
+          .uikit__component
+            p.uikit__text.uikit__text--class .author-date
+            +author-date({authorName: "NASYIYA ULFA", date: "25 NOV 2022"})
+            pre
+              |
+              code(class="language-pug").
+                +author-date({authorName: "NASYIYA ULFA", date: "25 NOV 2022"})
+
+        //- Логотип
+        section.uikit__section(id="logo")
+          h2.uikit__h2 Логотип
+          p.uikit__text Логотип для header на главной странице \ не кликабелен
+          .uikit__component
+            p.uikit__text.uikit__text--class .logo
+            +logo({header: true})
+            pre
+              |
+              code(class="language-pug").
+                +logo({header: true})
+          p.uikit__text Логотип для header на страницах кроме главной \ кликабелен
+          .uikit__component
+            p.uikit__text.uikit__text--class .logo \ link
+            +logo({header: true, href: "index.html"})
+            pre
+              |
+              code(class="language-pug").
+                +logo({header: true, href: "index.html"})
+          .uikit__component
+            p.uikit__text Логотип для footer \ кликабелен
+            p.uikit__text.uikit__text--class .logo \ link
+            +logo({href: "index.html"})
+            pre
+              |
+              code(class="language-pug").
+                +logo({href: "index.html"})
+
+        //- Заголовок
+        section.uikit__section(id="title")
+          h2.uikit__h2 Заголовок
+          p.uikit__text Заголовок H1
+          .uikit__component
+            p.uikit__text.uikit__text--class .title
+            +title({tag: "h1", text: "Заголовок H1"}).title--h1
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h1", text: "Заголовок H1"}).title--h1
+          p.uikit__text Заголовок H2
+          .uikit__component
+            p.uikit__text.uikit__text--class .title
+            +title({tag: "h2", text: "Заголовок H2"}).title--h2
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h2", text: "Заголовок H2"}).title--h2
+          p.uikit__text Заголовок H3
+          .uikit__component
+            p.uikit__text.uikit__text--class .title
+            +title({tag: "h3", text: "Заголовок H3"}).title--h3
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h3", text: "Заголовок H3"}).title--h3
+          p.uikit__text Заголовок H3 с font-weight: 500
+          .uikit__component
+            p.uikit__text.uikit__text--class .title
+            +title({tag: "h3", text: "Заголовок H3"}).title--h3.title--500
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h3", text: "Заголовок H3"}).title--h3.title--500
+          p.uikit__text Заголовок H3 с font-weight: 600
+          .uikit__component
+            p.uikit__text.uikit__text--class .title
+            +title({tag: "h3", text: "Заголовок H3"}).title--h3.title--600
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h3", text: "Заголовок H3"}).title--h3.title--600
+
+        //- Фото клиентов с текстом
+        section.uikit__section(id="fotosСlients")
+          h2.uikit__h2 Фото клиентов с текстом
+          p.uikit__text Фото клиентов с текстом \ всегда три фото
+          .uikit__component
+            p.uikit__text.uikit__text--class .fotos-clients
+            +fotos-clients({
+              foto: [
+                {
+                  path: "content",
+                  image: "foto-client-1",
+                  format: "webp",
+                  width: "51",
+                  height: "51",
+                  altText: "фото счастливого клиента",
+                  number: "1"
+                },
+                {
+                  path: "content",
+                  image: "foto-client-2",
+                  format: "webp",
+                  width: "51",
+                  height: "51",
+                  altText: "фото счастливого клиента",
+                  number: "2"
+                },
+                {
+                  path: "content",
+                  image: "foto-client-3",
+                  format: "webp",
+                  width: "51",
+                  height: "51",
+                  altText: "фото счастливого клиента",
+                  number: "3"
+                },
+              ],
+              quantity: "32k+ ",
+              text: "Happy Client"
+            })
+            pre
+              |
+              code(class="language-pug").
+                +fotos-clients({
+                  foto: [
+                    {
+                      path: "content",
+                      image: "foto-client-1",
+                      format: "webp",
+                      width: "51",
+                      height: "51",
+                      altText: "фото счастливого клиента",
+                      number: "1"
+                    },
+                    {
+                      path: "content",
+                      image: "foto-client-2",
+                      format: "webp",
+                      width: "51",
+                      height: "51",
+                      altText: "фото счастливого клиента",
+                      number: "2"
+                    },
+                    {
+                      path: "content",
+                      image: "foto-client-3",
+                      format: "webp",
+                      width: "51",
+                      height: "51",
+                      altText: "фото счастливого клиента",
+                      number: "3"
+                    },
+                  ],
+                  quantity: "32k+ ",
+                  text: "Happy Client"
+                })
+
+        //- Социальные сети
+        section.uikit__section(id="socials")
+          h2.uikit__h2 Социальные сети
+          .uikit__component
+            p.uikit__text.uikit__text--class .socials \ link
+            +socials([
+              {
+                href: "#",
+                iconName: "icon-twitter",
+                iconWidth: "20",
+                iconHeight: "16"
+              },
+              {
+                href: "#",
+                iconName: "icon-facebook",
+                iconWidth: "12",
+                iconHeight: "21"
+              },
+              {
+                href: "#",
+                iconName: "icon-instagram",
+                iconWidth: "24",
+                iconHeight: "24"
+              },
+              {
+                href: "#",
+                iconName: "icon-github",
+                iconWidth: "22",
+                iconHeight: "22"
+              },
+            ])
+            pre
+              |
+              code(class="language-pug").
+                +socials([
+                  {
+                    href: "#",
+                    iconName: "icon-twitter",
+                    iconWidth: "20",
+                    iconHeight: "16"
+                  },
+                  {
+                    href: "#",
+                    iconName: "icon-facebook",
+                    iconWidth: "12",
+                    iconHeight: "21"
+                  },
+                  {
+                    href: "#",
+                    iconName: "icon-instagram",
+                    iconWidth: "24",
+                    iconHeight: "24"
+                  },
+                  {
+                    href: "#",
+                    iconName: "icon-github",
+                    iconWidth: "22",
+                    iconHeight: "22"
+                  },
+                ])
+
+        //- Делиться информацией
+        section.uikit__section(id="share")
+          h2.uikit__h2 Делиться информацией
+          .uikit__component
+            p.uikit__text.uikit__text--class .share \ link
+            +share({
+              title: "Share :",
+              shareLink: [
+                {
+                  href: "#",
+                  iconName: "icon-twitter",
+                  iconWidth: "20",
+                  iconHeight: "16"
+                },
+                {
+                  href: "#",
+                  iconName: "icon-facebook",
+                  iconWidth: "12",
+                  iconHeight: "21"
+                },
+                {
+                  href: "#",
+                  iconName: "icon-instagram",
+                  iconWidth: "24",
+                  iconHeight: "24"
+                },
+              ],
+            })
+            pre
+              |
+              code(class="language-pug").
+                +share({
+                  title: "Share :",
+                  shareLink: [
+                    {
+                      href: "#",
+                      iconName: "icon-twitter",
+                      iconWidth: "20",
+                      iconHeight: "16"
+                    },
+                    {
+                      href: "#",
+                      iconName: "icon-facebook",
+                      iconWidth: "12",
+                      iconHeight: "21"
+                    },
+                    {
+                      href: "#",
+                      iconName: "icon-instagram",
+                      iconWidth: "24",
+                      iconHeight: "24"
+                    },
+                  ],
+                })
+
+        //- Видео
+        section.uikit__section(id="video")
+          h2.uikit__h2 Видео
+          p.uikit__text Видео с картинкой заглушкой \ стилизвция добавлена отдельно картинками
+          .uikit__component
+            p.uikit__text.uikit__text--class .video \ video file local
+            +video({
+              image: {
+                path: "content",
+                image: "video-posterimage",
+                format: "jpg",
+                width: "1200",
+                height: "676",
+                altText: "Постер-заглушка на видео",
+              },
+              shadow: {
+                path: "content",
+                image: "video-shadow",
+                format: "png",
+                width: "1200",
+                height: "522",
+                altText: "Декор элемент для постера-заглушки",
+              },
+              linePlay: {
+                path: "content",
+                image: "line-play",
+                format: "png",
+                width: "1135",
+                height: "16",
+                altText: "Полоса прокрутки плеера",
+              },
+              video: {
+                src: "./video/video.mp4",
+                dataSrc: "./video/video.mp4"
+              },
+              badge: "VR Service",
+              text: "How to get started",
+            })
+            pre
+              |
+              code(class="language-pug").
+                +video({
+                  image: {
+                    path: "content",
+                    image: "video-posterimage",
+                    format: "jpg",
+                    width: "1200",
+                    height: "676",
+                    altText: "Постер-заглушка на видео",
+                  },
+                  shadow: {
+                    path: "content",
+                    image: "video-shadow",
+                    format: "png",
+                    width: "1200",
+                    height: "522",
+                    altText: "Декор элемент для постера-заглушки",
+                  },
+                  linePlay: {
+                    path: "content",
+                    image: "line-play",
+                    format: "png",
+                    width: "1135",
+                    height: "16",
+                    altText: "Полоса прокрутки плеера",
+                  },
+                  video: {
+                    src: "./video/video.mp4",
+                    dataSrc: "./video/video.mp4"
+                  },
+                  badge: "VR Service",
+                  text: "How to get started",
+                })
+
+        //- Сайдбар карточка
+        section.uikit__section(id="sidebarCard")
+          h2.uikit__h2 Сайдбар карточка \ ссылка
+          .uikit__component
+            p.uikit__text.uikit__text--class .sidebar-card
+            +sidebar-card({
+              path: "content",
+              image: "sidebar-content-1",
+              format: "jpg",
+              width: "102",
+              height: "65",
+              altText: "очки виртуальной реальности",
+              badge: "VR Education",
+              text: "The Future of&nbsp;Education: How VR&nbsp;is&nbsp;Revolutionizing the Classroom"
+            })
+            pre
+              |
+              code(class="language-pug").
+                +sidebar-card({
+                  path: "content",
+                  image: "sidebar-content-1",
+                  format: "jpg",
+                  width: "102",
+                  height: "65",
+                  altText: "очки виртуальной реальности",
+                  badge: "VR Education",
+                  text: "The Future of&nbsp;Education: How VR&nbsp;is&nbsp;Revolutionizing the Classroom"
+                })
+
+        //- Сайдбар
+        section.uikit__section(id="sidebar")
+          h2.uikit__h2 Сайдбар
+          .uikit__component
+            p.uikit__text.uikit__text--class .sidebar
+            +sidebar({
+              sidebar: {
+                title: "Recent Article",
+                sidebarContent: [
+                  {
+                    path: "content",
+                    image: "sidebar-content-1",
+                    format: "jpg",
+                    width: "102",
+                    height: "65",
+                    altText: "очки виртуальной реальности",
+                    badge: "VR Education",
+                    text: "The Future of&nbsp;Education: How VR&nbsp;is&nbsp;Revolutionizing the Classroom"
+                  },
+                  {
+                    path: "content",
+                    image: "sidebar-content-2",
+                    format: "jpg",
+                    width: "102",
+                    height: "65",
+                    altText: "мужчина в очках виртуальной реальности",
+                    badge: "VR Architecture",
+                    text: "Bringing Designs to&nbsp;Life: How VR&nbsp;is&nbsp;Changing Architecture"
+                  },
+                  {
+                    path: "content",
+                    image: "sidebar-content-3",
+                    format: "jpg",
+                    width: "102",
+                    height: "65",
+                    altText: "игра в очках виртуальной реальности",
+                    badge: "VR Entertainment ",
+                    text: "Making Events Memorable: The Power of&nbsp;VR for Corporate and Special Occasions"
+                  },
+                  {
+                    path: "content",
+                    image: "sidebar-content-4",
+                    format: "jpg",
+                    width: "102",
+                    height: "65",
+                    altText: "очки виртуальной реальности",
+                    badge: "VR Event",
+                    text: "Exploring New Worlds: The Benefits of&nbsp;VR&nbsp;Travel"
+                  },
+                ]
+              }
+            })
+            pre
+              |
+              code(class="language-pug").
+                +sidebar({
+                  sidebar: {
+                    title: "Recent Article",
+                    sidebarContent: [
+                      {
+                        path: "content",
+                        image: "sidebar-content-1",
+                        format: "jpg",
+                        width: "102",
+                        height: "65",
+                        altText: "очки виртуальной реальности",
+                        badge: "VR Education",
+                        text: "The Future of&nbsp;Education: How VR&nbsp;is&nbsp;Revolutionizing the Classroom"
+                      },
+                      {
+                        path: "content",
+                        image: "sidebar-content-2",
+                        format: "jpg",
+                        width: "102",
+                        height: "65",
+                        altText: "мужчина в очках виртуальной реальности",
+                        badge: "VR Architecture",
+                        text: "Bringing Designs to&nbsp;Life: How VR&nbsp;is&nbsp;Changing Architecture"
+                      },
+                      {
+                        path: "content",
+                        image: "sidebar-content-3",
+                        format: "jpg",
+                        width: "102",
+                        height: "65",
+                        altText: "игра в очках виртуальной реальности",
+                        badge: "VR Entertainment ",
+                        text: "Making Events Memorable: The Power of&nbsp;VR for Corporate and Special Occasions"
+                      },
+                      {
+                        path: "content",
+                        image: "sidebar-content-4",
+                        format: "jpg",
+                        width: "102",
+                        height: "65",
+                        altText: "очки виртуальной реальности",
+                        badge: "VR Event",
+                        text: "Exploring New Worlds: The Benefits of&nbsp;VR&nbsp;Travel"
+                      },
+                    ]
+                  }
+                })
+
+        //- Бэйдж (ярлык)
+        section.uikit__section(id="badge")
+          h2.uikit__h2 Бэйдж (ярлык)
+          p.uikit__text Бэйдж \ default
+          .uikit__component
+            p.uikit__text.uikit__text--class .badge \ postTags: true
+            +badge({text: "VR Service"})
+            pre
+              |
+              code(class="language-pug").
+                +badge({text: "VR Service"})
+          p.uikit__text Бэйдж для хэштега
+          .uikit__component
+            p.uikit__text.uikit__text--class .badge \ postTags: true
+            +badge({hashtag: "ArchitectureInnovation"})
+            pre
+              |
+              code(class="language-pug").
+                +badge({hashtag: "ArchitectureInnovation"})
+
+        //- Хэштег
+        section.uikit__section(id="hashtag")
+          h2.uikit__h2 Хэштег
+          p.uikit__text Хэштеги в строку
+          .uikit__component
+            p.uikit__text.uikit__text--class .hashtag \ postTags: true
+            +hashtag({
+              postTags: true,
+              title: "Post Tags :",
+              hashtags: [
+                {
+                  text: "VRDesign"
+                },
+                {
+                  text: "ArchitectureInnovation"
+                },
+                {
+                  text: "VirtualRealityArchitecture"
+                },
+                {
+                  text: "BringingDesignsToLife"
+                },
+                {
+                  text: "DesignVisualization"
+                },
+                {
+                  text: "ArchitecturalVisualization"
+                },
+              ],
+            })
+            pre
+              |
+              code(class="language-pug").
+                +hashtag({
+                  postTags: true,
+                  title: "Post Tags :",
+                  hashtags: [
+                    {
+                      text: "VRDesign"
+                    },
+                    {
+                      text: "ArchitectureInnovation"
+                    },
+                    {
+                      text: "VirtualRealityArchitecture"
+                    },
+                    {
+                      text: "BringingDesignsToLife"
+                    },
+                    {
+                      text: "DesignVisualization"
+                    },
+                    {
+                      text: "ArchitecturalVisualization"
+                    },
+                  ],
+                })
+          p.uikit__text Хэштеги в блоке с закруглением
+          .uikit__component
+            p.uikit__text.uikit__text--class .hashtag \ postTags: false
+            +hashtag({
+              title: "Popular Hashtag",
+              hashtags: [
+                {
+                  text: "VRDesign"
+                },
+                {
+                  text: "ArchitectureInnovation"
+                },
+                {
+                  text: "DesignThinking"
+                },
+                {
+                  text: "VirtualRealityArchitecture"
+                },
+                {
+                  text: "BringingDesignsToLife"
+                },
+              ],
+            })
+            pre
+              |
+              code(class="language-pug").
+                +hashtag({
+                  title: "Popular Hashtag",
+                  hashtags: [
+                    {
+                      text: "VRDesign"
+                    },
+                    {
+                      text: "ArchitectureInnovation"
+                    },
+                    {
+                      text: "DesignThinking"
+                    },
+                    {
+                      text: "VirtualRealityArchitecture"
+                    },
+                    {
+                      text: "BringingDesignsToLife"
+                    },
+                  ],
+                })
+
+        //- Карточка команды сотрудника
+        section.uikit__section(id="teamCard")
+          h2.uikit__h2 Карточка команды сотрудника
+          .uikit__component
+            p.uikit__text.uikit__text--class .team-card
+            +team-card({
+              picture: {
+                path: "content",
+                image: "team-foto-1",
+                format: "webp",
+                width: "276",
+                height: "371",
+                altText: "фото сотрудника нашей компании",
+              },
+              name: "Bondan&nbsp;Prabowo",
+              jobTitle: "CEO",
+            })
+            pre
+              |
+              code(class="language-pug").
+                +team-card({
+                  picture: {
+                    path: "content",
+                    image: "team-foto-1",
+                    format: "webp",
+                    width: "276",
+                    height: "371",
+                    altText: "фото сотрудника нашей компании",
+                  },
+                  name: "Bondan&nbsp;Prabowo",
+                  jobTitle: "CEO",
+                })
+
+        //- Заголовок страницы
+        section.uikit__section(id="titlePage")
+          h2.uikit__h2 Заголовок страницы
+          p.uikit__text Заголовок страницы с подчеркивание
+          p.uikit__text Если заголовка как такогового нет на странице, то надо передать дополнительно hidden: true
+          .uikit__component
+            p.uikit__text.uikit__text--class .title-page
+            +title-page({title: { text: "About Us" }})
+            pre
+              |
+              code(class="language-pug").
+                +title-page({title: { text: "About Us" }})
+                или
+                +title-page({title: { text: "About Us", hidden: true }})
+
+        //- Хлебные крошки
+        section.uikit__section(id="breadcrumbs")
+          h2.uikit__h2 Хлебные крошки
+          p.uikit__text Последнее название ограничено от переполнения тремя точками "..."
+          .uikit__component
+            p.uikit__text.uikit__text--class .breadcrumbs
+            +breadcrumbs({
+              list:
+              [
+                {text: "Home", href: "index.html"},
+                {text: "Blog", href: "about.html"},
+                {text: "Bringing Designs to&nbsp;Life: How VR&nbsp;is&nbsp;Changing Architecture"},
+              ]
+            })
+            pre
+              |
+              code(class="language-pug").
+                +title-page({title: { text: "About Us" }})
+                или
+                +title-page({title: { text: "About Us", hidden: true }})
+
+        //- Ценник
+        section.uikit__section(id="priceCard")
+          h2.uikit__h2 Ценник с сылкой
+          .uikit__component
+            p.uikit__text.uikit__text--class .price-card \ link
+            +price-card({
+              title: "Start from",
+              price: "$99",
+              href: "#",
+              text: "get started",
+              warranty: "30&nbsp;Days Moneyback Guarantee",
+            })
+            pre
+              |
+              code(class="language-pug").
+                +price-card({
+                  title: "Start from",
+                  price: "$99",
+                  href: "#",
+                  text: "get started",
+                  warranty: "30&nbsp;Days Moneyback Guarantee",
+                })
+
+        //- Карточка преимуществ
+        section.uikit__section(id="privilegeCard")
+          h2.uikit__h2 Карточка преимуществ
+          p.uikit__text Карточка не ограничена в размерах. Есть только отступы между внутреннеми элементами
+          .uikit__component
+            p.uikit__text.uikit__text--class .privilege-card
+            +privilege-card({
+              icon: {name: "icon-games", width: 48, height: 48, gradient: true},
+              title: "VR Games",
+              text: "We&nbsp;offer a&nbsp;wide selection of&nbsp;VR games that are&nbsp;suitable for players of&nbsp;all ages and skill levels.",
+            })
+            pre
+              |
+              code(class="language-pug").
+                +privilege-card({
+                  icon: {name: "icon-games", width: 48, height: 48, gradient: true},
+                  title: "VR Games",
+                  text: "We&nbsp;offer a&nbsp;wide selection of&nbsp;VR games that are&nbsp;suitable for players of&nbsp;all ages and skill levels.",
+                })
+
+  script
+    include ../../js/inline/ui-kit.js

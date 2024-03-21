@@ -1,0 +1,10 @@
+mixin team-card(data = {})
+  - const picture = data.picture
+
+  .team-card
+    +picture(picture.path, picture.image, picture.format, picture.width, picture.height, picture.altText)
+    .team-card__inner
+      .team-card__name
+        p !{data.name}
+      .team-card__job-title
+        p !{data.jobTitle}

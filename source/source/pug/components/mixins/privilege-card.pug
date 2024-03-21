@@ -1,0 +1,14 @@
+mixin privilege-card(data = {})
+  - const {name, width, height, gradient} = data.icon;
+  - const title = data.title || "";
+  - const text = data.text || "";
+
+  .privilege-card&attributes(attributes)
+    .privilege-card__box
+      span.privilege-card__icon
+        +icon(name, width, height, gradient)
+    .privilege-card__inner
+      +title({text: title}).title--h3
+      .privilege-card__text
+        p !{text}
+    block

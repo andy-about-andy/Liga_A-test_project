@@ -1,0 +1,223 @@
+mixin blog-page(data = {})
+  -
+    const badge = {
+      text: "VR Architecture"
+    }
+
+    const title = {
+      text: "Bringing Designs to&nbsp;Life: How VR&nbsp;is&nbsp;Changing Architecture"
+    }
+
+    const authorDate = {
+      authorName: "NASYIYA ULFA",
+      date: "25 NOV 2022"
+    }
+
+    const picture = {
+      path: "content",
+      image: "blog-content",
+      format: "jpg",
+      width: "789",
+      height: "528",
+      altText: "мужчина в очках виртуальной реальности",
+    }
+
+    const texts = [
+      {
+        text: "Architecture is&nbsp;an&nbsp;art and science that is&nbsp;constantly evolving with technology. The industry has gone through various transformations over the years, from pencil and paper sketches to&nbsp;computer-aided design (CAD) software. However, one technology that is&nbsp;revolutionizing architecture is&nbsp;virtual reality (VR) design."
+      },
+      {
+        text: "With VR&nbsp;design, architects can bring their designs to&nbsp;life and offer clients an&nbsp;immersive experience that was previously impossible. The technology enables architects to&nbsp;create a&nbsp;virtual representation of&nbsp;their designs, allowing clients to&nbsp;step into the building and explore its features and spaces before it&nbsp;is&nbsp;built."
+      },
+      {
+        text: "VR&nbsp;design is&nbsp;a&nbsp;game-changer for architects and clients alike. It&nbsp;enables architects to&nbsp;design with a&nbsp;greater level of&nbsp;detail and precision, allowing them to&nbsp;identify design flaws and make necessary modifications before construction begins. This not only saves time and money but also ensures that the final product meets the client&rsquo;s expectations."
+      },
+      {
+        text: "Clients can also benefit from&nbsp;VR design by&nbsp;having a&nbsp;better understanding of&nbsp;the design and how it&nbsp;will look and feel in&nbsp;real life. It&nbsp;allows them to&nbsp;experience the design in&nbsp;a&nbsp;more realistic way, helping them make informed decisions and providing valuable feedback to&nbsp;the architects."
+      },
+      {
+        text: "Moreover, VR&nbsp;design is&nbsp;not only limited to&nbsp;the design phase. It&nbsp;can also be&nbsp;used in&nbsp;the construction process to&nbsp;visualize the project&rsquo;s progress and identify any issues that may arise."
+      },
+    ]
+
+    const pictureAdd = [
+      {
+        path: "content",
+        image: "blog-content-1",
+        format: "jpg",
+        width: "377",
+        height: "252",
+        altText: "знак бесконечности",
+      },
+      {
+        path: "content",
+        image: "blog-content-2",
+        format: "jpg",
+        width: "377",
+        height: "252",
+        altText: "очки виртуальной реальности",
+      },
+    ]
+
+    const textsAdd = [
+      {
+        text: "The benefits of&nbsp;VR design in&nbsp;architecture are clear, and the technology is&nbsp;becoming increasingly accessible and affordable. More and more architects and firms are incorporating&nbsp;VR design into their workflows, and the industry is&nbsp;poised for a&nbsp;major transformation."
+      },
+      {
+        text: "In&nbsp;conclusion, VR&nbsp;design is&nbsp;changing the way architects design and bring their projects to&nbsp;life. It&nbsp;is&nbsp;a&nbsp;powerful tool that offers a&nbsp;range of&nbsp;benefits, from increased precision and efficiency in&nbsp;the design phase to&nbsp;better communication and understanding with clients. As&nbsp;the technology becomes more advanced and widespread, we&nbsp;can expect to&nbsp;see more innovative designs and better-designed buildings in&nbsp;the future."
+      },
+    ]
+
+    const hashtag = {
+      postTags: true,
+      title: "Post Tags :",
+      hashtags: [
+        {
+          text: "VRDesign"
+        },
+        {
+          text: "ArchitectureInnovation"
+        },
+        {
+          text: "VirtualRealityArchitecture"
+        },
+        {
+          text: "BringingDesignsToLife"
+        },
+        {
+          text: "DesignVisualization"
+        },
+        {
+          text: "ArchitecturalVisualization"
+        },
+        {
+          text: "RevolutionizingArchitecture"
+        },
+        {
+          text: "BuildingInVR"
+        },
+        {
+          text: "DesignThinking"
+        },
+        {
+          text: "VRInArchitecture"
+        },
+      ],
+    }
+
+    const share = {
+      title: "Share :",
+      shareLink: [
+        {
+          href: "#",
+          iconName: "icon-twitter",
+          iconWidth: "20",
+          iconHeight: "16"
+        },
+        {
+          href: "#",
+          iconName: "icon-facebook",
+          iconWidth: "12",
+          iconHeight: "21"
+        },
+        {
+          href: "#",
+          iconName: "icon-instagram",
+          iconWidth: "24",
+          iconHeight: "24"
+        },
+      ],
+    }
+
+    const sidebar = {
+      title: "Recent Article",
+      sidebarContent: [
+        {
+          href: "#",
+          label: "недавняя статья",
+          path: "content",
+          image: "sidebar-content-1",
+          format: "jpg",
+          width: "102",
+          height: "65",
+          altText: "очки виртуальной реальности",
+          badge: "VR Education",
+          text: "The Future of&nbsp;Education: How VR&nbsp;is&nbsp;Revolutionizing the Classroom"
+        },
+        {
+          href: "#",
+          label: "недавняя статья",
+          path: "content",
+          image: "sidebar-content-2",
+          format: "jpg",
+          width: "102",
+          height: "65",
+          altText: "мужчина в очках виртуальной реальности",
+          badge: "VR Architecture",
+          text: "Bringing Designs to&nbsp;Life: How VR&nbsp;is&nbsp;Changing Architecture"
+        },
+        {
+          href: "#",
+          label: "недавняя статья",
+          path: "content",
+          image: "sidebar-content-3",
+          format: "jpg",
+          width: "102",
+          height: "65",
+          altText: "игра в очках виртуальной реальности",
+          badge: "VR Entertainment ",
+          text: "Making Events Memorable: The Power of&nbsp;VR for Corporate and Special Occasions"
+        },
+        {
+          href: "#",
+          label: "недавняя статья",
+          path: "content",
+          image: "sidebar-content-4",
+          format: "jpg",
+          width: "102",
+          height: "65",
+          altText: "очки виртуальной реальности",
+          badge: "VR Event",
+          text: "Exploring New Worlds: The Benefits of&nbsp;VR&nbsp;Travel"
+        },
+      ]
+    }
+
+    const popularHashtag = {
+      title: "Popular Hashtag",
+      hashtags: [
+        {
+          text: "VRDesign"
+        },
+        {
+          text: "ArchitectureInnovation"
+        },
+        {
+          text: "DesignThinking"
+        },
+        {
+          text: "VirtualRealityArchitecture"
+        },
+        {
+          text: "BringingDesignsToLife"
+        },
+        {
+          text: "DesignVisualization"
+        },
+        {
+          text: "ArchitecturalVisualization"
+        },
+        {
+          text: "RevolutionizingArchitecture"
+        },
+        {
+          text: "BuildingInVR"
+        },
+      ],
+    }
+
+  .blog-page
+    .container(data-trigger)
+      .blog-page__wrapper
+        +blog-content({badge, title, authorDate, picture, texts, pictureAdd, textsAdd, hashtag, share})
+        +sidebar({sidebar, popularHashtag})

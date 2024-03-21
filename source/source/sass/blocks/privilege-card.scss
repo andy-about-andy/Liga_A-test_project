@@ -1,0 +1,25 @@
+.privilege-card {
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 69px;
+    height: 69px;
+
+    svg {
+      margin: auto;
+    }
+  }
+
+  .title--h3 {
+    margin-top: 41px;
+  }
+
+  &__text {
+    p {
+      margin: 9px 0 0;
+      font-size: 14px;
+      color: $color-spun-pearl;
+    }
+  }
+}

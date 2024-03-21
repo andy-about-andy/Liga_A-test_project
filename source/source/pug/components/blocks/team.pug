@@ -1,0 +1,82 @@
+mixin team(data = {})
+  -
+    const button = {
+      href: "#",
+    }
+
+    const list = [
+      {
+        picture: {
+          path: "content",
+          image: "team-foto-1",
+          format: "webp",
+          width: "276",
+          height: "371",
+          altText: "фото сотрудника нашей компании",
+        },
+        name: "Bondan&nbsp;Prabowo",
+        jobTitle: "CEO",
+      },
+      {
+        picture: {
+          path: "content",
+          image: "team-foto-2",
+          format: "webp",
+          width: "276",
+          height: "371",
+          altText: "фото сотрудника нашей компании",
+        },
+        name: "Bayu&nbsp;Aji",
+        jobTitle: "VR&nbsp;Development",
+      },
+      {
+        picture: {
+          path: "content",
+          image: "team-foto-3",
+          format: "webp",
+          width: "276",
+          height: "371",
+          altText: "фото сотрудника нашей компании",
+        },
+        name: "Agung&nbsp;Brandon",
+        jobTitle: "VR&nbsp;Artist",
+      },
+      {
+        picture: {
+          path: "content",
+          image: "team-foto-4",
+          format: "webp",
+          width: "276",
+          height: "371",
+          altText: "фото сотрудника нашей компании",
+        },
+        name: "Aril&nbsp;Laso",
+        jobTitle: "UI&nbsp;/&nbsp;UX&nbsp;Designer",
+      },
+    ]
+
+  .team
+    .container(data-trigger)
+      .team__wrapper
+        .team__inner
+          +title({tag: "h2", text: "OUR TEAM"}).title--h2
+          .team__box
+            p Our Professionals Team
+        .team__content
+          ul.team__list
+            each item in list
+              li.team__item
+                +team-card({
+                  picture: {
+                    path: item.picture.path,
+                    image: item.picture.image,
+                    format: item.picture.format,
+                    width: item.picture.width,
+                    height: item.picture.height,
+                    altText: item.picture.altText,
+                  },
+                  name: item.name,
+                  jobTitle: item.jobTitle,
+                })
+        .team__button
+          +btn({href: button.href, text: "See all"}).btn--with-border(aria-label="Переход по ссылке")

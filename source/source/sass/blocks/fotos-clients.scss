@@ -1,0 +1,70 @@
+.fotos-clients {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    position: relative;
+    display: flex;
+    width: 127px;
+    height: 51px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    user-select: none;
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 51px;
+    height: 51px;
+
+    &:nth-child(2) {
+      left: 39px;
+    }
+
+    &:nth-child(3) {
+      left: 78px;
+    }
+
+    @include vp-767 {
+      &:nth-child(2) {
+        left: 38px;
+      }
+
+      &:nth-child(3) {
+        left: 76px;
+      }
+    }
+  }
+
+  &__text-inner {
+    max-width: 200px;
+    margin-left: 20px;
+    font-weight: 600;
+
+    @include vp-767 {
+      margin-left: 18px;
+    }
+  }
+
+  &__quantity {
+    position: relative;
+
+    span {
+      position: absolute;
+      bottom: -10px;
+      left: -6px;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+
+    span {
+      font-weight: 300;
+      color: $color-light-grey;
+    }
+  }
+}

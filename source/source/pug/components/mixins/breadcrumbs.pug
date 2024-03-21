@@ -1,0 +1,17 @@
+mixin breadcrumbs(data = {})
+  - const list = data.list || false;
+
+  .breadcrumbs&attributes(attributes)
+    ol.breadcrumbs__list
+      each item, index in list
+        -
+          const text = item.text || false;
+          const href = item.href || false;
+          const breadIcon = item.breadIcon ?? ["icon-arrow", 9, 5];
+
+        li.breadcrumbs__item
+          if index !== list.length - 1
+            +link({text, href})
+            +icon(...breadIcon)
+          else
+            span.link!= text

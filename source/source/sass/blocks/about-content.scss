@@ -1,0 +1,293 @@
+.about-content {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 48.2%;
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__decor {
+    position: relative;
+    z-index: -1;
+    user-select: none;
+
+    @include vp-1023 {
+      height: 622px;
+    }
+
+    @include vp-767 {
+      width: 288px;
+      height: 485px;
+      margin: 0 auto;
+    }
+
+    @include vp-414 {
+      height: 340px;
+    }
+  }
+
+  &__box {
+    margin-left: auto;
+  }
+
+  &__inner {
+    margin-top: 48px;
+
+    @include vp-767 {
+      margin-top: 44px;
+    }
+
+    .title--h2 {
+      margin: 0 0 12px;
+    }
+  }
+
+  &__designation {
+    p {
+      margin: 0 0 12px;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 58px;
+      letter-spacing: -0.24px;
+
+      @include vp-1023 {
+        margin: 0 0 32px;
+        font-size: 32px;
+        line-height: normal;
+        letter-spacing: -0.16px;
+      }
+
+      @include vp-767 {
+        margin: 0 0 12px;
+      }
+    }
+  }
+
+  &__content {
+    .btn {
+      margin-bottom: 12px;
+      user-select: none;
+
+      @include vp-767 {
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  &__text {
+    p {
+      margin: 0;
+      font-weight: 300;
+      color: $color-light-grey;
+
+      &:last-child {
+        margin: 0 0 24px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 32px;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__item-icon {
+    width: 16px;
+    height: 16px;
+    margin: 2px 12px auto 0;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__item-text {
+    p {
+      margin: 0;
+    }
+  }
+
+  &__decor-man-inner {
+    width: 1029px;
+    height: 785px;
+    position: absolute;
+    top: -77px;
+    left: 40%;
+    transform: translate(-50%, 0);
+
+    @include vp-1279 {
+      top: -58px;
+      width: 900px;
+      height: 687px;
+    }
+
+    @include vp-1023 {
+      top: 0;
+      left: 50%;
+    }
+
+    @include vp-767 {
+      top: -37px;
+      left: 46.5%;
+      width: 774px;
+      height: 591px;
+    }
+
+    @include vp-414 {
+      top: -20px;
+      width: 550px;
+      height: 420px;
+    }
+  }
+
+  &__decor-man {
+    transform: translateZ(0);
+
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__decor-glasses {
+    width: 196px;
+    height: 128px;
+    position: absolute;
+    top: 487px;
+    right: 15%;
+
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1279 {
+      right: 15%;
+    }
+
+    @include vp-1023 {
+      top: 520px;
+      right: 18%;
+    }
+
+    @include vp-767 {
+      top: 388px;
+      right: -18.9%;
+      width: 147px;
+      height: 96px;
+    }
+
+    @include vp-414 {
+      top: 270px;
+      right: -6%;
+      width: 130px;
+      height: 85px;
+    }
+  }
+
+  &--page-about {
+    .about-content__wrapper {
+      grid-template-columns: 52% 1fr;
+    }
+
+    .about-content__inner {
+      margin-top: 36px;
+
+      @include vp-767 {
+        margin-top: 0;
+      }
+    }
+
+    .about-content__designation {
+      margin-bottom: 18px;
+    }
+
+    .about-content__box {
+      margin-bottom: 65px;
+    }
+
+    .about-content__decor {
+      order: 1;
+
+      @include vp-1023 {
+        height: 490px;
+      }
+
+      @include vp-767 {
+        height: 427px;
+      }
+    }
+
+    .about-content__decor-man-inner {
+      width: 1030px;
+      height: 786px;
+      top: -97px;
+      left: 69.1%;
+
+      @include vp-1279 {
+        top: -58px;
+        width: 900px;
+        height: 687px;
+      }
+
+      @include vp-1023 {
+        top: -135px;
+        left: 54%;
+      }
+
+      @include vp-767 {
+        top: -125px;
+        left: 76.3%;
+        width: 816px;
+        height: 621px;
+      }
+
+      @include vp-414 {
+        left: 70%;
+        width: 774px;
+        height: 591px;
+      }
+    }
+
+    .about-content__decor-glasses {
+      top: 478px;
+      left: 8.6%;
+
+      @include vp-1023 {
+        top: 362px;
+        left: 20%;
+      }
+
+      @include vp-767 {
+        top: 329px;
+        left: -19.1%;
+        width: 155px;
+        height: 101px;
+      }
+
+      @include vp-414 {
+        left: -3%;
+        width: 147px;
+        height: 96px;
+      }
+    }
+  }
+}

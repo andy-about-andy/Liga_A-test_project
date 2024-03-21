@@ -1,0 +1,48 @@
+.hashtag {
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background: $color-accent-main;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__list--popular {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px 12px;
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: $color-default-white;
+
+    .badge {
+      display: block;
+      border-radius: 11.52px;
+    }
+
+    .badge__hashtag {
+      padding: 1px 7px 1px;
+      font-size: 10px;
+      line-height: 14px;
+      font-weight: 500;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    font-weight: 300;
+  }
+
+  .title--600 {
+    margin-bottom: 12px;
+  }
+
+  .title--500 {
+    margin-bottom: 24px;
+  }
+}

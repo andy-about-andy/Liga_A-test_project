@@ -1,0 +1,40 @@
+mixin choose-page-main(data = {})
+  -
+    const text = {
+      text: "Why Choose Us&nbsp;for Your VR&nbsp;Needs",
+    }
+
+    const list = [
+      {
+        text: "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        buttonText: "Passionate and Experienced Team",
+      },
+      {
+        text: "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        buttonText: "Customized Solutions",
+      },
+      {
+        text: "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        buttonText: "Exceptional Customer Service",
+      },
+    ]
+
+    const decorMan = {
+      path: "content",
+      image: "choose-man",
+      format: "webp",
+      width: "1029",
+      height: "806",
+      altText: "мужчина в очках виртуальной реальности",
+    }
+
+    const decorGlasses = {
+      path: "content",
+      image: "choose-glasses",
+      format: "webp",
+      width: "196",
+      height: "128",
+      altText: "очки виртуальной реальности",
+    }
+
+  +choose-content({text, list, decorMan, decorGlasses})

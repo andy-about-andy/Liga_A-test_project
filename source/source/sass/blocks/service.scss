@@ -1,0 +1,210 @@
+.service {
+  position: relative;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 46px;
+
+    @include vp-1023 {
+      flex-direction: column;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__decor-element {
+    position: absolute;
+    top: -55px;
+    left: 53%;
+    z-index: -1;
+    width: 874px;
+    height: 619px;
+    user-select: none;
+
+    @include vp-1919 {
+      left: 58%;
+    }
+
+    @include vp-1023 {
+      display: none;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    min-width: 259px;
+    margin-right: 80px;
+
+    .title--h2 {
+      margin: 0 0 12px;
+    }
+
+    p {
+      margin: 0 0 12px;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 58px;
+      letter-spacing: -0.24px;
+
+      @include vp-1023 {
+        margin: 0 0 6px;
+        font-size: 32px;
+        line-height: normal;
+        letter-spacing: -0.16px;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 625px;
+    margin: 6px 42px 0 0;
+
+    @include vp-1023 {
+      margin: 6px 0 0;
+    }
+
+    p {
+      margin: 0;
+      font-weight: 300;
+      color: $color-light-grey;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include vp-1279 {
+      gap: 15px;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+    }
+
+    .privilege-card__text {
+      p {
+        overflow: hidden;
+        display: -webkit-box;
+        color: $color-spun-pearl;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    min-height: 291px;
+    padding: 38px 42px 21px 32px;
+    background-color: $color-second-black;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    cursor: pointer;
+    transition: border-image-source $trans-default;
+    transform: translateY(0);
+
+    @include vp-767 {
+      padding: 37px 42px 21px 31px;
+    }
+
+    @include hover-focus {
+      border-image-source: $color-accent-main;
+
+      .service__button {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .privilege-card .title--h3 {
+      margin-top: 58px;
+
+      @include vp-767 {
+        margin-top: 59px;
+      }
+    }
+
+    .privilege-card__icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    &:nth-child(3n+2) {
+      transform: translateY(57px);
+
+      @include vp-1023 {
+        transform: translateY(0);
+      }
+    }
+
+    &:nth-child(3n+3) {
+      transform: translateY(135px);
+
+      @include vp-1023 {
+        transform: translateY(0);
+      }
+    }
+
+    @include vp-1023 {
+      &:nth-child(2n+2) {
+        transform: translateY(57px);
+
+        @include vp-767 {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  .privilege-card {
+    position: relative;
+  }
+
+  &__button {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 154px;
+    padding: 74px 0 30px;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(37, 37, 50, 0) 0%, rgba(37, 37, 50, 0.91) 53.06%, #252532 100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity $trans-default, visibility $trans-modal;
+    user-select: none;
+
+    .btn {
+      padding: 18px 36px;
+    }
+  }
+
+  &__box {
+    padding-bottom: 135px;
+
+    @include vp-1023 {
+      padding-bottom: 57px;
+    }
+
+    @include vp-767 {
+      padding-bottom: 0;
+    }
+  }
+}

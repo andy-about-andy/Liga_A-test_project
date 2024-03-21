@@ -1,0 +1,258 @@
+.price {
+  &__wrapper {
+    position: relative;
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 39px;
+    }
+  }
+
+  &__inner {
+    .title--h2 {
+      margin: 0 0 12px;
+    }
+
+    p {
+      margin: 0 0 16px;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 58px;
+      letter-spacing: -0.24px;
+
+      @include vp-1023 {
+        margin: 0 0 16px;
+        font-size: 32px;
+        line-height: normal;
+        letter-spacing: -0.16px;
+      }
+    }
+  }
+
+  &__text {
+    p {
+      max-width: 625px;
+      margin: 0 0 40px;
+      font-weight: 300;
+      color: $color-light-grey;
+
+      @include vp-767 {
+        margin: 0 0 47px;
+      }
+    }
+  }
+
+  &__description {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 40px;
+    padding: 53px 0 0 41px;
+    background-color: rgba(37, 37, 50, 0.81);
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+
+    @include vp-1279 {
+      grid-template-columns: 1fr 280px;
+      padding: 32px 0 0 22px;
+    }
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      gap: 85px;
+      padding: 32px 22px 0 22px;
+    }
+
+    @include vp-767 {
+      gap: 85px;
+      padding: 30px 22px 0 20px;
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 118px 55px 0;
+    padding: 0;
+    list-style-type: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -14px;
+      right: -118px;
+      width: 1px;
+      height: calc(100% - 85px);
+      background-color: $color-default-white;
+      opacity: 0.1;
+    }
+
+    @include vp-1279 {
+      margin: 0 10px 55px 0;
+
+      &::after {
+        right: -10px;
+      }
+    }
+
+    @include vp-1023 {
+      margin: 0;
+
+      &::after {
+        top: inherit;
+        bottom: -48px;
+        right: 0;
+        width: 100%;
+        height: 1px;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 31px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    span {
+      width: 16px;
+      height: 16px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .privilege-card__box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 42px;
+      height: 42px;
+      background: $color-accent-main border-box;
+      border-radius: 50%;
+    }
+
+    .privilege-card__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 39px;
+      height: 39px;
+      background-color: $color-default-black;
+      border-radius: 50%;
+    }
+
+    .privilege-card {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 16px;
+    }
+
+    .privilege-card__text {
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    .privilege-card .title--h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+  }
+
+  &__image {
+    margin-top: auto;
+    user-select: none;
+
+    svg,
+    img {
+      width: 100%;
+    }
+
+    @include vp-1023 {
+      margin: 0 -22px 0 64%;
+      padding: 0;
+    }
+
+    @include vp-767 {
+      width: 256px;
+      height: 369px;
+      margin: 0 -22px 0 auto;
+    }
+
+    @include vp-414 {
+      margin: 0 -22px 0 auto;
+    }
+  }
+
+  &__decor-light {
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: -20%;
+    z-index: -1;
+    width: 1246px;
+    height: 783px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1279 {
+      top: 150px;
+      right: -27%;
+    }
+
+    @include vp-1023 {
+      top: auto;
+      bottom: 0;
+      right: -32%;
+      width: 1023px;
+      height: 685px;
+    }
+
+    @include vp-767 {
+      bottom: -140px;
+      right: -100%;
+    }
+  }
+
+  .price-card {
+    position: absolute;
+    bottom: -47px;
+    right: 173px;
+
+    @include vp-1279 {
+      bottom: -60px;
+      right: 78px;
+      padding: 15px 30px;
+    }
+
+    @include vp-1023 {
+      bottom: -60px;
+      right: 16%;
+      padding: 18px 68px 17px 68px;
+    }
+
+    @include vp-767 {
+      bottom: -86px;
+    }
+
+    @include vp-414 {
+      right: 13%;
+      width: 240px;
+      padding: 15px 26px;
+    }
+  }
+}

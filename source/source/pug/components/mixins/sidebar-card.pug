@@ -1,0 +1,10 @@
+mixin sidebar-card(data = {})
+  - const {href, label, path, image, format, width, height, altText, badge, text} = data;
+
+  .sidebar-card&attributes(attributes)
+    +link({href, label})
+      +picture(path, image, format, width, height, altText)
+      .sidebar-card__inner
+        +badge({text: badge})
+        .sidebar-card__text
+          p !{text}

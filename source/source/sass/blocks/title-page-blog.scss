@@ -1,0 +1,16 @@
+.title-page-blog {
+  .title-page__decor-element {
+    display: none;
+    user-select: none;
+
+    @include vp-1023 {
+      display: block;
+      top: -75px;
+      left: -15%;
+    }
+  }
+
+  .breadcrumbs__list {
+    display: flex;
+  }
+}

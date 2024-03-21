@@ -1,0 +1,16 @@
+mixin title-page-about(data = {})
+  -
+    const title = {
+      text: "About Us"
+    }
+
+  .title-page-about
+    .container(data-trigger)
+      +title-page({title})
+        +breadcrumbs({
+          list:
+            [
+              {text: "Home", href: "index.html"},
+              {text: "About us"},
+            ]
+        })

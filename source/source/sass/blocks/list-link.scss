@@ -1,0 +1,20 @@
+.list-link {
+  &__list {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    cursor: pointer;
+  }
+
+  &__link {
+    text-align: left;
+    font-weight: 300;
+
+    @include vp-1023 {
+      text-align: left;
+    }
+  }
+}

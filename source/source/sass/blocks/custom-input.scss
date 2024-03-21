@@ -1,0 +1,149 @@
+.custom-input,
+.custom-textarea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 365px;
+  min-height: 56px;
+  padding: 0;
+  opacity: 1;
+
+  @media screen and (max-width: 1279px) {
+    width: 330px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+  }
+
+  label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 14px;
+      width: 24px;
+      height: 24px;
+      transform: translate(0, -50%);
+
+      @media screen and (max-width: 374px) {
+        left: 6px;
+      }
+    }
+
+    input,
+    textarea {
+      flex-grow: 1;
+      max-width: 520px;
+      width: 100%;
+      min-width: 254px;
+      min-height: 56px;
+      padding: 13px 70px 13px 44px;
+      background-color: rgba(255, 255, 255, 0.07);
+      border: 2px solid $color-transparent;
+      border-radius: 2px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      color: $color-default-white;
+      outline: none;
+      transition: border $trans-default;
+
+      &::placeholder {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        color: $color-default-white;
+        user-select: none;
+      }
+
+      &:hover {
+        border: 2px solid rgba(#ffffff, 0.5);
+      }
+
+      &:focus {
+        border: 2px solid rgba(#ffffff, 0.8);
+      }
+
+      @media screen and (max-width: 1023px) {
+        max-width: 100%;
+      }
+
+      @media screen and (max-width: 374px) {
+        padding: 14px 58px 14px 32px;
+        font-size: 14px;
+        line-height: 20px;
+
+        &::placeholder {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  &__label {
+    @media screen and (max-width: 767px) {
+      margin: 0 0 18px 0;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    right: 0;
+    bottom: 35px;
+    color: $color-coral-red;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    @media screen and (max-width: 767px) {
+      bottom: 20px;
+    }
+  }
+
+  &.is-invalid {
+    input,
+    textarea {
+      border: 2px solid $color-coral-red;
+
+      &:focus,
+      &:hover {
+        border: 2px solid rgba($color-coral-red, 0.5);
+      }
+    }
+  }
+
+  &.is-valid {
+    input {
+      border: 2px solid $color-jade;
+
+      &:focus,
+      &:hover {
+        border: 2px solid rgba($color-jade, 0.5);
+      }
+    }
+  }
+
+  .input-message {
+    width: 100%;
+
+    &.is-invalid {
+      color: $color-coral-red;
+    }
+
+    &.is-valid {
+      color: $color-jade;
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px $color-transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}

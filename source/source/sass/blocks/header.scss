@@ -1,0 +1,291 @@
+.header {
+  width: 100%;
+  background-color: $color-transparent;
+
+  &--base {
+    backdrop-filter: none;
+  }
+
+  &--blur {
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  &--nav-index {
+    .link--index {
+      font-weight: 500;
+      pointer-events: none;
+    }
+  }
+
+  &--nav-about {
+    .link--about {
+      font-weight: 500;
+      pointer-events: none;
+    }
+  }
+
+  &--nav-blog {
+    .link--blog {
+      font-weight: 500;
+      pointer-events: none;
+    }
+  }
+
+
+  &__box--scroll {
+    backdrop-filter: blur(5px);
+  }
+
+  &__box--sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    padding: 30px 0;
+
+    @include vp-767 {
+      padding: 43px 0;
+    }
+
+    &.is-open {
+      .header__menu {
+        @include vp-1023 {
+          visibility: visible;
+          opacity: 1;
+          padding-top: 116px;
+          width: 100%;
+        }
+      }
+
+      .header__item {
+        @include vp-1023 {
+          visibility: visible;
+          opacity: 1;
+          max-width: 180px;
+        }
+      }
+
+      .header__button-icon-open {
+        @include vp-1023 {
+          opacity: 0;
+        }
+      }
+
+      .header__button-icon-close {
+        @include vp-1023 {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2.55fr;
+    align-items: center;
+
+    @include vp-1279 {
+      grid-template-columns: 1fr 2.8fr;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  & .logo svg,
+  & .logo {
+    z-index: 100;
+    width: 101px;
+    height: 30px;
+  }
+
+  &__button {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+    width: 32px;
+    height: 32px;
+    margin: 0 0 0 auto;
+    background: none;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: $color-accent-main;
+    transition: opacity $trans-default;
+
+    @include vp-1023 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__button-icon-open,
+  &__button-icon-close {
+    position: absolute;
+    width: 16px;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: opacity $trans-default;
+  }
+
+  &__button-icon-open {
+    opacity: 1;
+  }
+
+  &__button-icon-close {
+    opacity: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 4px;
+    padding: 0;
+    list-style: none;
+
+    @include vp-1279 {
+      margin: 0;
+    }
+
+    @include vp-1023 {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 65px 10px 0;
+    font-weight: 300;
+    transition: opacity $trans-default, visibility $trans-modal;
+
+    @include vp-1279 {
+      margin: 10px 50px 10px 0;
+    }
+
+    @include vp-1023 {
+      position: relative;
+      margin: 0;
+      min-height: 54px;
+      visibility: hidden;
+      opacity: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $color-accent-main;
+      }
+
+      &:last-child {
+        margin-bottom: 50px;
+
+        &::before {
+          content: none;
+        }
+      }
+    }
+  }
+
+  &__decor {
+    z-index: -1;
+    width: 1120px;
+    height: 716px;
+    position: absolute;
+    top: -311px;
+    right: -355px;
+    overflow: hidden;
+    opacity: 0.2;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1023 {
+      width: 655px;
+      height: 419px;
+      top: -180px;
+      right: -170px;
+    }
+
+    @include vp-767 {
+      width: 655px;
+      height: 419px;
+      top: -180px;
+      right: -210px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity $trans-default, visibility $trans-modal;
+
+    @include vp-1023 {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      position: absolute;
+      top: -30px;
+      right: 0;
+      max-width: 1023px;
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding-bottom: 42px;
+      background-color: $color-default-black;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    @include vp-767 {
+      top: -43px;
+    }
+  }
+
+  &__menu-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1023px;
+    width: 100%;
+
+    @include vp-1023 {
+      overflow: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .link,
+  .btn {
+    user-select: none;
+  }
+
+  .btn {
+    @include vp-1023 {
+      margin-bottom: 25px;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+mixin page-intro(data = {})
+  .page-intro(data-trigger)
+    .container
+      .page-intro__wrapper
+        .page-intro__box
+          .page-intro__inner
+            +title({tag: "h1", text: "Immerse Yourself<br>in&nbsp;Virtual Reality"}).title--h1
+            .page-intro__text
+              p Experience Unforgettable Events in&nbsp;VR. Bring your events to&nbsp;life like never before with our&nbsp;VR services
+            +btn({href: "#", text: "discover more"})(aria-label="Переход по ссылке")
+          +fotos-clients({
+            foto: [
+              {
+                path: "content",
+                image: "foto-client-1",
+                format: "webp",
+                width: "51",
+                height: "51",
+                altText: "фото счастливого клиента",
+                number: "1"
+              },
+              {
+                path: "content",
+                image: "foto-client-2",
+                format: "webp",
+                width: "51",
+                height: "51",
+                altText: "фото счастливого клиента",
+                number: "2"
+              },
+              {
+                path: "content",
+                image: "foto-client-3",
+                format: "webp",
+                width: "51",
+                height: "51",
+                altText: "фото счастливого клиента",
+                number: "3"
+              },
+            ],
+            quantity: "32k+ ",
+            text: "Happy Client"
+          })
+        .page-intro__decor
+          .page-intro__decor-man
+            +img("content", "page-intro-man", "webp", 987, 760, "мужчина в очках виртуальной реальности")
+          .page-intro__decor-rectangle
+            +img("content", "page-intro-rectangle", "webp", 196, 128, "мальчик в очках виртуальной реальности")
+
+    if data.advantages
+      +advantages()

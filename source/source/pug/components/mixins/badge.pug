@@ -1,0 +1,8 @@
+mixin badge(data = {})
+
+  .badge&attributes(attributes)
+    if data.hashtag
+      span.badge__hashtag !{"#" + data.hashtag}
+    else
+      .badge__text
+        p !{data.text}

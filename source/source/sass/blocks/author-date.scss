@@ -1,0 +1,18 @@
+.author-date {
+  display: inline-block;
+  background: $color-accent-main;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &__text {
+    display: inline-block;
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 2.24px;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+mixin choose-content(data = {})
+  - const {text, list, decorMan, decorGlasses} = data
+
+  .choose-content(data-parallax-box)&attributes(attributes)
+    .container(data-trigger)
+      .choose-content__wrapper
+        .choose-content__box
+          .choose-content__inner
+            +title({tag: "h2", text: "WHY CHOOSE US"}).title--h2
+            .choose-content__designation
+              p !{text.text}
+          .choose-content__accordion.accordion(data-accordion="parent", data-single)
+            ul.choose-content__list
+              each item in list
+                li.choose-content__item
+                  .accordion__element(data-accordion="element")
+                    .choose-content__button
+                      +btn({text: item.buttonText}).accordion__button(aria-label="открывает элемент аккордиона", data-accordion="button")
+                      +icon("icon-arrow", 7, 4)
+                    .accordion__content(data-accordion="content")
+                      .accordion__wrapper
+                        .accordion__text
+                          p !{item.text}
+        .choose-content__decor
+          .choose-content__decor-man-inner
+            .choose-content__decor-man(data-parallax-mouse, data-movement="50")
+              +picture(decorMan.path, decorMan.image, decorMan.format, decorMan.width, decorMan.height, decorMan.altText)
+          .choose-content__decor-glasses(data-parallax-mouse, data-movement="20")
+            +picture(decorGlasses.path, decorGlasses.image, decorGlasses.format, decorGlasses.width, decorGlasses.height, decorGlasses.altText)

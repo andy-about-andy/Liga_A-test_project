@@ -1,0 +1,40 @@
+mixin about-page-main(data = {})
+  -
+    const list = [
+      {text: "Cutting-Edge Technology"},
+      {text: "Versatile Applications"},
+      {text: "Affordable and Accessible"},
+    ]
+
+    const button = {
+      href: "#",
+      text: "read more",
+    }
+
+    const decorMan = {
+      path: "content",
+      image: "about-man",
+      format: "webp",
+      width: "1029",
+      height: "785",
+      altText: "мужчина в очках виртуальной реальности",
+    }
+
+    const decorGlasses = {
+      path: "content",
+      image: "about-glasses",
+      format: "webp",
+      width: "196",
+      height: "128",
+      altText: "очки виртуальной реальности",
+    }
+
+    const textTitle = {
+      text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services."
+    }
+
+    const text = [
+      {textParagraph: "VRNas is&nbsp;a&nbsp;leading provider of&nbsp;VR services for education, entertainment, architecture, and events. Our mission is&nbsp;to&nbsp;bring the power of&nbsp;virtual reality to&nbsp;everyone, allowing them to&nbsp;explore new worlds, learn in&nbsp;new ways, and experience events in&nbsp;a&nbsp;whole new light."},
+    ]
+
+  +about-content({list, button, decorMan, decorGlasses, textTitle, text})

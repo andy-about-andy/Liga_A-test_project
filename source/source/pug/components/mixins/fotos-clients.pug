@@ -1,0 +1,17 @@
+mixin fotos-clients(data = {})
+  - const quantity = data.quantity || "";
+  - const text = data.text || "";
+
+  .fotos-clients&attributes(attributes)
+    .fotos-clients__foto
+      ul.fotos-clients__list
+        each item in data.foto
+          li.fotos-clients__item
+            +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+    if quantity
+      .fotos-clients__text-inner
+        span.fotos-clients__quantity !{quantity}
+          span
+            +icon("icon-decor-element", 48, 7, true)
+        .fotos-clients__text
+          span !{text}

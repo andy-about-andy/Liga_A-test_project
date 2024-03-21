@@ -1,0 +1,14 @@
+mixin logo(data = {})
+  - const href = data.href || false;
+  - const header = data.header || false;
+
+    if (header && href)
+      a.logo(href=href, aria-label="Переход на главную страницу")&attributes(attributes)
+        +icon("icon-logo", 101, 30, true)
+    else if (header)
+      span.logo&attributes(attributes)
+        +icon("icon-logo", 101, 30, true)
+    else
+      if (href)
+        a.logo(href=href, aria-label="Переход на страницу")&attributes(attributes)
+          +icon("icon-logo", 101, 30, true)

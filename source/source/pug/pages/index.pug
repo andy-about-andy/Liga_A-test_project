@@ -1,0 +1,29 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Main"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = "header--nav-index"
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "index.html"
+
+block main
+  main
+    +page-content()
+      +page-section().page-section--second-padding-top
+        +page-intro({advantages: true})
+      +page-section()
+        +about-page-main()
+      +service()
+      +page-section()
+        +choose-page-main()
+      +page-section()
+        +started()
+      +page-section()
+        +price()
+      +page-section()
+        +partners()
+      +page-section().page-section--third-padding-top
+        +form()

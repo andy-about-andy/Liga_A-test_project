@@ -1,0 +1,14 @@
+mixin title-page(data = {})
+  - const {hidden, text} = data.title
+
+  .title-page&attributes(attributes)
+    .title-page__wrapper
+      if hidden
+        +title({tag: "h1", text: text}).title--h1.visually-hidden
+        .title-page__decor-element
+          +picture("content", "decor-light-title-blog", "webp", 430, 318, "декор элемент")
+      else
+        +title({tag: "h1", text: text}).title--h1
+        .title-page__decor-element
+          +picture("content", "decor-light-title", "webp", 669, 367, "декор элемент")
+      block

@@ -1,0 +1,31 @@
+mixin about-page-about(data = {})
+  -
+    const decorMan = {
+      path: "content",
+      image: "content-about-man",
+      format: "webp",
+      width: "1030",
+      height: "786",
+      altText: "мужчина в очках виртуальной реальности",
+    }
+
+    const decorGlasses = {
+      path: "content",
+      image: "page-intro-rectangle",
+      format: "webp",
+      width: "196",
+      height: "128",
+      altText: "мальчик в очках виртуальной реальности",
+    }
+
+    const textTitle = {
+      text: "Bringing Your Vision to&nbsp;Life: Learn About VRNas"
+    }
+
+    const text = [
+      {textParagraph: "VRNas is&nbsp;a&nbsp;leading provider of&nbsp;VR services for education, entertainment, architecture, and events. Our mission is&nbsp;to&nbsp;bring the power of&nbsp;virtual reality to&nbsp;everyone, allowing them to&nbsp;explore new worlds, learn in&nbsp;new ways, and experience events in&nbsp;a&nbsp;whole new light."},
+      {textParagraph: "Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. We&nbsp;use the latest&nbsp;VR hardware and software to&nbsp;create immersive, interactive experiences that are tailored to&nbsp;your specific needs."},
+      {textParagraph: "From initial consultation to&nbsp;final delivery, we&nbsp;are committed to&nbsp;providing exceptional customer service. Our goal is&nbsp;to&nbsp;ensure that you are completely satisfied with every aspect of&nbsp;your&nbsp;VR experience."}
+    ]
+
+  +about-content({decorMan, decorGlasses, textTitle, text}).about-content--page-about

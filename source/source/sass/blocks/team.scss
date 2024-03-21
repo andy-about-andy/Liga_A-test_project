@@ -1,0 +1,86 @@
+.team {
+  &__wrapper {
+    position: relative;
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__inner {
+    max-width: 650px;
+    margin-bottom: 41px;
+
+    @include vp-1023 {
+      flex-direction: column;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    .title--h2 {
+      margin: 0 0 12px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 41px;
+
+    @include vp-1023 {
+      justify-content: center;
+      margin: 0 0 32px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 58px;
+      letter-spacing: -0.24px;
+
+      @include vp-1023 {
+        font-size: 32px;
+        line-height: normal;
+        letter-spacing: -0.16px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include vp-767 {
+      gap: 24px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    user-select: none;
+
+    .btn {
+      max-width: 150px;
+      padding: 17px 37px;
+      background-color: rgba(255, 255, 255, 0.06);
+    }
+
+    @include vp-1023 {
+      position: static;
+      display: flex;
+      justify-content: center;
+      margin-top: 31px;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+mixin service(data = {})
+  -
+    const list = [
+          {
+            icon: {
+              name: "icon-development",
+            },
+            title: "VR Development",
+            text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+            button: {
+              href: "#",
+            },
+          },
+          {
+            icon: {
+              name: "icon-design",
+            },
+            title: "VR Design",
+            text: "Our talented&nbsp;VR designers will create immersive and engaging environments that will captivate your audience.",
+            button: {
+              href: "#",
+            },
+          },
+          {
+            icon: {
+              name: "icon-consulting",
+            },
+            title: "VR Consulting",
+            text: "Our VR&nbsp;consultants will work with you to&nbsp;ensure that your&nbsp;VR experience meets your goals and exceeds your expectations.",
+            button: {
+              href: "#",
+            },
+          },
+          {
+            icon: {
+              name: "icon-games",
+            },
+            title: "VR Games",
+            text: "We&nbsp;offer a&nbsp;wide selection of&nbsp;VR games that are&nbsp;suitable for players of&nbsp;all ages and skill levels.",
+            button: {
+              href: "#",
+            },
+          },
+          {
+            icon: {
+              name: "icon-events",
+            },
+            title: "VR Events",
+            text: "Make your next event unforgettable with our&nbsp;VR event services.",
+            button: {
+              href: "#",
+            },
+          },
+          {
+            icon: {
+              name: "icon-entertainment",
+            },
+            title: "VR Entertainment",
+            text: "Create a&nbsp;VR escape room, or&nbsp;offer&nbsp;VR experiences at&nbsp;a&nbsp;theme park, we&nbsp;have the expertise and experience to&nbsp;make it&nbsp;happen.",
+            button: {
+              href: "#",
+            },
+          },
+        ]
+
+  section.service.page-section(data-header-theme-class="header--blur")&attributes(attributes)
+    .container(data-trigger)
+      .service__wrapper
+        .service__inner
+          .service__title
+            +title({tag: "h2", text: "OUR SERVICE"}).title--h2
+            p Our Service
+          .service__text
+            p We&nbsp;use the latest&nbsp;VR hardware and software to&nbsp;create high-quality VR&nbsp;experiences that are accessible and affordable. Our goal is&nbsp;to&nbsp;provide exceptional customer service and support, and our team is&nbsp;always available to&nbsp;answer any questions and address any concerns you may have.
+        .service__box
+          ul.service__list
+            each item in list
+              li.service__item
+                +privilege-card({
+                  icon: {name: item.icon.name, width: 48, height: 48, gradient: true},
+                  title: item.title,
+                  text: item.text,
+                })
+                .service__button
+                  +btn({href: item.button.href, text: "LEARN MORE"}).btn--with-border(aria-label="Переход по ссылке")
+    .service__decor-element
+      +picture("content", "decor-light-service", "webp", 874, 619, "декор элемент")

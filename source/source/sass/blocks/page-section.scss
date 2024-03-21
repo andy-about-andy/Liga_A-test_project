@@ -1,0 +1,58 @@
+.page-section {
+  padding: 150px 0 0;
+  margin: 0 auto;
+
+  @include vp-1023 {
+    padding: 100px 0 0;
+  }
+
+  &--second-padding-top {
+    padding: 89px 0 0;
+
+    @include vp-1023 {
+      padding: 0;
+    }
+  }
+
+  &--third-padding-top {
+    padding: 4px 0 0;
+
+    @include vp-1023 {
+      padding: 0;
+    }
+  }
+
+  &--fourth-padding-top {
+    padding: 82px 0 0;
+
+    @include vp-1023 {
+      padding: 0;
+    }
+  }
+
+  &--fifth-padding-top {
+    padding: 51px 0 0;
+
+    @include vp-1023 {
+      padding: 0;
+    }
+  }
+
+  &--no-padding-top {
+    padding: 0;
+
+    @include vp-1023 {
+      padding: 0;
+    }
+  }
+
+  &--top-position {
+    position: relative;
+    z-index: 1;
+  }
+
+  &--bottom-position {
+    position: relative;
+    z-index: 0;
+  }
+}

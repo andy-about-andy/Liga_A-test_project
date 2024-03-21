@@ -1,0 +1,159 @@
+.page-intro {
+  .container {
+    position: relative;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 540px 1fr;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+    }
+
+    @include vp-767 {
+      max-width: 700px;
+      width: auto;
+    }
+  }
+
+  &__inner {
+    .btn {
+      margin-top: 32px;
+      user-select: none;
+    }
+  }
+
+  &__text {
+    p {
+      width: 446px;
+      margin: 12px 0 0;
+      font-weight: 300;
+      color: $color-light-grey;
+
+      @include vp-767 {
+        max-width: 400px;
+        width: auto;
+      }
+    }
+  }
+
+  &__decor {
+    position: relative;
+
+    @include vp-1023 {
+      height: 400px;
+    }
+
+    @include vp-414 {
+      height: 350px;
+    }
+  }
+
+  &__decor-man {
+    position: absolute;
+    bottom: -127px;
+    left: -14.4%;
+    z-index: -1;
+    width: 987px;
+    height: 760px;
+    user-select: none;
+
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1439 {
+      left: -8.4%;
+      bottom: -113px;
+      width: 880px;
+      height: 677px;
+    }
+
+    @include vp-1279 {
+      left: 65%;
+      transform: translate(-50%, 0);
+    }
+
+    @include vp-1023 {
+      bottom: -86px;
+      left: 20%;
+      width: 664px;
+      height: 513px;
+      transform: translate(0, 0);
+    }
+
+    @include vp-767 {
+      bottom: -86px;
+      left: 5.5%;
+    }
+
+    @include vp-414 {
+      bottom: -65px;
+      left: -2%;
+      width: 500px;
+      height: 391px;
+    }
+  }
+
+  &__decor-rectangle {
+    position: absolute;
+    bottom: 66px;
+    right: 98.5%;
+    width: 196px;
+    height: 128px;
+    user-select: none;
+
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1439 {
+      right: 80%;
+    }
+
+    @include vp-1279 {
+      transform: translate(-50%, 0);
+      bottom: 70px;
+      right: 65%;
+    }
+
+    @include vp-1023 {
+      bottom: 144px;
+      left: 15%;
+      transform: translate(0, 0);
+    }
+
+    @include vp-767 {
+      left: 0;
+    }
+
+    @include vp-414 {
+      bottom: 115px;
+      width: 140px;
+      height: 92px;
+    }
+  }
+
+  .privilege-card__inner {
+    .title--h3 {
+      margin-top: 43px;
+
+      @include vp-767 {
+        margin-top: 41px;
+      }
+    }
+  }
+
+  .fotos-clients {
+    margin: 81px 0 104px;
+
+    @include vp-1023 {
+      margin: 32px 0 16px;
+    }
+  }
+}

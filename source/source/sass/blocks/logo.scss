@@ -1,0 +1,12 @@
+.logo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: opacity $trans-default;
+
+  &[href]:hover,
+  &[href]:focus,
+  &[href]:active {
+    opacity: 0.8;
+  }
+}

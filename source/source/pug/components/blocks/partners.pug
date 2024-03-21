@@ -1,0 +1,66 @@
+mixin partners(data={})
+  -
+    const logos = [
+      {
+        name: "logo-partner-1",
+        width: "79",
+        height: "20",
+        number: "1"
+      },
+      {
+        name: "logo-partner-2",
+        width: "72",
+        height: "18",
+        number: "2"
+      },
+      {
+        name: "logo-partner-3",
+        width: "72",
+        height: "16",
+        number: "3"
+      },
+      {
+        name: "logo-partner-4",
+        width: "72",
+        height: "21",
+        number: "4"
+      },
+      {
+        name: "logo-partner-5",
+        width: "72",
+        height: "19",
+        number: "5"
+      },
+      {
+        name: "logo-partner-6",
+        width: "72",
+        height: "20",
+        number: "6"
+      },
+      {
+        name: "logo-partner-7",
+        width: "72",
+        height: "19",
+        number: "7"
+      },
+    ]
+
+  .partners&attributes(attributes)
+    .container(data-trigger)
+      .partners__wrapper
+        .partners__inner
+          +title({tag: "h2", text: "Our Trusted Partners"}).title--h2
+          p Discover the Companies We&nbsp;Work&nbsp;With
+        .partners__inner-content
+          .partners__decor-man
+            +picture("content", "partners-man", "webp", 1082, 887, "мужчина в очках виртуальной реальности")
+            .partners__wrap
+              .partners__stub
+              .partners__content
+                ul.partners__list
+                  each item in logos
+                    li.partners__item(class=`partners__item--${item.number}`)
+                      .partners__box
+                        +icon(item.name, item.width, item.height)
+                .partners__content-stub
+              .partners__stub

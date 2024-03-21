@@ -1,0 +1,325 @@
+.choose-content {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 45.67% 1fr;
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__decor {
+    position: relative;
+    z-index: -1;
+    user-select: none;
+
+    @include vp-1023 {
+      height: 622px;
+    }
+
+    @include vp-767 {
+      width: 288px;
+      height: 485px;
+      margin: 0 auto;
+    }
+
+    @include vp-414 {
+      height: 340px;
+    }
+  }
+
+  &__box {
+    margin-right: auto;
+
+    @include vp-1023 {
+      margin: 0;
+      order: 1;
+    }
+  }
+
+  &__inner {
+    margin-top: 91px;
+
+    @include vp-767 {
+      margin-top: 80px;
+    }
+
+    .title--h2 {
+      margin: 0 0 12px;
+    }
+  }
+
+  &__designation {
+    p {
+      margin: 0 0 32px;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 58px;
+      letter-spacing: -0.24px;
+
+      @include vp-1023 {
+        margin: 0 0 32px;
+        font-size: 32px;
+        line-height: normal;
+        letter-spacing: -0.16px;
+      }
+
+      @include vp-767 {
+        margin: 0 0 31px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 32px;
+    padding: 0;
+    list-style-type: none;
+
+    @include vp-767 {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin: 0;
+
+      .accordion__element {
+        margin-bottom: 40px;
+      }
+
+      @include vp-767 {
+        .accordion__element {
+          margin: 0;
+        }
+      }
+    }
+
+    .accordion__text {
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  &__decor-man-inner {
+    position: absolute;
+    top: 0;
+    left: 68.9%;
+    width: 1029px;
+    height: 806px;
+    transform: translate(-50%, 0);
+
+    @include vp-1279 {
+      top: 30px;
+      left: 58%;
+      width: 880px;
+      height: 688px;
+    }
+
+    @include vp-1023 {
+      top: 0;
+      left: 50%;
+    }
+
+    @include vp-767 {
+      width: 769px;
+      height: 600px;
+      left: 48.3%;
+    }
+
+    @include vp-414 {
+      width: 550px;
+      height: 430px;
+    }
+  }
+
+  &__decor-man {
+    transform: translateZ(0);
+
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__decor-glasses {
+    width: 196px;
+    height: 128px;
+    position: absolute;
+    top: 571px;
+    right: 0.1%;
+
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1279 {
+      top: 560px;
+      right: 0;
+    }
+
+    @include vp-1023 {
+      top: 540px;
+      right: 20%;
+    }
+
+    @include vp-767 {
+      width: 147px;
+      height: 96px;
+      top: 424px;
+      right: -0.6%;
+    }
+
+    @include vp-414 {
+      top: 300px;
+      right: -2%;
+      width: 130px;
+      height: 85px;
+    }
+  }
+
+  &__button {
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+
+    @include vp-767 {
+      padding-right: 12px;
+    }
+
+    svg {
+      position: absolute;
+      top: 30%;
+      right: 2px;
+      width: 7px;
+      height: 4px;
+
+      @include vp-767 {
+        right: 13px;
+      }
+
+      @include vp-414 {
+        right: 1px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.35);
+    }
+  }
+
+  &--page-about {
+    .choose-content__wrapper {
+      grid-template-columns: 1fr 49.15%;
+    }
+
+    .choose-content__inner {
+      margin-top: 65px;
+    }
+
+    .choose-content__designation {
+      p {
+        @include vp-767 {
+          margin: 0 0 32px;
+        }
+      }
+    }
+
+    .choose-content__box {
+      order: 1;
+    }
+
+    .choose-content__decor {
+      @include vp-1023 {
+        height: 490px;
+      }
+
+      @include vp-414 {
+        height: 320px;
+      }
+    }
+
+    .choose-content__decor-man-inner {
+      width: 1030px;
+      height: 786px;
+      top: -95px;
+      left: 48.5%;
+
+      @include vp-1279 {
+        top: -70px;
+        width: 880px;
+        height: 672px;
+      }
+
+      @include vp-1023 {
+        top: -78px;
+      }
+
+      @include vp-767 {
+        left: 55.7%;
+        width: 840px;
+        height: 641px;
+      }
+
+      @include vp-414 {
+        left: 50%;
+        width: 550px;
+        height: 430px;
+      }
+    }
+
+    .choose-content__decor-glasses {
+      top: 499px;
+      right: 15.8%;
+
+      @include vp-1279 {
+        top: 450px;
+        right: 12%;
+      }
+
+      @include vp-1023 {
+        top: 406px;
+        right: 20%;
+      }
+
+      @include vp-767 {
+        right: -17.5%;
+        width: 160px;
+        height: 104px;
+      }
+
+      @include vp-414 {
+        top: 260px;
+        right: 0;
+        width: 130px;
+        height: 85px;
+      }
+    }
+
+    .accordion {
+      margin: 0;
+    }
+
+    .choose-content__list {
+      margin: 0;
+    }
+  }
+}

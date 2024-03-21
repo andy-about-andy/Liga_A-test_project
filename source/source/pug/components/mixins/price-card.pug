@@ -1,0 +1,15 @@
+mixin price-card(data={ })
+  - const title = data.title;
+  - const price = data.price;
+  - const href = data.href;
+  - const text = data.text;
+  - const warranty = data.warranty;
+
+  .price-card&attributes(attributes)
+    .price-card__title
+      p !{title}
+    .price-card__price
+      p !{price}
+    +btn({href: href, text: text})(aria-label="Переход по ссылке")
+    .price-card__warranty
+      p !{warranty}

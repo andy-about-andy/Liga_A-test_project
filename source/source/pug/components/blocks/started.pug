@@ -1,0 +1,45 @@
+mixin started(data = {})
+
+  .started
+    .container(data-trigger)
+      .started__wrapper
+        .started__inner
+          +title({tag: "h2", text: "HOW TO GET STARTED"}).title--h2
+          p Bringing Your Virtual Reality <br>Dreams to Life
+        .started__content
+          +video({
+            image: {
+              path: "content",
+              image: "video-posterimage",
+              format: "jpg",
+              width: "1200",
+              height: "676",
+              altText: "Постер-заглушка на видео",
+            },
+            shadow: {
+              path: "content",
+              image: "video-shadow",
+              format: "png",
+              width: "1200",
+              height: "522",
+              altText: "Декор элемент для постера-заглушки",
+            },
+            linePlay: {
+              path: "content",
+              image: "line-play",
+              format: "png",
+              width: "1135",
+              height: "16",
+              altText: "Полоса прокрутки плеера",
+            },
+            video: {
+              src: "./video/video.mp4",
+              dataSrc: "./video/video.mp4"
+            },
+            badge: "VR Service",
+            text: "How to get started",
+          })
+          .started__button
+            +btn({href: "#", text: "GET STARTED"})(aria-label="Переход по ссылке")
+    .started__decor-light
+      +picture("content", "decor-light-video", "webp", 874, 619, "декор элемент")

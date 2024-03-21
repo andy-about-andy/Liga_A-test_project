@@ -1,0 +1,42 @@
+mixin blog-content(data = {})
+  - const badge = data.badge || "";
+  - const title = data.title || "";
+  - const authorDate = data.authorDate || "";
+  - const path = data.picture.path || "content";
+  - const image = data.picture.image || "";
+  - const format = data.picture.format || "webp";
+  - const width = data.picture.width || "789";
+  - const height = data.picture.height || "528";
+  - const altText = data.picture.altText || "Картинка";
+  - const texts = data.texts || "";
+  - const pictureAdd = data.pictureAdd || "";
+  - const textsAdd = data.textsAdd || "";
+  - const hashtag = data.hashtag || "";
+  - const share = data.share || "";
+
+  .blog-content&attributes(attributes)
+    +badge({text: badge.text})
+    +title({tag: "h2", text: title.text}).title--h2
+    +author-date({authorName: authorDate.authorName, date: authorDate.date})
+    .blog-content__content
+      if image
+        .blog-content__basic-img
+          +picture(path, image, format, width, height, altText)
+      each item in texts
+        .blog-content__text
+          p !{item.text}
+      .blog-content__additional-img
+        each item in pictureAdd
+          +picture(item.path, item.image, item.format, item.width, item.height, item.altText)
+      each item in textsAdd
+        .blog-content__text
+          p !{item.text}
+      +hashtag({
+        postTags: hashtag.postTags,
+        title: hashtag.title,
+        hashtags: hashtag.hashtags,
+      })
+      +share({
+        title: share.title,
+        shareLink: share.shareLink,
+      })
